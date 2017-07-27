@@ -1,0 +1,3090 @@
+<script type="text/javascript" src="{{skin url='js/jquery.mCustomScrollbar.concat.min.js' _area='frontend' _package='nykaa' _theme='theme202'}}"></script>
+<link rel="stylesheet" type="text/css" href="/skin/frontend/nykaa/theme202/css/product_option.css" />
+<link rel="stylesheet" type="text/css" href="/skin/frontend/nykaa/theme202/css/catalog/catalog.css" />
+ <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+ <style type="text/css">
+  *{margin:0; padding: 0}
+   body{background: #f3f3f3}
+  .wrap{font-family: 'Source Sans Pro', sans-serif; background: #f3f3f3 }
+  a{text-decoration:none}
+  .left{float:left}
+  .right{float:right}
+  .clear{clear:both}
+a.chartimg:hover,a.tresearch:hover{color:#3f414d}
+  /*widgets css*/
+  .slick-slide img{  margin-top: 0 !important; display: inline-block  !important;}
+  .slick-slide{border-right:none !important}
+  .product_list_ul1.slick-initialized .slick-slide{padding:0}
+  .tickmark{  margin-top: 5px !important; display: inline-block  !important;}
+  .product_list_ul3 .slick-slide:hover {border-right : 2px solid transparent !important}    
+  .slick-slide img { display:inline; }
+  .slick-prev {background: transparent url("http://www.nykaa.com/media/wysiwyg/Hul-sale-feb-2017/prev.png") center left no-repeat !important;left:0px !important;}
+  .slick-next {background: transparent url("http://www.nykaa.com/media/wysiwyg/Hul-sale-feb-2017/nxt.png") center right no-repeat !important;right:0px !important;}
+  .slick-prev{left: 0 !important;}
+  .slick-next{right: 0 !important;}
+  .product_list_ul1.slick-slider{margin-bottom:0;padding-bottom: 15px;}
+  .product_list_ul3 .slick-prev{left: 0 !important;}
+  .product_list_ul3 .slick-next{right: 0 !important;}
+  .content_inner{margin:0 auto; width:100%; padding: 0; background:#fff}
+  .product_list_ul3.slick-slider{margin-bottom:0}
+  .owl-wrapper {overflow: hidden; margin-bottom: 5%} 
+  .slick-prev,.slick-next{font-size: 0;line-height: 0;position: absolute;top: 50%;display: block;width: 38px;height: 29px !important;padding: 0;cursor: pointer;border: none;outline: none; margin-top: 0 !important} 
+  .product-box .product-name{ height:50px !important;}
+  .product-image{ text-align:center;}
+  .content_inner .product-box{ margin:10px 0 10px 0% !important; background: #fff}
+    .wrap #home-banner .slick-dots{bottom:-28px !important;}
+  .wrap #home-banner .slick-dots li,.wrap #home-banner .slick-dots li.slick-active button:before{height:7px !important; width:7px !important; }
+  .wrap #home-banner .slick-prev,.wrap #home-banner .slick-next{display:none !important}
+  .wrap #home-banner .slick-dots li button{  border-radius: 50%;height:7px; width:7px; padding: 0  }
+  .product_list_ul1 .slick-dots li{height:10px; width:10px; }
+  .product_list_ul1 .slick-dots li button:before,.product_list_ul1  .slick-dots li.slick-active button:before{display:none}
+  .wrap #home-banner .product_list_ul1 li.slick-active button{background: #fc2779}
+    .product_list_ul3 li{margin-right:0.5%}
+  .product_list_ul2.slick-slider{margin:8% 0; }
+  .product_list_ul1 .slick-prev, .product_list_ul1 .slick-next,.product_list_ul2 .slick-prev, .product_list_ul2 .slick-next{display:none !important}
+  .wrap #home-banner .slick-dots li button:before{color:transparent !important}
+  .product-box .add-to-cart a{background:#fc2779 !important}
+  .product_list_ul2 .slick-slide{border-right:1px solid #e1e1e1 !important; padding:0 5px} 
+  /*widgets css close*/
+  .center{text-align:center}
+  img{max-width:100%}
+  .slick-dots li{margin:3px}
+  .greywrap{background-color: #f9f9f9; 
+    box-shadow:inset 0px 2px 2px 0 rgba(0, 0, 0, 0.07), inset 0px -2px 2px 0 rgba(0, 0, 0, 0.07); padding: 0 10px;overflow: hidden; border-radius: 6px;
+  margin-top: 10%}
+  .greywrap.mrtp{margin-top:0}
+  .greywraphead{color:#3f414d; font-size:4.6vw; font-weight: bold; margin: 7% 0 5% 10px; text-transform: uppercase}
+  .catimgwrap{background: #fff; padding:10px; border-radius: 3px; margin-bottom:7%;box-shadow: 0px 2px 1px 0 rgba(56, 56, 56, 0.07); position: relative}
+  .catedesc{font-size: 4vw; color: #3f414d; margin-top: 7px  }
+  .catimg,.catimgext{width:25.4%; display: inline-block; margin: 5% 0 0;  cursor: pointer; padding-bottom: 5%} 
+ 
+  .catimg:nth-child(3n+2){margin:0 10.7%}
+  .catimgwrap.radius{border-radius: 3px;padding:0 0; margin-bottom: 10px; 
+   overflow: hidden}
+    .catimgwrap.radius:last-child{margin-bottom: 7%}
+  .catemenu .cateimg{border-radius: 50%; border:2px solid #fff; line-height: 0}
+  .catimg.active .cateimg{border:2px solid #fc2779;  }
+  .catimg.active {border-bottom:2px solid #fc2779 }
+  .catimg.active .catedesc{color:#fc2779; font-weight: 600}
+  .catimgwrap.saverimg{margin:10% 10px}
+  .brandwrap,.nykaarecommend,.chartswrap{padding-bottom: 5%}  
+  .featuredtophead{font-size:4.4vw; color:#3f414d; font-weight: 600; line-height: normal}
+  .featuredtophead span{color:#fc2779}
+  .featuredsubhead{font-size:4.2vw; color: #3f414d}
+  .featuredsubthirdhead{color:#8c8d94;font-size:4.2vw; margin: 10px 0px }
+  .featuredsubthirdhead.subsec{font-size:4.2vw; color: #1cbbb4; margin:10px 0px }
+  .whitewrap{background:#fff; box-shadow:inset 0px 2px 2px 0 rgba(0, 0, 0, 0.07), inset 0px -2px 2px 0 rgba(0, 0, 0, 0.07); margin-bottom: 50px }
+  .viewoffers{background: url(http://www.nykaa.com/media/wysiwyg/Mobile_view_all_14july.jpg) no-repeat center; margin:4% 10px; font-size: 4.6vw; background-size:100%; font-weight: 600;
+  border-radius: 3px; color: #000; padding: 9% 0 9% 14vw}
+  .viewoffers.blue{background: url(http://www.nykaa.com/media/wysiwyg/nykaa-mobile/vaba.jpg) no-repeat center; background-size:100%}
+  .viewoffers.white{background: url(http://www.nykaa.com/media/wysiwyg/nykaa-mobile/offerbg-b.png) no-repeat center; background-size:100%; margin: 0; color:#0072bc;font-size: 4.6vw; padding: 8% 0 8% 16vw }
+  .viewoffers.nykapp{background: url(http://www.nykaa.com/media/wysiwyg/nykaa-mobile/nykaahomescreena.jpg) no-repeat center; background-size:100%}
+  .viewofferssubhead{font-size:3.7vw; text-transform: capitalize; font-weight: normal; margin-top: 1%}
+  .viewofferssubhead span{color:#fc2779; font-weight: 600}
+  .fetimagedesc{ margin:10% auto 3%; text-align: center;width: 94%; background: #fff;border-radius: 3px; padding: 2%;
+  box-shadow: 0px 2px 3px 0 rgba(0, 0, 0, 0.1);}
+  .recommedprd{background: #fff; border-radius: 3px; display: inline-block;
+vertical-align:top;
+ width:47.6%; margin-bottom: 10px; overflow: hidden; box-shadow: 0px 2px 1px 0 rgba(56, 56, 56, 0.07);}
+  .recprdimgdesc{font-size: 4.2vw; color: #3f414d; margin:0% 0 5%; padding: 5px; line-height: normal; height:84px}
+  .resubhead{color: #8c8d94}
+.recprdimgdesc.nh{height:auto; margin-bottom:0; padding:10px}
+  .recommedprd:nth-child(2n+2){margin-left:10px}
+  .missingout{background: url(http://www.nykaa.com/media/wysiwyg/nykaa-mobile/missingoutbg.jpg) repeat-x; padding: 6% 10px 10px 10px; margin-top:0}
+  .misouthead{font-size:4.6vw; color: #fff; text-shadow: 0.8px 1.8px 6px rgba(56, 56, 56, 0.55); font-weight: bolder; padding-left: 10px}
+  .tresearch{padding:10px 44px 10px 15px; border-bottom: 1px solid #ebebeb; font-size: 4.6vw; color: #3f414d; background: url(http://www.nykaa.com/media/wysiwyg/nykaa-mobile/searchico.png) no-repeat right center; background-size: 9%; padding-left: 10px; display: block}
+  .tresearch:last-child{border-bottom:0}
+/*  .chartswrap{display: table;border-collapse:separate;border-spacing:15px;}*/
+  /*.chartimgrow{display: table-row}*/
+    .chartimg{width:47.4%; display: inline-block; background: #fff; border-radius: 3px; height: 60px; padding:0 20px 0 10px; box-sizing: border-box; background:#fff url(http://www.nykaa.com/media/wysiwyg/nykaa-mobile/nxtarwab.jpg) no-repeat 94% center; font-size: 4.3vw; color:#3f414d;  box-shadow: 0px 2px 1px 0 rgba(56, 56, 56, 0.07); margin-bottom: 10px; vertical-align: middle; line-height: 58px; background-size:5%} 
+   .chartimg:nth-child(2n+0){margin-left: 10px}
+   .brandwrap .chartimg{background-image:none; line-height: 80px; padding: 0 10px; height: 60px; }
+  /*accordian*/
+.smk_accordion {position: relative;margin: 0;padding: 0;list-style: none;  background: #fff; border-radius: 3px}    
+.smk_accordion .accordion_in {position: relative;z-index: 10; overflow: hidden;  }
+.smk_accordion .accordion_in .acc_head {position: relative;line-height:normal;padding:7px;font-size: 14px;display: block;cursor: pointer;  }
+.smk_accordion .accordion_in .acc_head .acc_icon_expand {display: block;width: 21px;height: 21px;position: absolute;right: 0;top: 50%;margin-top: -9px;  }
+.smk_accordion .accordion_in .acc_content {color: #7B7E85;padding: 0; }
+.smk_accordion .accordion_in .acc_content h1:first-of-type,
+.smk_accordion .accordion_in .acc_content h2:first-of-type,
+.smk_accordion .accordion_in .acc_content h3:first-of-type,
+.smk_accordion .accordion_in .acc_content h4:first-of-type,
+.smk_accordion .accordion_in .acc_content h5:first-of-type,
+.smk_accordion .accordion_in .acc_content h6:first-of-type {margin-top: 5px;}
+.acc_content ul{margin-left:9px; margin-top: 9px}
+.acc_content li{list-style-type:none;
+   
+  background: url(http://www.nykaa.com/media/wysiwyg/greyarwnnw.png) no-repeat 97% center;
+  
+  padding: 11px 0 11px 12px; border-top: 1px solid #ebebeb }
+.acc_content li a{display:block}
+.acc_content li:last-child{ }
+.shopallbtn.mrnone{margin-top:0}
+.smk_accordion .accordion_in:first-of-type,
+.smk_accordion .accordion_in:first-of-type .acc_head {}
+.smk_accordion .accordion_in:last-of-type,
+.smk_accordion .accordion_in:last-of-type .acc_content {border-radius: 0 0 3px 3px;}
+.smk_accordion .accordion_in.acc_active > .acc_content {display: block; }
+.smk_accordion .accordion_in.acc_active > .acc_head {padding-bottom:0}
+.smk_accordion .accordion_in.acc_active > .acc_head .acc_icon_expand { 
+   
+  background: url(http://www.nykaa.com/media/wysiwyg/plusiconnw.png) no-repeat;
+   
+  height: 21px;display: block;right: 0;margin-top: -11px;position: absolute;top: 40%;width: 21px;}
+.smk_accordion.acc_with_icon .accordion_in .acc_head,
+.smk_accordion.acc_with_icon .accordion_in .acc_content {  font-size:4vw; color:#3f414d}
+.accordion_in.nac .acc_head .acc_icon_expand{display:none !important}
+.accordion_in.nac .acc_head{padding-left:17px;}
+.head-acc{  cursor: pointer;display: block;font-size: 14px;line-height: 21px;padding:7px;position: relative;}
+.head-acc:first-child{text-transform:uppercase;}
+.smk_accordion .accordion_in .acc_head .acc_icon_expand{
+ 
+  background: url(http://www.nykaa.com/media/wysiwyg/plusiconnw.png)  no-repeat 30% 4px;
+  
+  height: 21px; width:21px;  }
+.smk_accordion .accordion_in.acc_active > .acc_head .acc_icon_expand{background: url(http://www.nykaa.com/media/wysiwyg/nykaa-mobile/minusicon.png) no-repeat; background-size: 60%; background-position:30% 17px}
+/*.smk_accordion .accordion_in .acc_head:hover .acc_icon_expand{background-position:0 0}
+.smk_accordion .accordion_in.acc_active > .acc_head:hover .acc_icon_expand{background-position:0 0 }
+.accordion_in .acc_icon_expand.acc_icon_expandactive{background-position:-14px 1px !important; }
+.accordion_in.acc_active .acc_icon_expandactive{background-position:-14px -13px !important }*/
+/*new*/  
+.head-acc.phead  a {color:#fc2779; 
+ width: 100%; display: block; background: url(http://www.nykaa.com/media/wysiwyg/nxtarwabnw.jpg) no-repeat; background-position: center right;}
+.smk_accordion .accordion_in, .head-acc{border-bottom: 1px solid #ebebeb} 
+.acc_head a,.head-acc a{color:#3f414d; display:block}
+.acc_active .acc_head a{color:#000}
+/*accordian*/
+.menuwrap{ border-radius: 3px;background-color: #f7f7f7; padding: 10px; box-shadow: inset 0px 2px 2px 0 rgba(0, 0, 0, 0.07), inset 0px -2px 2px 0 rgba(0, 0, 0, 0.07);text-align: left; display: none} 
+.smk_accordion.acc_with_icon .accordion_in:first-child .acc_head{color: #fc2779; padding: 0;}
+.smk_accordion .accordion_in:first-child .acc_head .acc_icon_expand{background: url(http://www.nykaa.com/media/wysiwyg/nykaa-mobile/nxticon.png) no-repeat;background-position: center center; height: 23px; width: 14px; background-size: 60%;
+   display: none}
+.viewbrands{color:#fc2779; font-weight: 600; text-transform: uppercase;  border: solid 1px #fc2779; border-radius:3px;
+padding: 6px 3vw; font-size:3vw; cursor: pointer; background: #fff; margin-top: -2px}
+.showmorecate{display: none}
+.gradientbg{background: url(http://www.nykaa.com/media/wysiwyg/nykaa-mobile/greybg3.png) no-repeat;  position: absolute; width:100%; left: 0; right: 0; margin: 0 auto;  bottom: 0; background-size: 100%; background-position: bottom center}
+.cateimg{line-height:0}
+/*youtube*/
+.youtube-player { position: relative; padding-bottom: 49%;/* Use 75% for 4:3 videos */height: 0; overflow: hidden;max-width: 100%;}
+.youtube-player iframe {position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: transparent;}
+.youtube-player img {bottom: 0;display: block;left: 0;margin: auto;max-width: 100%;width: 100%;position: static;right: 0;top: 0;border: none; height: auto; cursor: pointer;-webkit-transition: .4s all;-moz-transition: .4s all;transition: .4s all;}
+.youtube-player img:hover {-webkit-filter: brightness(75%);}
+.youtube-player .play {height: 100%;width: 100%;left:0;top:0;position: absolute; 
+cursor: pointer;}
+/*youtube*/  
+   img.lazy{background-color: #ffebf3;}
+   img.lazy.loaded{background-color: #ffffff;}
+   img.slider-lazy{background-color: #ffebf3;}  
+   #home-banner img{ display: none;}
+   #home-banner .slider-single img{ display: block; }
+.user-img{margin-left:0}
+dl.user-img{margin-top:6px}
+.slick-dots li button{background:#ccc}
+/*new accrdian*/
+.u-vmenu{background:#fff}  
+.u-vmenu ul li {
+   
+  list-style: none; border-top:1px solid #ebebeb;   
+}
+.u-vmenu ul ul{
+  display: none;
+}
+.u-vmenu > ul > li {
+  background: url(../images/vmenu/zakladka.png) left top no-repeat;
+  background-size: 100% auto; padding-left: 10px;
+}
+.u-vmenu ul li a {
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  font-size: 14px;
+  color: #82846f;
+  text-decoration: none;
+  outline: none;
+}
+.u-vmenu > ul > li > a {
+   
+   
+   
+}
+.u-vmenu > ul > li > ul > li > a {
+  margin-left: 10px; background: url(http://www.nykaa.com/media/wysiwyg/greyarwnnw.png) no-repeat 95.5% center;
+}
+.u-vmenu > ul > li > ul > li > ul > li > a {
+  margin-left: 22px; background: url(http://www.nykaa.com/media/wysiwyg/greyarwnnw.png) no-repeat 95.5% center;
+}
+.u-vmenu > ul > li > ul > li > ul > li > ul > li > a {
+  margin-left: 30px; background: url(http://www.nykaa.com/media/wysiwyg/greyarwnnw.png) no-repeat 95.5% center;
+}
+.u-vmenu ul li a[data-option='on']{
+  background: url(http://www.nykaa.com/media/wysiwyg/nykaa-mobile/minusicon.png) 96% center no-repeat;
+  background-size:14px;
+}
+.u-vmenu ul li a[data-option='off'] {
+  background: url(http://www.nykaa.com/media/wysiwyg/plusiconnw.png) 96% center no-repeat;
+}  
+ .menutitle{color:#fc2779; background: url(http://www.nykaa.com/media/wysiwyg/nxtarwabnw.jpg) 95% center no-repeat;
+   height: 30px; line-height: 30px; padding-left: 10px;}   
+/*new accrdian*/
+/*youtube*/	
+.youtube-player { position: relative; padding-bottom: 60%;/* Use 75% for 4:3 videos */height: 0; overflow: hidden;max-width: 100%; width:689px; margin: 0 auto}
+.youtube-player iframe {position: absolute;top: 0;left: 0;width: 100%;height: 100%; background: transparent;}
+.youtube-player img {bottom: 0;display: block;left: 0;margin: auto;max-width: 100%; width: 100%;position: absolute;right: 0;top: 0;
+border: none; height: auto; cursor: pointer;-webkit-transition: .4s all;-moz-transition: .4s all;transition: .4s all;}
+.youtube-player img:hover {-webkit-filter: brightness(75%);}
+.youtube-player .play {height: 100%;width: 100%;left:0;top:0;position: absolute; 
+cursor: pointer;}		 
+</style>
+
+    <div class="wrap">
+ <div>
+                 
+<!-- Slider Part ----------------------------->
+  <div id="home-banner">
+{{block type="bannerpro/bannerpro" name="bannerpro" template="bannerpro/bannerpro.phtml"}}
+ </div>
+  <!-- Slider Part ------End----------------------->
+    
+      
+<!-- Upper Tiles ------------------------------>
+<div class="catimgwrap center radius saverimg" style="margin-top: 5%">
+
+
+        <a href="http://www.nykaa.com/top-lipsticks-online?intcmp=hp|top_banner|top-lipsticks-online">
+         <div class="cateimg">
+          <img  src="http://www.nykaa.com/media/wysiwyg/Lipsticks_Mobilesalebanner_otr.jpg">
+          </div>
+          <div class="gradientbg">
+          <div class="fetimagedesc">
+            <div class="featuredtophead">
+            <span> From Cult Classics To Brand New Hues </span>
+            </div>
+            <div class="featuredsubhead">           
+                   Flat 25% OFF
+            </div>
+          </div>
+          </div>
+        </a>
+      </div>
+     
+    <!-- Upper Tiles -----End------------------------> 
+     
+
+   <!--Shop by CAtegory or Menu Part ------------------------------>   
+    <div class="greywrap mrtp">
+         <div class="greywraphead">
+            SHOP BY CATEGORY
+         </div>
+         <div class="catimgwrap catemenu center">
+           <div>  
+            <div class="catimg center">
+               <div class="cateimg"><img src="http://www.nykaa.com/media/wysiwyg/nykaa-mobile/categories/makeupn-min.png"></div>
+               <div class="catedesc">Makeup<br>&nbsp;</div>
+            </div>
+            <div class="catimg center">
+               <div class="cateimg"><img src="http://www.nykaa.com/media/wysiwyg/nykaa-mobile/categories/skinn-min.png"></div>
+               <div class="catedesc">Skin<br>&nbsp;</br></div>
+            </div>
+            <div class="catimg center">
+               <div class="cateimg"><img src="http://www.nykaa.com/media/wysiwyg/nykaa-mobile/categories/hairn-mina.png"></div>
+               <div class="catedesc">Hair<br>&nbsp;</div>
+            </div>
+      </div>
+  <div>
+      <div class="menuwrap">
+          <div class="accordion_example2">
+            <div class="head-acc phead accordion_in"> <a href="/makeup.html?root=nav_1&dir=desc&order=popularity">Complete Makeup collection</a> </div>
+          <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a>Face</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/makeup/face.html?root=nav_2&dir=desc&order=popularity">Complete Face collection</a></li>
+            <li><a href="/makeup/face/face-primer.html?root=nav_3&dir=desc&order=popularity">Face Primer</a></li>
+            <li><a href="/best-foundation-and-concealer-for-your-skin-tone?eq=mobile?root=nav_3&dir=desc&order=popularity">Concealer</a></li>
+            <li><a href="/best-foundation-and-concealer-for-your-skin-tone?eq=mobile?root=nav_3&dir=desc&order=popularity">Foundation</a></li>
+            <li><a href="/makeup/face/compact.html?root=nav_3&dir=desc&order=popularity">Compact</a></li>
+            <li><a href="/makeup/face/contour.html?root=nav_3&dir=desc&order=popularity">Contour</a></li>
+            <li><a href="/makeup/face/loose-powder.html?root=nav_3&dir=desc&order=popularity">Loose Powder</a></li>
+            <li><a href="/makeup/face/face-blush.html?root=nav_3&dir=desc&order=popularity">Blush</a></li>
+            <li><a href="/makeup/face/face-bronzer.html?root=nav_3&dir=desc&order=popularity">Bronzer</a></li>
+            <li><a href="/makeup/face/tinted-moisturizer.html?root=nav_3&dir=desc&order=popularity">Tinted Moisturizer</a></li>
+            <li><a href="/makeup/face/bb-cc-cream.html?root=nav_3&dir=desc&order=popularity">BB & CC cream</a></li>
+            <li><a href="/makeup/face/face-illuminator.html?root=nav_3&dir=desc&order=popularity">Illuminators</a></li>
+            <li><a href="/makeup/face/face-makeup-remover.html?root=nav_3&dir=desc&order=popularity">Makeup Removers</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+          <!--this div structure for submenu-->
+      <div class="accordion_in">
+
+        <div class="acc_head"><a>Eyes</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/makeup/eyes.html?root=nav_2&dir=desc&order=popularity=">Complete Eyes Collection</a></li>
+            <li><a href="/makeup/eyes/kajal.html?root=nav_3&dir=desc&order=popularity">Kajal</a></li>
+            <li><a href="/makeup/eyes/eyeliner.html?root=nav_3&dir=desc&order=popularity">Eyeliner</a></li>
+            <li><a href="/makeup/eyes/eye-mascara.html?root=nav_3&dir=desc&order=popularity">Mascara</a></li>
+            <li><a href="/makeup/eyes/eyeshadow.html?root=nav_3&dir=desc&order=popularity">Eye Shadow</a></li>
+            <li><a href="/makeup/eyes/eye-brow-enhancer.html?root=nav_3&dir=desc&order=popularity">Eye Brow Enhancers</a></li>
+            <li><a href="/makeup/eyes/eye-primer.html?root=nav_3&dir=desc&order=popularity">Eye Primer</a></li>
+            <li><a href="/makeup/eyes/false-eyelashes.html?root=nav_3&dir=desc&order=popularity">False Eyelashes</a></li>
+            <li><a href="/makeup/eyes/under-eye-concealer.html?root=nav_3&dir=desc&order=popularity">Under Eye Concealer</a></li>
+            <li><a href="/makeup/eyes/contact-lenses.html?root=nav_3&dir=desc&order=popularity">Contact Lenses</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+          <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Lips</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/makeup/lips.html?root=nav_2&dir=desc&order=popularity">Complete Lips Collection</a></li>
+            <li><a href="/makeup/lips/lipstick.html?root=nav_3&dir=desc&order=popularity">Lipstick</a></li>
+            <li><a href="/makeup/lips/liquid-lipstick.html?ptype=lst&id=263&root=nav_3&dir=desc&order=popularity"> Liquid Lipstick</a></li>
+        <li><a href="/makeup/lips/lip-crayon.html?root=nav_3&ptype=lst&id=5079&dir=desc&order=popularity">Lip Crayon</a></li>
+            <li><a href="/makeup/lips/lip-gloss.html?root=nav_3&dir=desc&order=popularity">Lip Gloss</a></li>
+            <li><a href="/makeup/lips/lip-liner.html?root=nav_3&dir=desc&order=popularity">Lip Liner</a></li>
+            <li><a href="/makeup/lips/lip-plumper.html?root=nav_3&dir=desc&order=popularity">Lip Plumper</a></li>
+            <li><a href="/makeup/lips/lip-stain.html?root=nav_3&dir=desc&order=popularity">Lip Stain</a></li>
+            <li><a href="/makeup/lips/lip-balm.html?root=nav_3&dir=desc&order=popularity">Lip Balm</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+         <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a>Body</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/makeup/makeup-body.html?root=nav_2&dir=desc&order=popularity">Complete Body Collection</a></li>
+            <li><a href="/makeup/makeup-body/body-art.html?root=nav_3&dir=desc&order=popularity">Body Art</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+         <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Nails</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/makeup/nails.html?root=nav_2&dir=desc&order=popularity">Complete Nail Collection</a></li>
+            <li><a href="/makeup/nails/nail-polish.html?root=nav_3&dir=desc&order=popularity">Nail Polish</a></li>
+            <li><a href="/makeup/nails/nail-art-kits.html?root=nav_3&dir=desc&order=popularity">Nail Art Kits</a></li>
+            <li><a href="/makeup/nails/nail-polish-sets.html?root=nav_3&dir=desc&order=popularity">Nail Polish Sets</a></li>
+            <li><a href="/makeup/nails/nail-care.html?root=nav_3&dir=desc&order=popularity">Nail Care</a></li>
+            <li><a href="/makeup/nails/nail-polish-remover.html?root=nav_3&dir=desc&order=popularity">Nail Polish Remover</a></li>
+            <li><a href="/makeup/nails/manicure-pedicure-kits.html?root=nav_3&dir=desc&order=popularity">Manicure & Pedicure Kits</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+         <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Makeup Kits</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/makeup/makeup-kits.html?root=nav_2&dir=desc&order=popularity">Complete Makeup Kits Collection</a></li>
+            <li><a href="/makeup/makeup-kits/eye-palettes.html?root=nav_3&dir=desc&order=popularity">Eye Palettes</a></li>
+            <li><a href="/makeup/makeup-kits/face-palettes.html?root=nav_3&dir=desc&order=popularity">Face Palettes</a></li>
+            <li><a href="/makeup/makeup-kits/value-combo-sets.html?root=nav_3&dir=desc&order=popularity">Value & Combo Sets</a></li>
+            <li><a href="/makeup/makeup-kits/customize-your-palette.html?root=nav_3&dir=desc&order=popularity">Customize Your Palette</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+         <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a>Tools & Brushes</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/best-makeup-brushes-online-sale?eq=mobile?root=nav_2&dir=desc&order=popularity">Complete Tools & Brushes Collection</a></li>
+            <li><a href="/makeup/tools-brushes/face-brush.html?root=nav_3&dir=desc&order=popularity">Face Brush</a></li>
+            <li><a href="/makeup/tools-brushes/blush-brush.html?root=nav_3&dir=desc&order=popularity">Blush Brush</a></li>
+            <li><a href="/makeup/tools-brushes/eye-brush.html?root=nav_3&dir=desc&order=popularity">Eye Brush</a></li>
+            <li><a href="/makeup/tools-brushes/lip-brush.html?root=nav_3&dir=desc&order=popularity">Lip Brush</a></li>
+            <li><a href="/makeup/tools-brushes/brush-sets.html?root=nav_3&dir=desc&order=popularity">Brush Sets</a></li>
+            <li><a href="/makeup/tools-brushes/sponges-applicators.html?root=nav_3&dir=desc&order=popularity">Sponges & Applicators</a></li>
+            <li><a href="/makeup/tools-brushes/eyelash-curlers.html?root=nav_3&dir=desc&order=popularity">Eyelash Curlers</a></li>
+            <li><a href="/makeup/tools-brushes/tweezers.html?root=nav_3&dir=desc&order=popularity">Tweezers</a></li>
+            <li><a href="/makeup/tools-brushes/sharpeners.html?root=nav_3&dir=desc&order=popularity">Sharpeners</a></li>
+            <li><a href="/makeup/tools-brushes/mirrors.html?root=nav_3&dir=desc&order=popularity">Mirrors</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+         <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a>Quick Links</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/makeup/new-at-nykaa.html?root=nav_3&dir=desc&order=popularity">New @ Nykaa</a></li>
+            <li><a href="/makeup/bestsellers.html?root=nav_3&dir=desc&order=popularity">Bestsellers</a></li>
+            <li><a href="http://beautybook.nykaa.com/contouring-ultimate-shapewear-face?utm_source=Nykaa Mobile Website&utm_medium=MegaMenu&utm_campaign=Beauty
+
+Blog">Contouring Guide</a></li>
+            <li><a href="http://beautybook.nykaa.com/picture-perfect-brushes-real-techniques?utm_source=Nykaa Mobile
+
+Website&utm_medium=MegaMenu&utm_campaign=Beauty Blog">Makeup Brush Guide</a></li>
+            <li><a href="http://beautybook.nykaa.com/makeup-artist-stars-namrata-sonifind-foundation-complexion?utm_source=Nykaa Mobile
+
+Website&utm_medium=MegaMenu&utm_campaign=Beauty Blog">Foundation Guide</a></li>
+            <li><a href="http://www.nykaa.com/nykaa-femina-beauty-awards-winners-2017">Nykaa Femina Beauty Award Winners '17</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+         </div>
+         </div>
+            
+<div class="menuwrap">
+          <div class="accordion_example2">
+            <div class="head-acc phead accordion_in"><a href="/skin-care.html?root=nav_1&dir=desc&order=popularity" >Complete Skincare Collection</a></div>
+          <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Face</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/skin-care/face.html?root=nav_2&dir=desc&order=popularity">Complete Face Collection</a>
+           
+            </li>
+         
+            <li><a href="/skin-care/face/face-wash.html?root=nav_3&dir=desc&order=popularity">Facewash</a></li>
+            <li><a href="/skin-care/face/face-scrubs-exfoliators.html?root=nav_3&dir=desc&order=popularity">Scrubs & Exfoliators</a></li>
+            <li><a href="/skin-care/face/face-cleanser.html?root=nav_3&dir=desc&order=popularity">Cleanser</a></li>
+            <li><a href="/skin-care/face/toners-astringents.html?root=nav_3&dir=desc&order=popularity">Toner & Astringents</a></li>
+            <li><a href="/skin-care/face/face-moisturizer.html?root=nav_3&dir=desc&order=popularity">Moisturizer</a></li>
+            <li><a href="/skin-care/face/face-day-cream.html?root=nav_3&dir=desc&order=popularity">Day Cream</a></li>
+            <li><a href="/skin-care/face/face-night-cream.html?root=nav_3&dir=desc&order=popularity">Night Cream</a></li>
+            <li><a href="/skin-care/face/serum.html?root=nav_3&dir=desc&order=popularity">Serums</a></li>
+            <li><a href="/skin-care/face/masks-peels.html?root=nav_3&dir=desc&order=popularity">Masks & Peels</a></li>
+            <li><a href="/skin-care/face/makeup-remover.html?root=nav_3&dir=desc&order=popularity">Makeup Remover</a></li>
+            <li><a href="/skin-care/face/face-mist.html?root=nav_3&dir=desc&order=popularity">Face Mist</a></li>
+            <li><a href="/skin-care/face/facial-kit.html?root=nav_3&dir=desc&order=popularity">Facial Kits</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+          <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Lip Care</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/skin-care/lip-care.html?root=nav_2&dir=desc&order=popularity">Complete Lip Care Collection</a></li>
+            <li><a href="/skin-care/lip-care/lip-balm.html?root=nav_3&dir=desc&order=popularity">Lip Balm</a></li>
+            <li><a href="/skin-care/lip-care/sun-protection.html?root=nav_3&dir=desc&order=popularity">Sun Protection</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+          <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Eye Care</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/skin-care/eye-care.html?root=nav_2&dir=desc&order=popularity">Complete Eye Care Collection</a></li>
+            <li><a href="/skin-care/eye-care/under-eye-cream.html?root=nav_3&dir=desc&order=popularity">Under Eye Cream</a></li>
+            <li><a href="/skin-care/eye-care/dark-circles-wrinkles.html?root=nav_3&dir=desc&order=popularity">Dark Circles/Wrinkles</a></li>
+            <li><a href="/skin-care/eye-care/puffiness.html?root=nav_3&dir=desc&order=popularity">Puffiness</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+       <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a>Neck Creams</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/skin-care/neck-creams.html?root=nav_2&dir=desc&order=popularity">Complete Neck Creams Collection</a></li>
+            <li><a href="/skin-care/neck-creams/neck-firming-creams.html?root=nav_3&dir=desc&order=popularity">Neck Firming Creams</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+       <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a>Shop By Concern</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/skin-care/shop-by-concern/skin-lightening.html?root=nav_3&dir=desc&order=popularity">Skin Lightening</a></li>
+            <li><a href="/skin-care/shop-by-concern/sun-protection.html?root=nav_3&dir=desc&order=popularity">Sun Protection</a></li>
+            <li><a href="/skin-care/shop-by-concern/acne-treatment.html?root=nav_3&dir=desc&order=popularity">Acne Treatment</a></li>
+            <li><a href="/skin-care/shop-by-concern/anti-ageing.html?root=nav_3&dir=desc&order=popularity">Anti Ageing</a></li>
+            <li><a href="/skin-care/shop-by-concern/oil-control.html?root=nav_3&dir=desc&order=popularity">Oil Control</a></li>
+            <li><a href="/skin-care/shop-by-concern/tan-removal.html?root=nav_3&dir=desc&order=popularity">Tan Removal</a></li>
+            <li><a href="/skin-care/shop-by-concern/pigmentation.html?root=nav_3&dir=desc&order=popularity">Pigmentation</a></li>
+            <li><a href="/skin-care/shop-by-concern/dull-skin-treatment.html?root=nav_3&dir=desc&order=popularity">Dull Skin Treatment</a></li>
+            <li><a href="/skin-care/shop-by-concern/face-treatment.html?root=nav_3&dir=desc&order=popularity">Face Treatment</a></li>
+            <li><a href="/skin-care/shop-by-concern/cold-protection.html?root=nav_3&dir=desc&order=popularity">Cold Protection</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Dermocosmetics</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/skin-care/luxury.html?root=nav_2&dir=desc&order=popularity">Complete Luxury Collection</a></li>
+            <li><a href="/kiehls?root=nav_3">Kiehl's</a></li>
+            <li><a href="/luxe/l-occitane.html?root=nav_3&dir=desc&order=popularity">L'Occitaine</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a>Quick Links</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/skin-care/new-at-nykaa.html?root=nav_3&dir=desc&order=popularity">New @ Nykaa</a></li>
+            <li><a href="/skin-care/bestsellers.html?root=nav_3&dir=desc&order=popularity">Bestsellers</a></li>
+            <li><a href="/skin-care/nykaas-choice.html?root=nav_3&dir=desc&order=popularity">Nykaa's Choice</a></li>
+            <li><a href="/ponds-age-miracle?root=nav_3&dir=desc&order=popularity">Ponds Age Miracle</a></li>
+            <li><a href="/skin-care/skincare-combo-sets.html?root=nav_3&dir=desc&order=popularity">Combo Sets</a></li>
+            <li><a href="/routine-finder-video?root=nav_3">Routine Finder</a></li>
+            <li><a href="http://www.nykaa.com/nykaa-femina-beauty-awards-winners-2017">Nykaa Femina Beauty Award Winners '17</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+         </div>
+         </div>
+<div class="menuwrap">
+          <div class="accordion_example2">
+            <div class="head-acc phead accordion_in"><a href="http://www.nykaa.com/hair-care?root=nav_1&dir=desc&order=popularity" > Complete hair care collection</a></div>
+          <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Hair Care</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/hair-care/hair.html?root=nav_2&dir=desc&order=popularity">Complete Hair Care Collection</a></li>
+            <li><a href="/hair-care/hair/shampoo.html?root=nav_3&dir=desc&order=popularity">Shampoo</a></li>
+            <li><a href="/hair-care/hair/dry-shampoo.html?root=nav_3&dir=desc&order=popularity">Dry Shampoo</a></li>
+            <li><a href="/hair-care/hair/conditioner.html?root=nav_3&dir=desc&order=popularity">Conditioner</a></li>
+            <li><a href="/hair-care/hair/hair-oil.html?root=nav_3&dir=desc&order=popularity">Hair Oil</a></li>
+            <li><a href="/hair-care/hair/hair-serum.html?root=nav_3&dir=desc&order=popularity">Hair Serum</a></li>
+            <li><a href="/hair-care/hair/hair-creams-masks.html?root=nav_3&dir=desc&order=popularity">Hair Creams & Masks</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+          <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Styling</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/hair-care/hair-styling.html?root=nav_2&dir=desc&order=popularity">Complete Styling Collection</a></li>
+            <li><a href="/hair-care/hair-styling/hair-color.html?root=nav_3&dir=desc&order=popularity">Hair Color</a></li>
+            <li><a href="/hair-care/hair-styling/hair-spray.html?root=nav_3&dir=desc&order=popularity">Hair Spray</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+       <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Tools & Accessories</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/hair-care/tools-and-accessories.html?root=nav_2&dir=desc&order=popularity">Complete Tools & Accessories Collection</a></li>
+            <li><a href="/catalog/category/view/s/hair-brushes/id/2048/?root=nav_3&dir=desc&order=popularity">Hair Brushes</a></li>
+            <li><a href="/hair-care/tools-and-accessories/hair-combs.html?root=nav_3&dir=desc&order=popularity">Hair Combs</a></li>
+            <li><a href="/hair-care/tools-and-accessories/hair-dryers.html?root=nav_3&dir=desc&order=popularity">Dryers & Stylers</a></li>
+            <li><a href="/hair-care/tools-and-accessories/hair-straightening-irons.html?root=nav_3&dir=desc&order=popularity">Straighteners</a></li>
+            <li><a href="/hair-care/tools-and-accessories/hair-rollers.html?root=nav_3&dir=desc&order=popularity">Rollers</a></li>
+            <li><a href="/hair-care/tools-and-accessories/hair-curlers.html?root=nav_3&dir=desc&order=popularity">Curlers</a></li>
+            <li><a href="/hair-care/tools-and-accessories/hair-extensions.html?root=nav_3&dir=desc&order=popularity">Hair Extensions</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a>Shop By Concern</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/hair-care/shop-by-concern.html?root=nav_2&dir=desc&order=popularity">Complete Shop by Concern Collection</a></li>
+            <li><a href="/hair-care/shop-by-concern/hairfall-thinning.html?root=nav_3&dir=desc&order=popularity">Hairfall & Thinning</a></li>
+            <li><a href="/hair-care/shop-by-concern/dandruff.html?root=nav_3&dir=desc&order=popularity">Dandruff</a></li>
+            <li><a href="/hair-care/shop-by-concern/dry-frizzy-hair.html?root=nav_3&dir=desc&order=popularity">Dry & Frizzy Hair</a></li>
+            <li><a href="/hair-care/shop-by-concern/split-ends.html?root=nav_3&dir=desc&order=popularity">Split Ends</a></li>
+            <li><a href="/hair-care/shop-by-concern/curls-waves.html?root=nav_3&dir=desc&order=popularity">Curls & Waves</a></li>
+            <li><a href="/hair-care/shop-by-concern/color-protection.html?root=nav_3&dir=desc&order=popularity">Color Protection</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Quick Links</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/hair-combos-sale.html?root=nav_3&dir=desc&order=popularity">Combos</a></li>
+            <li><a href="/hair-care/new-at-nykaa.html?root=nav_3&dir=desc&order=popularity">New @ Nykaa</a></li>
+            <li><a href="/hair-care/bestsellers.html?root=nav_3&dir=desc&order=popularity">Bestsellers</a></li>
+            <li><a href="/herbal/haircare.html?root=nav_3&dir=desc&order=popularity">Herbal Hair Care</a></li>
+            <li><a href="/beauty-routine-finder?root=nav_3">Routine Finder</a></li>
+            <li><a href="http://www.nykaa.com/nykaa-femina-beauty-awards-winners-2017">Nykaa Femina Beauty Award Winners '17</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+         </div>
+         </div>
+            
+            
+
+          </div>
+           <div> 
+            <div class="catimg center">
+               <div class="cateimg"><img src="http://www.nykaa.com/media/wysiwyg/nykaa-mobile/categories/personal-care-min.png"></div>
+               <div class="catedesc">Personal <br> Care</div>
+            </div>
+            <div class="catimg center">
+               <div class="cateimg"><img src="http://www.nykaa.com/media/wysiwyg/nykaa-mobile/categories/herbal-min.png"></div>
+               <div class="catedesc">Herbal<br>&nbsp;</div>
+            </div>
+            <div class="catimg center">
+               <div class="cateimg"><img src="http://www.nykaa.com/media/wysiwyg/nykaa-mobile/categories/luxe-mina.png"></div>
+               <div class="catedesc">Luxe<br>&nbsp;</div>
+            </div>
+      </div>
+           <div>
+<div class="menuwrap">
+          <div class="accordion_example2">
+            <div class="head-acc phead accordion_in"><a href="/personal-care.html?root=nav_1&dir=desc&order=popularity">Complete Personal Care Collection</a></div>
+          <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Bath</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/personal-care/bath.html?root=nav_2&dir=desc&order=popularity">Complete Bath Collection</a></li>
+            <li><a href="/personal-care/bath/showergels.html?root=nav_3&dir=desc&order=popularity" class=""> Shower Gels</a></li>
+            <li><a href="/personal-care/bath/scrubs-and-exfoliants.html?root=nav_3&dir=desc&order=popularity" class=""> Scrubs & Exfoliants</a></li>
+            <li><a href="/personal-care/bath/soaps.html?root=nav_3&dir=desc&order=popularity" class="">Soaps</a></li>
+            <li><a href="/personal-care/bath/bath-salts.html?root=nav_3&dir=desc&order=popularity" class=""> Bath Salts</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+          <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Body</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/personal-care/body.html?root=nav_2&dir=desc&order=popularity"> Complete Body Collection</a></li>
+            <li><a href="/personal-care/body/moisturizing-lotion.html?root=nav_3&dir=desc&order=popularity" class=""> Lotions & Creams</a></li>
+            <li><a href="/personal-care/body/talcum-powder.html?root=nav_3&dir=desc&order=popularity" class=""> Talcum Powder</a></li>
+            <li><a href="/personal-care/body/deodorants-roll-ons.html?root=nav_3&dir=desc&order=popularity" class=""> Deodorants/Roll Ons</a></li>
+            <li><a href="/personal-care/body/body-mist-spray.html?root=nav_3&dir=desc&order=popularity" class=""> Body Mist/Spray</a></li>
+            <li><a href="/personal-care/body/perfumes-edt-edp.html?root=nav_3&dir=desc&order=popularity" class=""> Perfumes (EDT & EDP)</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Face</a></div>
+        <div class="acc_content">
+          <ul>
+      <li><a href="/personal-care/face.html?root=nav_2&dir=desc&order=popularity"> Complete Face Collection</a></li>
+      <li><a href="/personal-care/face/facewash.html?root=nav_3&dir=desc&order=popularity" class=""> Facewash</a></li>
+            <li><a href="/personal-care/face/moisturizer.html?root=nav_3&dir=desc&order=popularity" class=""> Moisturizer</a></li>
+            <li><a href="/personal-care/face/sunscreen.html?root=nav_3&dir=desc&order=popularity" class=""> Sunscreen</a></li>
+            <li><a href="/personal-care/face/facialwipes.html?root=nav_3&dir=desc&order=popularity" class=""> Face Wipes</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Hair</a></div>
+        <div class="acc_content">
+          <ul>
+      <li><a href="/personal-care/hair.html?root=nav_2&dir=desc&order=popularity"> Complete Hair Collection</a></li>
+      <li><a href="/personal-care/hair/shampoo.html?root=nav_3&dir=desc&order=popularity" class=""> Shampoo</a></li>
+            <li><a href="/personal-care/hair/conditioner.html?root=nav_3&dir=desc&order=popularity" class=""> Conditioner</a></li>
+            <li><a href="/personal-care/hair/hair-color.html?root=nav_3&dir=desc&order=popularity" class=""> Hair Color</a></li>
+            <li><a href="/personal-care/hair/hair-oil.html?root=nav_3&dir=desc&order=popularity" class=""> Hair Oil</a></li>
+            <li><a href="/personal-care/hair/hair-serum.html?root=nav_3&dir=desc&order=popularity" class=""> Hair Serum</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Hands & Feet</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/personal-care/hands-and-feet.html?root=nav_2&dir=desc&order=popularity">Complete Hands & Feet Collection</a></li>
+            <li><a href="/personal-care/hands-and-feet/hand-creams.html?root=nav_3&dir=desc&order=popularity" class="">Hand Creams</a></li>
+            <li><a href="/personal-care/hands-and-feet/foot-creams.html?root=nav_3&dir=desc&order=popularity" class=""> Foot creams</a></li>
+            <li><a href="/personal-care/hands-and-feet/hand-sanitizer.html?root=nav_3&dir=desc&order=popularity" class="">Hand Sanitizer</a></li>
+            <li><a href="/personal-care/hands-and-feet/handwash.html?root=nav_3&dir=desc&order=popularity" class="">Handwash</a></li>          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Herbal</a></div>
+        <div class="acc_content">
+          <ul>
+      <li><a href="/personal-care/herbal.html?root=nav_2&dir=desc&order=popularity"> Complete Herbal Collection</a></li>
+      <li><a href="/personal-care/herbal/skin.html?root=nav_3&dir=desc&order=popularity" class=""> Skin</a></li>
+            <li><a href="/personal-care/herbal/hair.html?root=nav_3&dir=desc&order=popularity" class=""> Hair</a></li>
+            <li><a href="/personal-care/herbal/bath-body.html?root=nav_3&dir=desc&order=popularity" class=""> Bath & Body</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+       <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a>Feminine Hygiene</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/personal-care/feminine-hygiene.html?root=nav_2&dir=desc&order=popularity"> Complete Feminine Hygiene Collection</a></li>
+            <li><a href="/personal-care/feminine-hygiene/hair-removal.html?root=nav_3&dir=desc&order=popularity" class=""> Hair Removal </a></li>
+            <li><a href="/personal-care/feminine-hygiene/happy-period.html?root=nav_3&dir=desc&order=popularity" class=""> Happy Period</a></li>
+            <li><a href="/personal-care/feminine-hygiene/intimate-care.html?root=nav_3&dir=desc&order=popularity" class=""> Intimate Care</a></li>
+            <li><a href="/personal-care/feminine-hygiene/cotton-buds-balls.html?root=nav_3&dir=desc&order=popularity" class=""> Cotton Buds & Balls</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+       <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a>Men's Grooming</a></div>
+        <div class="acc_content">
+          <ul>
+      <li><a href="/personal-care/men-s-grooming.html?root=nav_2&dir=desc&order=popularity"> Complete Men's Grooming Collection</a></li>
+      <li><a href="/personal-care/men-s-grooming/razors-cartridges.html?root=nav_3&dir=desc&order=popularity" class=""> Razors & Catridges </a></li>
+            <li><a href="/personal-care/men-s-grooming/shaving-cream-foams-gels.html?root=nav_3&dir=desc&order=popularity" class=""> Shaving Cream, Foams & Gels </a></li>
+            <li><a href="/personal-care/men-s-grooming/pre-post-shaves.html?root=nav_3&dir=desc&order=popularity" class=""> Pre & Post Shaves</a></li>
+      </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a>Dental Care</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/personal-care/dentalcare.html?root=nav_2&dir=desc&order=popularity"> Complete Dental Collection</a></li>
+            <li><a href="/personal-care/dentalcare/toothbrush-floss.html?root=nav_3&dir=desc&order=popularity" class=""> Toothbrush & Floss</a></li>
+            <li><a href="/personal-care/dentalcare/toothpaste.html?root=nav_3&dir=desc&order=popularity" class=""> Toothpaste</a></li>
+            <li><a href="/personal-care/dentalcare/mouthwash.html?root=nav_3&dir=desc&order=popularity" class="">Mouthwash </a></li>
+      </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+                    <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a>Tools & Accessories</a></div>
+        <div class="acc_content">
+          <ul>
+      <li><a href="/personal-care/tools-accessories.html?root=nav_2&dir=desc&order=popularity"> Complete Tools & Accessories Collection</a></li>
+      <li><a href="/personal-care/tools-accessories/manicure-pedicure-kits.html?root=nav_3&dir=desc&order=popularity" class=""> Manicure & Pedicure Kits</a></li>
+            <li><a href="/personal-care/tools-accessories/body-scrubbers-brushes.html?root=nav_3&dir=desc&order=popularity" class=""> Body Scrubbers & Brushes</a></li>
+            <li><a href="/personal-care/tools-accessories/loofahs-sponges.html?root=nav_3&dir=desc&order=popularity" class=""> Loofahs & Sponges</a></li>                                    
+            <li><a href="/personal-care/tools-accessories/shower-caps.html?root=nav_3&dir=desc&order=popularity" class=""> Shower Caps</a></li>
+      </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a>Miscellaneous</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/personal-care/miscellaneous.html?root=nav_2&dir=desc&order=popularity"> Complete Miscellaneous Collection</a></li>
+            <li><a href="/personal-care/miscellaneous/insect-repellents.html?root=nav_3&dir=desc&order=popularity" class=""> Insect Repellents</a></li>
+            <li><a href="/personal-care/miscellaneous/pepperspray.html?root=nav_3&dir=desc&order=popularity" class=""> Pepper Spray</a></li>
+            <li><a href="/personal-care/miscellaneous/airfreshener.html?root=nav_3&dir=desc&order=popularity" class=""> Air Fresheners</a></li>
+      </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+                    <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a>Travel Essentials</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/personal-care/travel-essentials.html?root=nav_2&dir=desc&order=popularity"> Complete Travel Essentials Collection</a></li>
+      </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+                    <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a>Quick Links</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/personal-care/combos-at-nykaa.html?root=nav_3&dir=desc&order=popularity">Combos @ Nykaa</a></li>                                   
+            <li><a href="/personal-care/new-launches.html?root=nav_3&dir=desc&order=popularity">New Launches</a></li>
+            <li><a href="/nykaa-femina-beauty-awards-winners-2017">Nykaa Femina Beauty Award Winners '17</a></li>
+            <li><a href="/personal-care/gifts-at-nykaa.html?root=nav_3&dir=desc&order=popularity">Gifts @ Nykaa</a></li> 
+
+            <li><a href="/routine-finder-v2?root=nav_3&dir=desc&order=popularity">Routine Finder</a></li>     </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+         </div>
+         </div>
+<div class="menuwrap">
+          <div class="accordion_example2">
+            <div class="head-acc phead accordion_in"><a href="/herbal-sale-online.html?root=nav_1&dir=desc&order=popularity" > Complete Herbal Collection</a></div>
+          <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a>Makeup</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/herbal/makeup.html?root=nav_2&dir=desc&order=popularity"> Complete Makeup Collection</a></li>
+            <li><a href="/herbal/makeup/lipstick.html?root=nav_3&dir=desc&order=popularity" class=""> Lipstick</a></li>
+            <li><a href="/herbal/makeup/lip-gloss.html?root=nav_3&dir=desc&order=popularity" class=""> Lip Gloss</a></li>
+            <li><a href="/herbal/makeup/lip-balm.html?root=nav_3&dir=desc&order=popularity" class=""> Lip Balm</a></li>
+            <li><a href="/herbal/makeup/kajal.html?root=nav_3&dir=desc&order=popularity" class=""> Kajal</a></li>
+            <li><a href="/herbal/makeup/eyeliner.html?root=nav_3&dir=desc&order=popularity" class=""> Eyeliner</a></li>
+            <li><a href="/herbal/makeup/mascara.html?root=nav_3&dir=desc&order=popularity" class=""> Mascara</a></li>
+            <li><a href="/herbal/makeup/nail-paint.html?root=nav_3&dir=desc&order=popularity" class=""> Nail Paint</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+          <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Skin</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/herbal/skin.html?root=nav_2&dir=desc&order=popularity"> Complete Skin Collection</a></li>
+            <li><a href="/herbal/skin/facewash.html?root=nav_3&dir=desc&order=popularity" class=""> Face Wash</a></li>
+            <li><a href="/herbal/skin/face-cream.html?root=nav_3&dir=desc&order=popularity" class=""> Face Cream</a></li>
+            <li><a href="/herbal/skin/cleanser.html?root=nav_3&dir=desc&order=popularity" class="">Cleanser </a></li>
+            <li><a href="/herbal/skin/toner.html?root=nav_3&dir=desc&order=popularity" class=""> Toner</a></li>
+            <li><a href="/herbal/skin/moisturizers.html?root=nav_3&dir=desc&order=popularity" class=""> Moisturizer</a></li>
+            <li><a href="/herbal/skin/sunscreen.html?root=nav_3&dir=desc&order=popularity" class=""> Sunscreen</a></li>
+            <li><a href="/herbal/skin/daycream.html?root=nav_3&dir=desc&order=popularity" class=""> Day Cream</a></li>
+            <li><a href="/herbal/skin/nightcream.html?root=nav_3&dir=desc&order=popularity" class="">Night Cream</a></li>
+            <li><a href="/herbal/skin/scrubs-exfoliators.html?root=nav_3&dir=desc&order=popularity" class="">Scrubs & Exfoliators</a></li>
+            <li><a href="/herbal/skin/masks-peels.html?root=nav_3&dir=desc&order=popularity" class=""> Masks & Peels</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a>Hair Care</a></div>
+        <div class="acc_content">
+
+          <ul>
+            <li><a href="/herbal/hair.html?root=nav_2&dir=desc&order=popularity"> Complete Hair Collection</a></li>
+            <li><a href="/herbal/hair/hair-oil.html?root=nav_3&dir=desc&order=popularity" class=""> Hair Oil</a></li>
+            <li><a href="/herbal/hair/shampoo.html?root=nav_3&dir=desc&order=popularity" class="">Shampoo</a></li>
+            <li><a href="/herbal/hair/conditioner.html?root=nav_3&dir=desc&order=popularity" class=""> Conditioner</a></li>
+            <li><a href="/herbal/hair/serum.html?root=nav_3&dir=desc&order=popularity" class=""> Serum</a></li>
+            <li><a href="/herbal/hair/hair-color.html?root=nav_3&dir=desc&order=popularity" class=""> Hair Color</a></li>
+
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Bath & Body</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/herbal/bathandbody.html?root=nav_2&dir=desc&order=popularity"> Complete Bath & Body Collection</a></li>
+            <li><a href="/herbal/bathandbody/bath-gels.html?root=nav_3&dir=desc&order=popularity" class=""> Bath Gels</a></li>
+            <li><a href="/herbal/bathandbody/soaps.html?root=nav_3&dir=desc&order=popularity" class="">Soaps</a></li>
+            <li><a href="/herbal/bathandbody/body-scrubs.html?root=nav_3&dir=desc&order=popularity" class=""> Body Scrubs</a></li>
+            <li><a href="/herbal/bathandbody/bathsalts.html?root=nav_3&dir=desc&order=popularity" class=""> Bath Salts</a></li>
+            <li><a href="/herbal/bathandbody/massageoils.html?root=nav_3&dir=desc&order=popularity" class=""> Massage Oil</a></li>
+            <li><a href="/herbal/bathandbody/aromatherapy-essential-oils.html?root=nav_3&dir=desc&order=popularity" class=""> Aromatherapy/Essential Oils</a></li>
+            <li><a href="/herbal/bathandbody/hand-foot-creams.html?root=nav_3&dir=desc&order=popularity" class="">Hand & Foot Creams</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Shop By Concern</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/herbal/shop-by-concern/skin-lightening.html?root=nav_3&dir=desc&order=popularity" class=""> Skin Lightening</a></li>
+            <li><a href="/herbal/shop-by-concern/pigmentation.html?root=nav_3&dir=desc&order=popularity" class=""> Pigmentation</a></li>
+            <li><a href="/herbal/shop-by-concern/tan-removal.html?root=nav_3&dir=desc&order=popularity" class=""> Tan Removal</a></li>
+            <li><a href="/herbal/shop-by-concern/dullness.html?root=nav_3&dir=desc&order=popularity" class=""> Dullness</a></li>
+            <li><a href="/herbal/shop-by-concern/acne-treatment.html?root=nav_3&dir=desc&order=popularity" class=""> Acne Treatment</a></li>
+            <li><a href="/herbal/shop-by-concern/anti-ageing.html?root=nav_3&dir=desc&order=popularity" class=""> Anti-Ageing</a></li>
+            <li><a href="/herbal/shop-by-concern/oil-control.html?root=nav_3&dir=desc&order=popularity" class=""> Oil Control</a></li>
+            <li><a href="/herbal/shop-by-concern/darkcircles-wrinkles.html?root=nav_3&dir=desc&order=popularity" class=""> Dark Circles/Wrinkles</a></li>
+            <li><a href="/herbal/shop-by-concern/hairfall.html?root=nav_3&dir=desc&order=popularity" class=""> Hairfall</a></li>
+            <li><a href="/herbal/shop-by-concern/dandruff.html?root=nav_3&dir=desc&order=popularity" class=""> Dandruff</a></li>
+            <li><a href="/herbal/shop-by-concern/dry-frizzy-hair.html?root=nav_3&dir=desc&order=popularity" class=""> Dry & Frizzy Hair</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Quick Links</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="http://www.nykaa.com/herbal/new-at-nykaa.html?root=nav_3&dir=desc&order=popularity">New @ Nykaa</a></li>
+            <li><a href="http://www.nykaa.com/herbal/nykaa-bestsellers.html?root=nav_3&dir=desc&order=popularity">Bestsellers</a></li>
+            <!--<li><a href="http://www.nykaa.com/herbal/nykaa-bestsellers.html?root=nav_3&dir=desc&order=popularity">Essential Oils</a></li>-->
+            <li><a href="http://www.nykaa.com/beauty-award-winners.html?root=nav_3&dir=desc&order=popularity">Nykaa Femina Beauty Award Winners Collection</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+         </div>
+         </div>
+ <div class="menuwrap">
+           <div id="content">
+      <div class="u-vmenu">
+      <div class="menutitle"><a href="/luxury?root=nav_1&dir=desc&order=popularity">Complete luxe collection</a></div>
+        <ul>
+          <li>
+            <a href="#nogo">Makeup</a>
+            <ul>
+              <li><a href="/luxe/makeup.html?root=nav_2&dir=desc&order=popularity">Complete makeup collection</a>
+              </li>
+              <li>
+                <a href="#nogo">Face</a>
+                <ul>
+                    <li><a href="/luxe/makeup/face.html?root=nav_3&dir=desc&order=popularity" class=""> Complete Face Collection</a></li>
+                    <li><a href="/luxe/makeup/face/primer.html?root=nav_4&dir=desc&order=popularity" class=""> Primer</a></li>
+                    <li><a href="/luxe/makeup/face/concealer.html?root=nav_4&dir=desc&order=popularity" class=""> Concealer</a></li>
+                    <li><a href="/luxe/makeup/face/foundation.html?root=nav_4&dir=desc&order=popularity" class=""> Foundation</a></li>
+                    <li><a href="/luxe/makeup/face/compact.html?root=nav_4&dir=desc&order=popularity" class=""> Compact</a></li>
+                    <li><a href="/luxe/makeup/face/loose-powder.html?root=nav_4&dir=desc&order=popularity" class=""> Loose Powder</a></li>
+                    <li><a href="/luxe/makeup/face/blush.html?root=nav_4&dir=desc&order=popularity" class=""> Blush</a></li>
+                    <li><a href="/luxe/makeup/face/bronzer.html?root=nav_4&dir=desc&order=popularity" class=""> Bronzer</a></li>
+                    <li><a href="/luxe/makeup/face/highlighter.html?root=nav_4&dir=desc&order=popularity" class=""> Highlighter</a></li>
+                    <li><a href="/luxe/makeup/face/tinted-moisturizer.html?root=nav_4&dir=desc&order=popularity" class=""> Tinted Moisturizer</a></li>
+                    <li><a href="/luxe/makeup/face/bb-cc-cream.html?root=nav_4&dir=desc&order=popularity" class=""> BB & CC Cream</a></li>
+                    <li><a href="/luxe/makeup/face/makeup-remover.html?root=nav_4&dir=desc&order=popularity" class=""> Makeup Remover</a></li>
+                    <li><a href="/luxe/makeup/face/contouring.html?root=nav_4&dir=desc&order=popularity" class=""> Contouring</a></li>
+                    <li><a href="/luxe/makeup/face/customize-your-palette.html?root=nav_4&dir=desc&order=popularity" class=""> Customize Your Palette</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#nogo">Eyes</a>
+                <ul>
+                    <li><a href="/luxe/makeup/eyes.html?root=nav_3&dir=desc&order=popularity">Complete Eyes Collection</a></li>
+                    <li><a href="/luxe/makeup/eyes/eyeliner-kajal.html?root=nav_4&dir=desc&order=popularity" class=""> Eyeliner & Kajal</a></li>
+                    <li><a href="/luxe/makeup/eyes/mascara.html?root=nav_4&dir=desc&order=popularity" class=""> Mascara</a></li>
+                    <li><a href="/luxe/makeup/eyes/eye-shadow.html?root=nav_4&dir=desc&order=popularity" class=""> Eye Shadow</a></li>
+                    <li><a href="/luxe/makeup/eyes/brows.html?root=nav_4&dir=desc&order=popularity" class=""> Brows</a></li>
+                    <li><a href="/luxe/makeup/eyes/lashes.html?root=nav_4&dir=desc&order=popularity" class=""> Lashes</a></li>
+                    <li><a href="/luxe/makeup/eyes/eye-primer.html?root=nav_4&dir=desc&order=popularity" class=""> Eye Primer</a></li>
+                    <li><a href="/luxe/makeup/eyes/concealer.html?root=nav_4&dir=desc&order=popularity" class=""> Concealer</a></li>
+                    <li><a href="/luxe/makeup/eyes/customize-your-palette.html?root=nav_4&dir=desc&order=popularity" class=""> Customize Your Palette</a></li>
+                </ul>
+              </li>
+              <li>
+
+                <a href="#nogo">Lips</a>
+                <ul>
+                    <li><a href="/luxe/makeup/lips.html?root=nav_3&dir=desc&order=popularity">Complete Lips Collection</a></li>
+                    <li><a href="/luxe/makeup/lips/lipstick.html?root=nav_4&dir=desc&order=popularity"> Lipstick</a></li>
+                    <li><a href="/luxe/makeup/lips/lip-gloss.html?root=nav_4&dir=desc&order=popularity" class=""> Lip Gloss</a></li>
+                    <li><a href="/luxe/makeup/lips/lip-liner.html?root=nav_4&dir=desc&order=popularity" class=""> Lip Liner</a></li>
+                    <li><a href="/luxe/makeup/lips/lip-balm.html?root=nav_4&dir=desc&order=popularity" class=""> Lip Balm</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#nogo">Nails</a>
+                <ul>
+                    <li><a href="/luxe/makeup/nails.html?root=nav_3&dir=desc&order=popularity">Complete Nail Collection</a></li>
+                    <li><a href="/luxe/makeup/nails/nail-polish.html?root=nav_4&dir=desc&order=popularity" class=""> Nail Polish</a></li>
+                    <li><a href="/luxe/makeup/nails/nail-care.html?root=nav_4&dir=desc&order=popularity" class=""> Nail Care</a></li>
+                    <li><a href="/luxe/makeup/nails/nail-polish-remover.html?root=nav_4&dir=desc&order=popularity" class=""> Nail Polish Remover</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#nogo">Palettes</a>
+                <ul>
+                    <li><a href="/luxe/makeup/palettes.html?root=nav_3&dir=desc&order=popularity">Complete Palettes Collection</a></li>
+                    <li><a href="/luxe/makeup/palettes/eye-palette.html?root=nav_4&dir=desc&order=popularity"> Eye Palette</a></li>
+                    <li><a href="/luxe/makeup/palettes/face-palette.html?root=nav_4&dir=desc&order=popularity" class=""> Face Palette</a></li>
+                    <li><a href="/luxe/makeup/palettes/customize-your-palette.html?root=nav_4&dir=desc&order=popularity" class=""> Customize Your Palette</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#nogo">Tools & Brushes</a>
+                <ul>
+                    <li><a href="/luxe/makeup/tools-brushes.html?root=nav_3&dir=desc&order=popularity">Complete Tools & Brushes Collection</a></li>
+                    <li><a href="/luxe/makeup/tools-brushes/face-brush.html?root=nav_4&dir=desc&order=popularity"> Face Brush</a></li>
+                    <li><a href="/luxe/makeup/tools-brushes/eye-brush.html?root=nav_4&dir=desc&order=popularity" class=""> Eye Brush</a></li>
+                    <li><a href="/luxe/makeup/tools-brushes/lip-brush.html?root=nav_4&dir=desc&order=popularity" class=""> Lip Brush</a></li>
+                    <li><a href="/luxe/makeup/tools-brushes/applicators.html?root=nav_4&dir=desc&order=popularity" class=""> Applicators</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#nogo">Skin</a>
+            <ul>
+              <li><a href="/luxe/skin.html?root=nav_3&dir=desc&order=popularity">Complete Skin Collection</a>
+              </li>
+              <li>
+                <a href="#nogo">Face</a>
+                <ul>
+                    <li> <a href="/luxe/skin/face.html?root=nav_3&dir=desc&order=popularity">Complete Face Collection</a> </li>
+                    <li><a href="/luxe/skin/face/face-wash.html?root=nav_4&dir=desc&order=popularity" class=""> Face Wash</a></li>
+                    <li><a href="/luxe/skin/face/cleanser.html?root=nav_4&dir=desc&order=popularity"> Cleansers</a></li>
+                    <li><a href="/luxe/skin/face/toner.html?root=nav_4&dir=desc&order=popularity" class=""> Toner</a></li>
+                    <li><a href="/luxe/skin/face/exfoliators.html?root=nav_4&dir=desc&order=popularity" class=""> Exfoliators</a></li>
+                    <li><a href="/luxe/skin/face/serums.html?root=nav_4&dir=desc&order=popularity"> Serum</a></li>
+                    <li><a href="/luxe/skin/face/moisturisers.html?root=nav_4&dir=desc&order=popularity"> Moisturisers</a></li>
+                    <li><a href="/luxe/skin/face/day-cream.html?root=nav_4&dir=desc&order=popularity" class=""> Day Cream</a></li>
+                    <li><a href="/luxe/skin/face/night-cream.html?root=nav_4&dir=desc&order=popularity" class=""> Night Cream</a></li>
+                    <li><a href="/luxe/skin/face/masks.html?root=nav_4&dir=desc&order=popularity" class=""> Masks</a></li>
+                    <li><a href="/luxe/skin/face/sunscreen.html?root=nav_4&dir=desc&order=popularity" class=""> Sunscreen</a></li>
+                    <li><a href="/luxe/skin/face/face-mist.html?root=nav_4&dir=desc&order=popularity" class=""> Face Mist</a></li>
+                    <li><a href="/luxe/skin/face/makeup-remover.html?root=nav_4&dir=desc&order=popularity" class=""> Makeup Remover</a></li>
+                    <li><a href="/luxe/skin/face/shaving.html?root=nav_4&dir=desc&order=popularity" class=""> Shaving</a></li>
+                </ul>
+              </li>
+              <li><a href="/luxe/skin/lip-care.html?root=nav_3&dir=desc&order=popularity"> Lip Care </a>
+              </li>
+              <li>
+                <a href="#nogo">Eye Care</a>
+                <ul>
+                    <li><a href="/luxe/skin/eye-care.html?root=nav_3&dir=desc&order=popularity">Complete Eye Care Collection</a></li>
+                    <li><a href="/luxe/skin/eye-care/eye-cream.html?root=nav_4&dir=desc&order=popularity" class=""> Eye Cream</a></li>
+                    <li><a href="/luxe/skin/eye-care/serum.html?root=nav_4&dir=desc&order=popularity" class=""> Serum</a></li>
+                    <li><a href="/luxe/skin/eye-care/dark-circles.html?root=nav_4&dir=desc&order=popularity" class=""> Dark Circles</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#nogo">Shop By Concern</a>
+            <ul>
+              <li><a href="/luxe/shop-by-concern.html?root=nav_3&dir=desc&order=popularity" class=""> Complete Shop By Concern Collection</a></li>
+              <li><a href="/luxe/shop-by-concern/anti-blemish.html?root=nav_3&dir=desc&order=popularity" class=""> Anti-Blemish</a></li>
+              <li><a href="/luxe/shop-by-concern/brightening.html?root=nav_3&dir=desc&order=popularity" class=""> Brightening</a></li>
+              <li><a href="/luxe/shop-by-concern/pigmentation.html?root=nav_3&dir=desc&order=popularity" class=""> Pigmentation</a></li>
+              <li><a href="/luxe/shop-by-concern/oil-control.html?root=nav_3&dir=desc&order=popularity" class=""> Oil Control</a></li>
+              <li><a href="/luxe/shop-by-concern/dryness.html?root=nav_3&dir=desc&order=popularity" class=""> Dryness</a></li>
+              <li><a href="/luxe/shop-by-concern/anti-ageing.html?root=nav_3&dir=desc&order=popularity" class=""> Anti-Ageing</a></li>
+            </ul>
+          </li>
+          <li><a href="#nogo">Fragrance</a>
+            <ul>
+              <li><a href="/luxe/fragrance.html?root=nav_2&dir=desc&order=popularity" class=""> Complete Fragrance Collection</a></li>
+              <li><a href="/luxe/fragrance/women-s-fragrance.html?root=nav_3&dir=desc&order=popularity"> Women's Fragrance</a></li>
+              <li><a href="/luxe/fragrance/men-s-fragrance.html?root=nav_3&dir=desc&order=popularity"> Men's Fragrance</a></li>
+              <li><a href="/luxe/fragrance/unisex-fragrance.html?root=nav_3&dir=desc&order=popularity" class=""> Unisex Fragrance</a></li>
+              <li><a href="/luxe/fragrance/candles-incense.html?root=nav_3&dir=desc&order=popularity" class=""> Candles & Incense</a></li>
+              <li><a href="/luxe/fragrance/gifts.html?root=nav_3&dir=desc&order=popularity" class=""> Gifts</a></li>
+            </ul>
+          </li>
+          <li><a href="#nogo">Hair</a>
+            <ul>
+              <li><a href="/luxe/hair.html?root=nav_2&dir=desc&order=popularity" class=""> Complete Hair Collection</a></li>
+              <li><a href="/luxe/hair/shampoos.html?root=nav_3&dir=desc&order=popularity"> Shampoo</a></li>
+              <li><a href="/luxe/hair/conditioners.html?root=nav_3&dir=desc&order=popularity"> Conditioner</a></li>
+              <li><a href="/luxe/hair/oils.html?root=nav_3&dir=desc&order=popularity"> Oil</a></li>
+              <li><a href="/luxe/hair/treatments?root=nav_3&dir=desc&order=popularity"> Treatment</a></li>
+              <li><a href="/luxe/hair/hair-styling.html?root=nav_3&dir=desc&order=popularity" class=""> Hair Styling</a></li>
+              <li><a href="/luxe/hair/hair-color.html?root=nav_3&dir=desc&order=popularity" class=""> Hair Color</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#nogo">Bath & Body</a>
+            <ul>
+              <li><a href="/luxe/bath-body.html?root=nav_2&dir=desc&order=popularity">Complete Bath & Body Collection</a>
+              </li>
+              <li>
+                <a href="#nogo">Bath</a>
+                <ul>
+                    <li><a href="/luxe/bath-body/bath.html?root=nav_3&dir=desc&order=popularity">Complete Bath Collection</a></li>
+                    <li><a href="/luxe/bath-body/bath/soaps.html?root=nav_4&dir=desc&order=popularity"> Soap</a></li>
+                    <li><a href="/luxe/bath-body/bath/shower-gels.html?root=nav_4&dir=desc&order=popularity"> Shower Gel</a></li>
+                    <li><a href="/luxe/bath-body/body/scrubs-exfoliators.html?root=nav_4&dir=desc&order=popularity" > Scrubs & Exfoliators</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#nogo">Body</a>
+                <ul>
+                    <li><a href="/luxe/bath-body/body.html?root=nav_3&dir=desc&order=popularity">Complete Body Collection</a></li>
+                    <li><a href="/luxe/bath-body/body/moisturisers.html?root=nav_4&dir=desc&order=popularity"> Moisturiser</a></li>
+                    <li><a href="/luxe/bath-body/body/oils.html?root=nav_4&dir=desc&order=popularity" > Oil</a></li>
+                    <li><a href="/luxe/bath-body/body/hands-feet.html?root=nav_4&dir=desc&order=popularity" > Hands & Feet</a></li>
+                    <li><a href="/luxe/bath-body/body/deodorants.html?root=nav_4&dir=desc&order=popularity" > Deodorant</a></li>
+                    <li><a href="/luxe/bath-body/body/essential-oils.html?root=nav_4&dir=desc&order=popularity" > Essential Oil</a></li>
+                    <li><a href="/luxe/bath-body/body/sun-protection.html?root=nav_4&dir=desc&order=popularity" > Sun Protection</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="/luxe/gifts.html?root=nav_2">Gifts</a>
+          </li>
+          <li><a href="/luxe-letters-week-99100101?root=nav_2">Luxe Letters</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+         </div>
+        </div>
+
+
+           <div> 
+            <div class="catimg center">
+               <div class="cateimg"><img src="http://www.nykaa.com/media/wysiwyg/nykaa-mobile/categories/frangrance.png"></div>
+               <div class="catedesc">Fragrance<br>&nbsp;</div>
+            </div>
+            <div class="catimg center">
+               <div class="cateimg"><img src="http://www.nykaa.com/media/wysiwyg/nykaa-mobile/categories/mens-min.png"></div>
+               <div class="catedesc">Men's<br>&nbsp;</div>
+            </div>
+            <div class="catimg center showmorecate">
+
+               <div class="cateimg"><img src="http://www.nykaa.com/media/wysiwyg/nykaa-mobile/categories/wellness-min.png"></div>
+               <div class="catedesc">Wellness<br>&nbsp;</div>
+            </div>
+            <div class="catimgext center morebtn">
+               <div class="cateimg"><img src="http://www.nykaa.com/media/wysiwyg/nykaa-mobile/categery9.png"></div>
+               <div class="catedesc">More<br>&nbsp;</div>
+            </div>
+       </div>
+        <div>
+<div class="menuwrap">
+          <div class="accordion_example2">
+            <div class="head-acc phead accordion_in"><a href="/fragrance.html?root=nav_1&dir=desc&order=popularity" > Complete fragrance Collection</a></div>
+          <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Women</a></div>
+        <div class="acc_content">
+          <ul>
+        <li><a href="/fragrance/women.html?root=nav_2&dir=desc&order=popularity">Complete Women Collection</a></li>
+        <li><a href="/fragrance/women/perfume.html?root=nav_3&dir=desc&order=popularity">Perfumes</a></li>
+        <li><a href="/fragrance/women/body-mist-spray.html?root=nav_3&dir=desc&order=popularity"> Body Mist/Spray</a></li>
+        <li><a href="/fragrance/women/deodorants-roll-on.html?root=nav_3&dir=desc&order=popularity"> Deodorants/Roll-ons</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+          <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Men</a></div>
+        <div class="acc_content">
+          <ul>
+  <li><a href="/fragrance/men.html?root=nav_2&dir=desc&order=popularity">Complete Men Collection</a></li>
+  <li><a href="/fragrance/men/perfumes.html?root=nav_3&dir=desc&order=popularity">Perfumes</a></li>
+  <li><a href="/fragrance/men/edt-cologne-s.html?root=nav_3&dir=desc&order=popularity">Colognes</a></li>
+  <li><a href="/fragrance/men/aftershaves.html?root=nav_3&dir=desc&order=popularity">Aftershave</a></li>
+  <li><a href="/fragrance/men/deodorant-roll-on.html?root=nav_3&dir=desc&order=popularity"> Deodorants/Roll-ons</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Quick Links</a></div>
+        <div class="acc_content">
+          <ul>
+        <li><a href="/fragrance/perfumes.html?root=nav_3&dir=desc&order=popularity">Perfumes</a></li>
+        <li><a href="/fragrance/deodorants-rolls-ons.html?root=nav_3&dir=desc&order=popularity">Deodorants/Roll-ons</a></li>
+        <li><a href="/fragrance/men/aftershaves.html?root=nav_3&dir=desc&order=popularity">Aftershave</a></li>
+        <li><a href="/fragrance/giftsets.html?root=nav_3&dir=desc&order=popularity">Gift Sets</a></li>     
+            <li><a href="/nykaa-femina-beauty-awards-winners-2017">Nykaa Femina Beauty Award Winners '17</a></li>
+        <li><a href="/gifts/fragrance-gift-sets.html?root=nav_3&dir=desc&order=popularity">Gifts @ Nykaa</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+         </div>
+         </div>
+<div class="menuwrap">
+          <div class="accordion_example2">
+            <div class="head-acc phead accordion_in"><a href="/nykaa-mens-store?root=nav_1" > Complete Men's Store Collection</a></div>
+          <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Shaving</a></div>
+        <div class="acc_content">
+          <ul>
+        <li><a href="/mens/shaving.html?root=nav_men_1&dir=desc&order=popularity">Shaving</a></li>
+        <li><a href="/mens/shaving/razors-cartridges.html?root=nav_men_2&dir=desc&order=popularity">Razors &amp; cartridge</a></li>
+        <li><a href="/mens/shaving/shavers-trimmers.html?root=nav_men_2&dir=desc&order=popularity">Shavers &amp; Trimmers</a></li>
+        <li><a href="/mens/shaving/shaving-cream-gel.html?root=nav_men_2&dir=desc&order=popularity">Shaving Creams, Foams &amp; Gel</a></li>
+        <li><a href="/mens/shaving/shaving-cream-gel.html?root=nav_men_2&dir=desc&order=popularity"> Shaving Creams, Foams &amp; Gel</a></li>
+        <li><a href="/mens/shaving/pre-post-shaves.html?root=nav_men_2&dir=desc&order=popularity">Pre &amp; Post Shaves</a></li>
+        <li><a href="/mens/shaving/shaving-brushes.html?root=nav_men_2&dir=desc&order=popularity">Shaving Brushes</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+          <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Hair care</a></div>
+        <div class="acc_content">
+          <ul>
+    <li><a  href="/mens/hair-care.html?root=nav_men_1&dir=desc&order=popularity" id="L1_A1">Hair care</a></li>
+    <li><a href="/mens/hair-care/shampoo.html?root=nav_men_2&dir=desc&order=popularity">Shampoo</a></li>
+    <li><a href="/mens/hair-care/conditioner.html?root=nav_men_2&dir=desc&order=popularity">Conditioner</a></li>
+    <li><a href="/mens/hair-care/treatments.html?root=nav_men_2&dir=desc&order=popularity">Scalp Treatment</a></li>
+    <li><a href="/mens/hair-care/styling.html?root=nav_men_2&dir=desc&order=popularity">Styling</a></li>
+    <li><a href="/mens/hair-care/hair-color.html?root=nav_men_2&dir=desc&order=popularity">Hair Color</a></li>
+    <li><a href="/mens/hair-care/oils-masks.html?root=nav_men_2&dir=desc&order=popularity">Oil &amp; Masks</a></li>
+    <li><a href="/mens/hair-care/anti-dandruff.html?root=nav_men_2&dir=desc&order=popularity">Anti Dandruff</a></li>
+    <li><a href="/mens/hair-care/anti-hairfall.html?root=nav_men_2&dir=desc&order=popularity">Anti Hair Fall</a></li>
+    <li><a href="/mens/hair-care/professional.html?root=nav_men_2&dir=desc&order=popularity">Professional</a></li>
+    <li><a href="/mens/hair-care/tools.html?root=nav_men_2&dir=desc&order=popularity">Tools</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Skin care</a></div>
+        <div class="acc_content">
+          <ul>
+          <li><a href="/mens/skin-care.html?root=nav_men_1&dir=desc&order=popularity" id="L1_A2">Skin care</a>
+          <li><a href="/beard-care-products-online-sale.html?root=nav_3&dir=desc&order=popularity">Beard care</a>
+          <li><a href="/mens/skin-care/face-wash.html?root=nav_men_2&dir=desc&order=popularity?dir=desc&order=popularity&root=nav_men&nav_id=3%1%0">Face Wash</a></li>
+          <li><a href="/mens/skin-care/anti-acne.html?root=nav_men_2&dir=desc&order=popularity">Anti Acne</a></li>
+          <li><a href="/mens/skin-care/anti-ageing.html?root=nav_men_2&dir=desc&order=popularity">Anti Ageing</a></li>
+          <li><a href="/mens/skin-care/moisturizers.html?root=nav_men_2&dir=desc&order=popularity">Moisturisers</a></li>
+          <li><a href="/mens/skin-care/sunscreen.html?root=nav_men_2&dir=desc&order=popularity">Sunscreen</a></li>
+          <li><a href="/mens/skin-care/masks-peels.html?root=nav_men_2&dir=desc&order=popularity">Mask &amp; Peels</a></li>
+          <li><a href="/mens/skin-care/scrubs-and-exfoliants.html?root=nav_men_2&dir=desc&order=popularity">Scrubs &amp; Exfoliators</a></li>
+          <li><a href="/mens/skin-care/fairness.html?root=nav_men_2&dir=desc&order=popularity">Fairness</a></li>
+          <li><a href="/mens/skin-care/tools.html?root=nav_men_2&dir=desc&order=popularity">Tools</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Bath & Body</a></div>
+        <div class="acc_content">
+          <ul>
+          <li><a href="/mens/bath-body.html?root=nav_men_1&dir=desc&order=popularity" id="L1_A3">Bath &amp; Body</a></li>
+          <li><a href="/mens/bath-body/bath-shower-gels.html?root=nav_men_2&dir=desc&order=popularity" class="">Bath/Shower Gels</a></li>
+          <li><a href="/mens/bath-body/soaps.html?root=nav_men_2&dir=desc&order=popularity" class="">Soaps</a></li>
+          <li><a href="/mens/bath-body/body-scrubs.html?root=nav_men_2&dir=desc&order=popularity" class="">Body Scrubs</a></li>
+          <li><a href="/mens/bath-body/talc.html?root=nav_men_2&dir=desc&order=popularity" class=""> Talc</a></li>
+          <li><a href="/mens/bath-body/dental-care.html?root=nav_men_2&dir=desc&order=popularity" class=""> Dental Care</a></li>
+          <li><a href="/mens/bath-body/sunscreens.html?root=nav_men_2&dir=desc&order=popularity" class="">Sunscreens</a></li>
+          <li><a href="/mens/bath-body/body-lotion.html?root=nav_men_2&dir=desc&order=popularity" class="">Body Lotions</a></li>
+          <li><a href="/mens/bath-body/hand-and-foot-care.html?root=nav_men_2&dir=desc&order=popularity" class="">Hand &amp; Foot Care</a></li>
+          <li><a href="/mens/bath-body/massage-aromatherapy-oils.html?root=nav_men_2&dir=desc&order=popularity" class="">Massage &amp; Aromatherapy Oils</a></li>
+          <li><a href="/mens/bath-body/tools.html?root=nav_men_2&dir=desc&order=popularity" class="">Tools</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Fragrance</a></div>
+        <div class="acc_content">
+          <ul>
+          <li><a href="/fragrance/men.html?root=nav_men_1&dir=desc&order=popularity" id="L1_A4">Fragrance</a></li>
+          <li><a href="/fragrance/men/perfumes.html?root=nav_men_2&dir=desc&order=popularity" class="">Perfumes (EDT &amp; EDP)</a></li>
+          <li><a href="/fragrance/men/edt-cologne-s.html?root=nav_men_2&dir=desc&order=popularity " class="">Colognes</a></li>
+          <li><a href="/fragrance/men/deodorant-roll-on.html?root=nav_men_2&dir=desc&order=popularity" class="">Deodorants/Roll Ons</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Wellness</a></div>
+        <div class="acc_content">
+          <ul>
+          <li ><a href="/mens/wellness.html?root=nav_men_1&dir=desc&order=popularity" id="L1_A5">Wellness</a></li>
+          <li><a href="/mens/wellness/health-supplements.html?root=nav_men_2&dir=desc&order=popularity" class=""> Health Supplements</a></li>
+          <li><a href="/mens/wellness/health-support.html?root=nav_men_2&dir=desc&order=popularity" class="">Health Support</a></li>
+          <li><a href="/mens/wellness/weight-management.html?root=nav_men_2&dir=desc&order=popularity" class="">Weight Management</a></li>
+          <li><a href="/mens/wellness/sports-nutrition.html?root=nav_men_2&dir=desc&order=popularity" class="">Sports Nutrition</a></li>
+          <li><a href="/mens/wellness/good-for-you.html?root=nav_men_2&dir=desc&order=popularity" class=""> Good For You</a></li>
+      </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Herbal</a></div>
+        <div class="acc_content">
+          <ul>
+          <li><a href="/mens/herbal.html?root=nav_men_1&dir=desc&order=popularity" id="L1_A6">Herbal</a></li>
+          <li><a href="/mens/herbal/skin-care.html?root=nav_men_2&dir=desc&order=popularity" class="">Skin Care</a></li>
+          <li><a href="/mens/herbal/hair-care.html?root=nav_men_2&dir=desc&order=popularity" class="">Hair Care</a></li>
+          <li><a href="/mens/herbal/bath-body.html?root=nav_men_2&dir=desc&order=popularity" class="">Bath &amp; Body </a></li>
+      </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Quick Links</a></div>
+        <div class="acc_content">
+          <ul>
+          <li><a href="/mens/herbal.html?root=nav_men_1&dir=desc&order=popularity" id="L1_A6">Herbal</a></li>
+          <li><a href="/mens/herbal/skin-care.html?root=nav_men_2&dir=desc&order=popularity" class="">Skin Care</a></li>
+          <li><a href="/mens/herbal/hair-care.html?root=nav_men_2&dir=desc&order=popularity" class="">Hair Care</a></li>
+          <li><a href="/mens/herbal/bath-body.html?root=nav_men_2&dir=desc&order=popularity" class="">Bath &amp; Body </a></li>
+      </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+         </div>
+         </div>
+<div class="menuwrap">
+          <div class="accordion_example2">
+            <div class="head-acc phead accordion_in"><a href="/best-wellness-products-online-sale?root=nav_1&dir=desc&order=popularity" > Complete health & wellness Collection</a></div>
+          <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Supplements</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/wellness/health-supplements.html?root=nav_2&dir=desc&order=popularity"> Complete Supplement Collection</a></li>
+            <li><a href="/wellness/health-supplements/multivitamins.html?root=nav_3&dir=desc&order=popularity"> Multivitamins</a></li>
+            <li><a href="/wellness/health-supplements/minerals.html?root=nav_3&dir=desc&order=popularity"> Minerals</a></li>
+            <li><a href="/wellness/health-supplements/omega-fatty-acids.html?root=nav_3&dir=desc&order=popularity"> Omega Fatty Acids</a></li>
+            <li><a href="/wellness/health-supplements/antioxidants.html?root=nav_3&dir=desc&order=popularity"> Antioxidants</a></li>
+            <li><a href="/wellness/health-supplements/coenzyme-q10.html?root=nav_3&dir=desc&order=popularity"> Coenzymes Q10</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Weight Management</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/wellness/weight-management.html?root=nav_2&dir=desc&order=popularity"> Complete Weight Management Collection</a></li>
+            <li><a href="/wellness/weight-management/weight-loss.html?root=nav_3&dir=desc&order=popularity"> Weight Loss</a></li>
+            <li><a href="/wellness/weight-management/weight-gain.html?root=nav_3&dir=desc&order=popularity">Weight Gain</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Shop By Concern</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/wellness/health-support.html?root=nav_2&dir=desc&order=popularity"> Complete Shop By Concern Collection</a></li>
+            <li><a href="/wellness/health-support/osteoporosisarthritis-supplements.html?root=nav_3&dir=desc&order=popularity"> Arthritis & Osteoporosis</a></li>
+            <li><a href="/wellness/health-support/asthma-supplements.html?root=nav_3&dir=desc&order=popularity">Asthma</a></li>
+            <li><a href="/wellness/health-supplements/bonesjointsmuscles-supplements.html?root=nav_3&dir=desc&order=popularity"> Bones & Joints</a></li>
+            <li><a href="/wellness/health-support/brain-memory.html?root=nav_3&dir=desc&order=popularity"> Brain & Memory</a></li>
+            <li><a href="/wellness/health-supplements/heartcardiovascular-supplements.html?root=nav_3&dir=desc&order=popularity"> Cardiovascular Health</a></li>
+            <li><a href="/wellness/health-support/diabetes-supplements.html?root=nav_3&dir=desc&order=popularity">Diabetes</a></li>
+            <li><a href="/wellness/health-support/digestion-supplements.html?root=nav_3&dir=desc&order=popularity"> Digestion</a></li>
+            <li><a href="/wellness/health-support/fatigue-supplements.html?root=nav_3&dir=desc&order=popularity"> Fatigue</a></li>
+            <li><a href="/wellness/health-supplements/immunity-supplements.html?root=nav_3&dir=desc&order=popularity">Immunity</a></li>
+            <li><a href="/wellness/health-support/insomnia-supplements.html?root=nav_3&dir=desc&order=popularity"> Insomnia</a></li>
+            <li><a href="/wellness/health-support/liverdysfunction-supplements.html?root=nav_3&dir=desc&order=popularity"> Liver Dysfunction</a></li>
+            <li><a href="/wellness/health-support/menopause.html?root=nav_3&dir=desc&order=popularity"> Menopause</a></li>
+            <li><a href="/wellness/health-support/pregnancy.html?root=nav_3&dir=desc&order=popularity"> Pregnancy</a></li>
+            <li><a href="/wellness/health-support/wellbeing.html?root=nav_3&dir=desc&order=popularity"> Well Being</a></li>
+            <li><a href="/wellness/health-supplements/hairskinnails-supplements.html?root=nav_3&dir=desc&order=popularity"> Hair, Skin & Nails</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Good For You</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/wellness/good-for-you.html?root=nav_2&dir=desc&order=popularity">Complete Good for You Collection</a></li>
+            <li><a href="/wellness/good-for-you/green-tea.html?root=nav_3&dir=desc&order=popularity"> Green Tea</a></li>
+            <li><a href="/wellness/good-for-you/herbal-tea.html?root=nav_3&dir=desc&order=popularity"> Herbal Tea</a></li>
+            <li><a href="/wellness/good-for-you/slimming-tea.html?root=nav_3&dir=desc&order=popularity"> Slimming Tea</a></li>
+            <li><a href="/wellness/good-for-you/black-tea.html?root=nav_3&dir=desc&order=popularity"> Black Tea</a></li>
+            <li><a href="/wellness/good-for-you/sugar-substitutes.html?root=nav_3&dir=desc&order=popularity"> Sugar Substitutes</a></li>
+      </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Sexual Wellness</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/wellness/sexual-wellness.html?root=nav_2&dir=desc&order=popularity">Complete Sexual Wellness Collection</a></li>
+            <li><a href="/wellness/sexual-wellness/condoms.html?root=nav_3&dir=desc&order=popularity">Condoms</a></li>
+            <li><a href="/wellness/sexual-wellness/lubricants.html?root=nav_3&dir=desc&order=popularity">Lubricants</a></li>
+            <li><a href="/wellness/sexual-wellness/sexual-enhancers.html?root=nav_3&dir=desc&order=popularity">Sexual Enhancers</a></li>
+      </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Sports Nutrition</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/wellness/sports-nutrition.html?root=nav_2&dir=desc&order=popularity">Complete Sports Nutrition Collection</a></li>
+            <li><a href="/wellness/sports-nutrition/lean.html?root=nav_3&dir=desc&order=popularity">Lean</a></li>
+            <li><a href="/wellness/sports-nutrition/bulk.html?root=nav_3&dir=desc&order=popularity">Bulk</a></li>
+            <li><a href="/wellness/sports-nutrition/creatinine.html?root=nav_3&dir=desc&order=popularity">Creatinine</a></li>
+            <li><a href="/wellness/sports-nutrition/nitric-oxide.html?root=nav_3&dir=desc&order=popularity">Nitric Oxide</a></li>
+            <li><a href="/wellness/sports-nutrition/pre-workout.html?root=nav_3&dir=desc&order=popularity">Pre Workout</a></li>
+            <li><a href="/wellness/sports-nutrition/post-workout.html?root=nav_3&dir=desc&order=popularity">Post Workout</a></li>
+      </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Quick Links</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/wellness/new-at-nykaa.html?root=nav_3&dir=desc&order=popularity">New @ Nykaa</a></li>
+            <li><a href="/wellness/bestsellers.html?root=nav_3&dir=desc&order=popularity">Bestsellers</a></li>
+            <!--<li><a href="#">Top 10 Weight Loss Products</a></li>
+                  <li><a href="#">Top 10 Anti-Hairfall Products</a></li>-->
+      </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+       </div>
+         </div>
+        </div>
+    
+    
+
+
+
+
+            <div> 
+            <div class="catimg center showmorecate">
+               <div class="cateimg"><img src="http://www.nykaa.com/media/wysiwyg/nykaa-mobile/categories/mom-baby-min.png"></div>
+               <div class="catedesc">Mom &amp; Baby<br>&nbsp;</div>
+            </div>
+            <div class="catimg center showmorecate">
+               <div class="cateimg"><img src="http://www.nykaa.com/media/wysiwyg/nykaa-mobile/categories/pop-up-min.png"></div>
+               <div class="catedesc">Glam &amp; Fit<br>&nbsp;</div>
+            </div>
+            <div class="catimg center showmorecate">
+               <div class="cateimg"><img src="http://www.nykaa.com/media/wysiwyg/nykaa-mobile/categories/beauty-advice-min.png"></div>
+               <div class="catedesc">Beauty<br> Advice</div>
+            </div>
+       </div>
+        <div>
+<div class="menuwrap">
+          <div class="accordion_example2">
+            <div class="head-acc phead accordion_in"><a href="/mom-and-baby.html?root=nav_1&dir=desc&order=popularity" >Complete Mom & Baby collection</a></div>
+          <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Baby Care</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/mom-and-baby/baby-care.html?root=nav_2&dir=desc&order=popularity"> Complete Baby Care Collection</a></li>
+            <li><a href="/mom-and-baby/baby-care/bath-grooming.html?root=nav_3&dir=desc&order=popularity"> Bath & Grooming</a></li>
+            <li><a href="/mom-and-baby/baby-care/diapers-rashcreams.html?root=nav_3&dir=desc&order=popularity"> Diapers & Rash Creams</a></li>
+            <li><a href="/mom-and-baby/baby-care/feeding-and-nursing.html?root=nav_3&dir=desc&order=popularity">Feeding & Nursing</a></li>
+            <li><a href="/mom-and-baby/baby-care/creams-lotions-oils.html?root=nav_3&dir=desc&order=popularity"> Creams, Lotions & Oils</a></li>
+            <li><a href="/mom-and-baby/baby-care/baby-dental-care.html?root=nav_3&dir=desc&order=popularity"> Teeth & Dental Care</a></li>
+            <li><a href="/mom-and-baby/baby-care/health-hygiene.html?root=nav_3&dir=desc&order=popularity"> Health & Hygiene</a></li>
+            <li><a href="/mom-and-baby/baby-care/baby-care-collections.html?root=nav_3&dir=desc&order=popularity"> Baby Collection & Gift Sets</a></li>
+            <li><a href="/mom-and-baby/baby-care/body-art.html?root=nav_3&dir=desc&order=popularity"> Body Art</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+          <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Mother Care</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/mom-and-baby/mother-care.html?root=nav_2&dir=desc&order=popularity"> Complete Mother Care Collection</a></li>
+            <li><a href="/mom-and-baby/mother-care/breast-pumps-pads.html?root=nav_3&dir=desc&order=popularity"> Breast Feeding Essentials</a></li>
+            <li><a href="/mom-and-baby/mother-care/bust-firming-gel.html?root=nav_3&dir=desc&order=popularity"> Bust Firming Gel</a></li>
+            <li><a href="/mom-and-baby/mother-care/nipple-cream-balm.html?root=nav_3&dir=desc&order=popularity"> Nipple Cream</a></li>
+            <li><a href="/mom-and-baby/mother-care/anti-stretch-mark.html?root=nav_3&dir=desc&order=popularity"> Anti-Stretch Mark Cream</a></li>
+             <li><a href="/mom-and-baby/mother-care/intimate-care.html?root=nav_2&dir=desc&order=popularity">Intimate Care</a></li>
+            <li><a href="/mom-and-baby/mother-care/cotton-buds-balls.html?root=nav_3&dir=desc&order=popularity">Cotton Buds & Balls</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+     <!--  <div class="accordion_in">
+        <div class="acc_head"><a >Female Hygiene</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/mom-and-baby/feminine-hygiene.html?root=nav_2&dir=desc&order=popularity">Complete Female Hygiene Collection</a></li>
+            <li><a href="/mom-and-baby/feminine-hygiene/cotton-balls.html?root=nav_3&dir=desc&order=popularity">Cotton Buds & Balls</a></li>
+            <li><a href="/mom-and-baby/feminine-hygiene/intimate-care.html?root=nav_3&dir=desc&order=popularity"> Intimate Washes </a></li>
+            <li><a href="/mom-and-baby/feminine-hygiene/sanitary-napkins.html?root=nav_3&dir=desc&order=popularity"> Sanitary Napkins</a></li>
+            <li><a href="/mom-and-baby/feminine-hygiene/tampons.html?root=nav_3&dir=desc&order=popularity"> Tampons</a></li>
+            <li><a href="/mom-and-baby/feminine-hygiene/panty-liners.html?root=nav_3&dir=desc&order=popularity"> Panty Liners</a></li>
+          </ul>
+        </div>
+      </div> -->
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Quick Links</a></div>
+        <div class="acc_content">
+          <ul>
+            <li><a href="/mom-and-baby/new-at-nykaa.html?root=nav_3&dir=desc&order=popularity">New @ Nykaa</a></li>
+            <li><a href="/mom-and-baby/bestsellers.html?root=nav_3&dir=desc&order=popularity">Bestsellers</a></li>
+            <li><a href="/mom-and-baby/baby-care/baby-care-collections.html?root=nav_3&dir=desc&order=popularity">Baby Collection & Gift Sets</a></li>
+            <!--<li><a href="#?root=nav_3&dir=desc&order=popularity">Top Essentials for Mom & Baby</a></li>-->
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+         </div>
+         </div>
+<div class="menuwrap">
+          <div class="accordion_example2">
+            <div class="head-acc phead accordion_in"><a href="/glam-n-fit-at-nykaa?root=nav_1&dir=desc&order=popularity" >Explore The Glam&Fit Pop-Up</a></div>
+          <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Bra</a></div>
+        <div class="acc_content">
+          <ul>
+        <li><a href="/glam-fit-pop-up/bra.html?root=nav_2&dir=desc&order=popularity">Complete Bra Collection</a></li>
+        <li><a href="/glam-fit-pop-up/bra/t-shirt.html?root=nav_3&dir=desc&order=popularity">T-Shirt</a></li>
+        <li><a href="/glam-fit-pop-up/bra/push-up.html?root=nav_3&dir=desc&order=popularity">Push-up</a></li>
+        <li><a href="/glam-fit-pop-up/bra/multiway.html?root=nav_3&dir=desc&order=popularity">Multiway</a></li>
+        <li><a href="/glam-fit-pop-up/bra/unlined.html?root=nav_3&dir=desc&order=popularity">Unlined</a></li>
+        <li><a href="/glam-fit-pop-up/bra/wireless.html?root=nav_3&dir=desc&order=popularity">Wireless</a></li>
+        <li><a href="/glam-fit-pop-up/bra/underwired.html?root=nav_3&dir=desc&order=popularity">Underwired</a></li>
+        <li><a href="/glam-fit-pop-up/bra/strapless.html?root=nav_3&dir=desc&order=popularity">Strapless</a></li>
+        <li><a href="/glam-fit-pop-up/bra/padded.html?root=nav_3&dir=desc&order=popularity">Padded</a></li>
+        <li><a href="/glam-fit-pop-up/bra/racerback.html?root=nav_3&dir=desc&order=popularity">Racerback</a></li>
+        <li><a href="/glam-fit-pop-up/bra/demi-balconette.html?root=nav_3&dir=desc&order=popularity">Demi/Balconette</a></li>
+        <li><a href="/glam-fit-pop-up/bra/full.html?root=nav_3&dir=desc&order=popularity">Full</a></li>
+        <li><a href="/glam-fit-pop-up/bra/bralette.html?root=nav_3&dir=desc&order=popularity">Bralette</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Bra Collection</a></div>
+        <div class="acc_content">
+          <ul>
+        <li><a href="/glam-fit-pop-up/bra-collection.html?root=nav_2&dir=desc&order=popularity">Complete Bra Collection</a></li>
+        <li><a href="/glam-fit-pop-up/bra-collection/cotton.html?root=nav_3&dir=desc&order=popularity">Cotton</a></li>
+        <li><a href="/glam-fit-pop-up/bra-collection/sexy.html?root=nav_3&dir=desc&order=popularity">Sexy</a></li>
+        <li><a href="/glam-fit-pop-up/bra-collection/lace.html?root=nav_3&dir=desc&order=popularity">Lace</a></li>
+        <li><a href="/glam-fit-pop-up/bra-collection/maternity.html?root=nav_3&dir=desc&order=popularity">Maternity</a></li>
+        <li><a href="/glam-fit-pop-up/bra-collection/bridal.html?root=nav_3&dir=desc&order=popularity">Bridal</a></li>
+        <li><a href="/glam-fit-pop-up/bra-collection/beginners.html?root=nav_3&dir=desc&order=popularity">Beginners</a></li>
+        <li><a href="/glam-fit-pop-up/bra-collection/plus-size.html?root=nav_3&dir=desc&order=popularity">Plus Size</a></li>
+        <li><a href="/glam-fit-pop-up/bra-collection/basics.html?root=nav_3&dir=desc&order=popularity">Basics</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Underwear</a></div>
+        <div class="acc_content">
+          <ul>
+        <li><a href="/glam-fit-pop-up/underwear.html?root=nav_2&dir=desc&order=popularity">Complete Underwear Collection</a></li>
+        <li><a href="/glam-fit-pop-up/underwear/bikini.html?root=nav_3&dir=desc&order=popularity">Bikini</a></li>
+        <li><a href="/glam-fit-pop-up/underwear/seamless.html?root=nav_3&dir=desc&order=popularity">Seamless</a></li>
+        <li><a href="/glam-fit-pop-up/underwear/brief-hipster.html?root=nav_3&dir=desc&order=popularity">Brief / Hipster</a></li>
+        <li><a href="/glam-fit-pop-up/underwear/thong.html?root=nav_3&dir=desc&order=popularity">Thong</a></li>
+        <li><a href="/glam-fit-pop-up/underwear/boy-shorts.html?root=nav_3&dir=desc&order=popularity">Boy Shorts</a></li>
+        <li><a href="/glam-fit-pop-up/underwear/lace.html?root=nav_3&dir=desc&order=popularity">Lace</a></li>
+        <li><a href="/glam-fit-pop-up/underwear/cotton.html?root=nav_3&dir=desc&order=popularity">Cotton</a></li>
+        <li><a href="/glam-fit-pop-up/underwear/bridal.html?root=nav_3&dir=desc&order=popularity">Bridal</a></li>
+        <li><a href="/glam-fit-pop-up/underwear/sexy.html?root=nav_3&dir=desc&order=popularity">Sexy</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Activewear</a></div>
+        <div class="acc_content">
+          <ul>
+                <li><a href="/glam-fit-pop-up/activewear.html?root=nav_2&dir=desc&order=popularity">Complete Activewear Collection</a></li>
+                <li><a href="/glam-fit-pop-up/activewear/sports-bra.html?root=nav_3&dir=desc&order=popularity">Sports Bra</a></li>
+                 <li><a href="/glam-fit-pop-up/activewear/tanks-tees.html?root=nav_3&dir=desc&order=popularity">Tanks & Tees</a></li>
+                 <li><a href="/glam-fit-pop-up/activewear/shorts.html?root=nav_3&dir=desc&order=popularity">Shorts</a></li>
+                 <li><a href="/glam-fit-pop-up/activewear/leggings-pants.html?root=nav_3&dir=desc&order=popularity">Leggings/Pants</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Sleepwear</a></div>
+        <div class="acc_content">
+          <ul>
+                <li><a href="/glam-fit-pop-up/sleepwear.html?root=nav_2&dir=desc&order=popularity">Complete Sleepwear Collection</a></li>
+                <li><a href="/glam-fit-pop-up/sleepwear/sets.html?root=nav_3&dir=desc&order=popularity">Sets</a></li>
+        <li><a href="/glam-fit-pop-up/sleepwear/babydoll.html?root=nav_3&dir=desc&order=popularity">Babydoll</a></li>
+        <li><a href="/glam-fit-pop-up/sleepwear/pajamas.html?root=nav_3&dir=desc&order=popularity">Pajamas</a></li>
+        <li><a href="/glam-fit-pop-up/sleepwear/nightdress.html?root=nav_3&dir=desc&order=popularity">Nightdress</a></li>
+        <li><a href="/glam-fit-pop-up/sleepwear/camis-tanks-tops.html?root=nav_3&dir=desc&order=popularity">Camis/Tops</a></li>
+        <li><a href="/glam-fit-pop-up/sleepwear/shorts.html?root=nav_3&dir=desc&order=popularity">Shorts</a></li>
+        <li><a href="/glam-fit-pop-up/sleepwear/sleepshirt.html?root=nav_3&dir=desc&order=popularity">Sleepshirt</a></li>
+        <li><a href="/glam-fit-pop-up/sleepwear/wraps-gowns.html?root=nav_3&dir=desc&order=popularity">Wraps / Gowns</a></li>
+        <li><a href="/glam-fit-pop-up/sleepwear/leggings.html?root=nav_3&dir=desc&order=popularity">Leggings</a></li>
+        <li><a href="/glam-fit-pop-up/sleepwear/cotton.html?root=nav_3&dir=desc&order=popularity">Cotton</a></li>
+        <li><a href="/glam-fit-pop-up/sleepwear/satin.html?root=nav_3&dir=desc&order=popularity">Satin</a></li>
+        <li><a href="/glam-fit-pop-up/sleepwear/bridal-sexy.html?root=nav_3&dir=desc&order=popularity">Bridal/Sexy</a></li>
+        <li><a href="/glam-fit-pop-up/sleepwear/lace.html?root=nav_3&dir=desc&order=popularity">Lace</a></li>    
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+              <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Swimwear</a></div>
+        <div class="acc_content">
+          <ul>
+                <li><a href="/glam-fit-pop-up/swimwear.html?root=nav_2&dir=desc&order=popularity">Complete Swimwear Collections</a></li>
+                <li><a href="/glam-fit-pop-up/swimwear/one-piece.html?root=nav_3&dir=desc&order=popularity">One Piece</a></li>
+        <li><a href="/glam-fit-pop-up/swimwear/two-piece.html?root=nav_3&dir=desc&order=popularity">Two Piece</a></li>
+        <li><a href="/glam-fit-pop-up/swimwear/swim-skirts.html?root=nav_3&dir=desc&order=popularity">Swim Skirts</a></li>
+        <li><a href="/glam-fit-pop-up/swimwear/swim-shorts.html?root=nav_3&dir=desc&order=popularity">Swim Shorts</a></li>
+        <li><a href="/glam-fit-pop-up/swimwear/sarong-and-cover-up.html?root=nav_3&dir=desc&order=popularity">Sarong and Cover-up</a></li>
+        <li><a href="/glam-fit-pop-up/swimwear/beachwear.html?root=nav_3&dir=desc&order=popularity">Beachwear</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+                     <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Shapewear</a></div>
+        <div class="acc_content">
+          <ul>
+                <li><a href="/glam-fit-pop-up/shapewear.html?root=nav_2&dir=desc&order=popularity">Complete Shapewear Collections</a></li>
+                <li><a href="/glam-fit-pop-up/shapewear/bodysuits.html?root=nav_3&dir=desc&order=popularity">Bodysuits</a></li>
+        <li><a href="/glam-fit-pop-up/shapewear/mid-thigh.html?root=nav_3&dir=desc&order=popularity">Mid-Thigh</a></li>
+        <li><a href="/glam-fit-pop-up/shapewear/waist-cinchers.html?root=nav_3&dir=desc&order=popularity">Waist Cinchers</a></li>
+        <li><a href="/glam-fit-pop-up/shapewear/capris-leggings.html?root=nav_3&dir=desc&order=popularity">Capris/Leggings</a></li>
+        <li><a href="/glam-fit-pop-up/shapewear/slips-skirts.html?root=nav_3&dir=desc&order=popularity">Slips/Skirts</a></li>
+        <li><a href="/glam-fit-pop-up/shapewear/panties-girl-shorts.html?root=nav_3&dir=desc&order=popularity">Panties/Girl Shorts</a></li>
+        <li><a href="/glam-fit-pop-up/shapewear/tanks-camis.html?root=nav_3&dir=desc&order=popularity">Tanks & Camis</a></li>
+        <li><a href="/glam-fit-pop-up/shapewear/saree-shapewear.html?root=nav_3&dir=desc&order=popularity">Saree Shapewear</a></li>
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+                     <!--this div structure for submenu-->
+      <div class="accordion_in">
+        <div class="acc_head"><a >Accessories</a></div>
+        <div class="acc_content">
+          <ul>
+              <li><a href="/glam-fit-pop-up/accessories.html?root=nav_2&dir=desc&order=popularity">Complete Accessories Collections</a></li>
+              <li><a href="/glam-fit-pop-up/accessories/pasties-stick-on-cups.html?root=nav_3&dir=desc&order=popularity">Pasties/Stick-ons</a></li>
+        <li><a href="/glam-fit-pop-up/accessories/stockings-garters.html?root=nav_3&dir=desc&order=popularity">Stockings / Garters</a></li> 
+          </ul>
+        </div>
+      </div>
+           <!--this div structure for submenu-->
+            <div class="head-acc"><a href="/glam-fit-pop-up/sets.html?root=nav_2&dir=desc&order=popularity">Value Packs</a> </div>
+       </div>
+         </div>
+<div class="menuwrap">
+          <div class="accordion_example2">
+            <div class="head-acc phead accordion_in"><a href="http://nykaa.com/beauty-blog/beauty-book-196/?utm_source=nykaawebsite&utm_campaign=beautybook&utm_medium=header" > Beauty Book</a></div>
+            <div class="head-acc"><a href="http://nykaa.com/shop-the-look.html?root=nav" > Trending Looks</a></div>
+            <div class="head-acc"><a href="http://www.nykaa.com/nykaa-top-picks-2017?eq=mobile&root=nav" > Nykaa Favorites</a></div>
+            <div class="head-acc"><a href="http://experts.nykaa.com?utm_source=Nykaa Mobile Website&utm_medium=MegaMenu&utm_campaign=Experts" > Experts Online</a></div>
+      <div class="head-acc"><a href="http://www.nykaa.com/beauty-routine-finder?root=nav_3" > Routine Finder</a></div>
+            <div class="head-acc"><a href="http://www.nykaa.com/style-divas-at-nykaa?root=hdr_style_diva#all" > Style Divas </a></div>
+            <div class="head-acc"><a href="https://www.youtube.com/channel/UCoaH2UtB1PsV7av17woV1BA/?utm_source=Nykaa%20Website&utm_medium=Header&utm_campaign=NykaaTV" > Nykaa TV</a></div>
+         </div>
+         </div>
+        </div>
+
+
+
+        
+            <div> 
+            <div class="catimg center showmorecate">
+
+<a  href="/beauty-partners/">
+               <div class="cateimg"><img src="http://www.nykaa.com/media/wysiwyg/nykaa-mobile/categories/beauty-services-min.png"></div>
+               <div class="catedesc">Beauty<br> Services</div></a>
+            </div>
+   
+ 
+       </div>
+        <div>
+ 
+ 
+  
+        </div>
+        
+         </div>
+      </div>
+      <!--Shop by CAtegory or Menu Part ---End-------------------------->    
+    <!--FEATURED ON NYKAA  Part ------------------------------>      
+    <div class="greywrap">
+         <div class="greywraphead">
+            In The Spotlight
+         </div>
+
+
+        <div class="catimgwrap center radius">
+          <a href="http://www.nykaa.com/brands/nivea.html?intcmp=hp|in-the-spotlight|1|nivea">
+            <div class="cateimg">
+             <img class="lazy" src="http://www.nykaa.com/media/gicons/600X360.svg" data-original="http://www.nykaa.com/media/wysiwyg/Mobile_HPtile_Nivea_V2_26thjuly.jpg"> 
+            </div>
+             <div class="gradientbg">
+            <div class="fetimagedesc">
+              <div class="featuredtophead">              
+              <span>
+              Innovative High Quality Products
+                  </span> 
+               </div>
+                <div class="featuredsubhead">                       
+              Flat 25% OFF
+               </div> 
+            </div>
+            </div>
+            </a>
+         </div>        
+
+                 
+         <div class="catimgwrap center radius">
+        <a href="http://www.nykaa.com/brands/maybelline-new-york.html?intcmp=hp|in-the-spotlight|2|maybelline-new-york">
+            <div class="cateimg">
+            <img class="lazy" src="http://www.nykaa.com/media/gicons/600X360.svg" data-original="https://www.nykaa.com/media/wysiwyg/Mobile_HPtile_Maybelline_V1_27jully.jpg">
+            </div>
+            <div class="gradientbg">
+            <div class="fetimagedesc">
+               <div class="featuredtophead">        
+                <span>
+            One Saturated Stroke
+                </span>
+               </div> 
+               <div class="featuredsubhead">   
+              Colour Sensational - The Loaded Bold
+               </div>
+            </div>
+            </div>
+            </a>
+         </div>   
+
+
+        <div class="catimgwrap center radius">
+          <a href="http://www.nykaa.com/luxe/brands/clinique.html?intcmp=hp|in-the-spotlight|3|clinique">
+            <div class="cateimg">
+             <img class="lazy" src="http://www.nykaa.com/media/gicons/600X360.svg" data-original="https://www.nykaa.com/media/wysiwyg/Estee_HP_Mobile_Tile_Withouttext_25july.jpg"> 
+            </div>
+             <div class="gradientbg">
+            <div class="fetimagedesc">
+              <div class="featuredtophead">              
+              <span> 
+               Clinique Moisture Surge + Fresh Pressed 
+                  </span> 
+               </div>
+                <div class="featuredsubhead">       
+             Recipe For All Time Hydrated - Glowing Skin
+               </div> 
+            </div>
+            </div>
+            </a>
+         </div>                  
+      
+        <div class="catimgwrap center radius">
+             <a href="http://www.nykaa.com/brands/vlcc.html?intcmp=hp|in-the-spotlight|4|vlcc">
+             <div class="cateimg">
+             <img class="lazy" src="http://www.nykaa.com/media/gicons/600X360.svg" data-original="http://www.nykaa.com/media/wysiwyg/Mobile_HPtile_VLCC_QWER.jpg">
+             </div>
+             <div class="gradientbg">
+             <div class="fetimagedesc">
+             <div class="featuredtophead">
+              <span> Get That Parlour Like Glow At Home </span>
+               </div>
+               <div class="featuredsubhead">    
+               Flat 30% OFF    
+               </div>
+            </div>
+            </div>
+            </a>
+         </div> 
+
+
+        <div class="catimgwrap center radius">
+             <a href="http://www.nykaa.com/brands/colorbar.html?intcmp=hp|in-the-spotlight|5|colorbar">
+             <div class="cateimg">
+             <img class="lazy" src="http://www.nykaa.com/media/gicons/600X360.svg" data-original="http://www.nykaa.com/media/wysiwyg/colorbar_spotlight_Mobile_HP-tile-_v9_26thjuly.jpg">
+             </div>
+             <div class="gradientbg">
+             <div class="fetimagedesc">
+             <div class="featuredtophead">
+              <span> It's Time To Steal The Show</span>
+               </div>
+               <div class="featuredsubhead">    
+                Flat 25% OFF On Lipsticks
+               </div>
+            </div>
+            </div>
+            </a>
+         </div>     
+
+
+         <div class="catimgwrap center radius">
+          <a href="http://www.nykaa.com/brands/l-a-girl.html?intcmp=hp|in-the-spotlight|6|l-a-girl">
+            <div class="cateimg">
+             <img class="lazy" src="http://www.nykaa.com/media/gicons/600X360.svg" data-original="http://www.nykaa.com/media/wysiwyg/LAGirl_Mobile_HP_tile_V7_25july.jpg"> 
+            </div>
+             <div class="gradientbg">
+            <div class="fetimagedesc">
+              <div class="featuredtophead">              
+              <span> 
+                New Metal Liquid Lipstick  
+                  </span> 
+               </div>
+                <div class="featuredsubhead">       
+              Flat 25% OFF On Lipsticks 
+               </div> 
+            </div>
+            </div>
+            </a>
+         </div>                  
+      
+
+    
+      </div>
+      <!--FEATURED ON NYKAA  Part ----End-------------------------->  
+      <!--View All Offers  Part ------------------------------>  
+      <div class=" ">
+        <a href="http://www.nykaa.com/offers.html?intcmp=hp|bottom_offer_tile|offers">
+         <div class="viewoffers">
+            <div>View All Offers </div>
+            <div class="viewofferssubhead"> </div>
+         </div>
+      </a>
+      </div>
+      <!--View All Offers  Part -------End----------------------> 
+      
+      <!--QUICK LINKS  Part ----------------------------> 
+      <div class="greywrap mrtp">
+         <div class="greywraphead">
+            QUICK LINKS
+         </div>
+
+  
+
+        <div class="catimgwrap center radius">
+        <a href="http://www.nykaa.com/deals-of-the-day?intcmp=hp|quicklinks|1|deals-of-the-day">
+            <div class="cateimg">
+               <img class="lazy" src="http://www.nykaa.com/media/gicons/600X360.svg" data-original="http://www.nykaa.com/media/bannerpro/dealoftheday_Mobiletile_GTR.jpg">
+            </div>
+            <div class="gradientbg">
+            <div class="fetimagedesc">
+               <div class="featuredtophead">
+              <span>Fresh Deals Everyday. </span> 
+               </div>
+               <div class="featuredsubhead">
+               Great Savings On Top Brands 
+               </div>
+            </div>
+            </div>
+            </a>
+         </div>
+
+<!--         <div class="catimgwrap center radius">
+        <a href="http://www.nykaa.com/best-kits-and-combos-sale-online.html?intcmp=hp|quicklinks|1|best-kits-and-combos-sale-online">
+            <div class="cateimg">
+               <img class="lazy" src="http://www.nykaa.com/media/gicons/600X360.svg" data-original="http://www.nykaa.com/media/wysiwyg/FabulousKitsCombos_Mobile_HP_tile_14july.jpg">
+            </div>
+            <div class="gradientbg">
+            <div class="fetimagedesc">
+               <div class="featuredtophead">
+              <span>Fabulous Kits & Combos</span> 
+               </div>
+               <div class="featuredsubhead">
+               Makeup | Skin | Hair | Bath & Body | Men's
+               </div>
+            </div>
+            </div>
+            </a>
+         </div>  -->		 
+
+         
+        <div class="catimgwrap center radius">
+        <a href="http://www.nykaa.com/gift-a-rakhi?intcmp=hp|quicklinks|2|gift-a-rakhi">
+            <div class="cateimg">
+               <img class="lazy" src="http://www.nykaa.com/media/gicons/600X360.svg" data-original="http://www.nykaa.com/media/wysiwyg/Mobile-Quick-Links-Tile_cdffgf.jpg">
+            </div>
+            <div class="gradientbg">
+            <div class="fetimagedesc">
+               <div class="featuredtophead">
+              <span> Share The Love | Upto 30% OFF         
+              </span>
+               </div>
+               <div class="featuredsubhead">                
+               Find The Perfect Gift For Brothers & Sisters                                 
+               </div>
+            </div>
+            </div>
+            </a>
+         </div> 
+
+
+        <div class="catimgwrap center radius">
+        <a href="http://www.nykaa.com/best-foundation-and-concealer-for-your-skin-tone?intcmp=hp|quicklinks|3|best-foundation-and-concealer-for-your-skin-tone">
+            <div class="cateimg">
+               <img class="lazy" src="http://www.nykaa.com/media/gicons/600X360.svg" data-original="http://www.nykaa.com/media/wysiwyg/Mobile-Tile_14july_mob.jpg">
+            </div>
+            <div class="gradientbg">
+            <div class="fetimagedesc">
+               <div class="featuredtophead">
+              <span>The Foundation Finder | Upto 30% OFF</span>
+               </div>
+               <div class="featuredsubhead">
+               Find The Best Fit For Your Skin Tone
+               </div>
+            </div>
+            </div>
+            </a>
+         </div>          
+
+       
+      </div>
+      <!--QUICK LINKS  Part ********End**********-->
+      <!--View All Brands  Part ***********-->
+      <div class=" ">
+            <div class="top-ten" id="seeallbrands1"
+         onclick="ga('send', 'event', 'Open Menu Brands', 'From home page see all brands tile', 'See all brands',1);">
+         <div class="viewoffers blue">
+            <div>View All Brands</div>
+            <div class="viewofferssubhead">700+ Beauty Brands to Delight You</div>
+         </div>
+      </div>
+      </div>
+      <!--View All Brands  Part *****End*********-->
+      
+
+      <!--IN THE SPOTLIGHT   Part **************-->
+      <div class="greywrap mrtp">
+        <div class="greywraphead">  Featured Brands  
+         </div> 
+      <div class="nykaarecommend center">
+
+        <div class="recommedprd">
+              <a href="http://www.nykaa.com/brands/kaya.html?intcmp=hp|featured-brands|1|kaya">
+               <div class="recprdimg">
+                  <img class="lazy" src="http://www.nykaa.com/media/gicons/300X300.svg" data-original="http://www.nykaa.com/media/wysiwyg/kayamobile_feature_26thjuly.jpg">
+               </div>
+               <div class="recprdimgdesc">
+                  <div class="rehead">
+                  Flat 25% OFF 
+                  </div>  
+                  <div class="resubhead">                                      
+                  Fulfilling Your Dreams Of Flawless Beauty   
+                  </div>
+               </div>
+               </a>
+            </div>       
+
+            <!-- <div class="recommedprd">
+            <a href="http://www.nykaa.com/brands/bioderma.html?intcmp=hp|featured-brands|2|bioderma">
+             <div class="recprdimg">
+                <img class="lazy" src="http://www.nykaa.com/media/gicons/300X300.svg" data-original="http://www.nykaa.com/media/bannerpro/Bioderma_Mobile6_26july.jpg">
+               </div>
+               <div class="recprdimgdesc">
+                  <div class="rehead">
+                  Flat 20% OFF
+                  </div>
+                  <div class="resubhead"> 
+                Biology At The Service Of Dermatology
+                  </div>
+               </div>
+            </a>
+            </div> --> 
+
+          <div class="recommedprd">
+            <a href="http://www.nykaa.com/brands/the-face-shop.html?intcmp=hp|featured-brands|2|the-face-shop">
+             <div class="recprdimg">
+                <img class="lazy" src="http://www.nykaa.com/media/gicons/300X300.svg" data-original="http://www.nykaa.com/media/wysiwyg/Thefaceshop_Mobile_rtrt.jpg">
+               </div>
+               <div class="recprdimgdesc">
+                  <div class="rehead">
+                  Buy 5 Mask Sheets & Get 5 Free
+                  </div>
+                  <div class="resubhead"> 
+                *(T&C Apply)
+                  </div>
+               </div>
+            </a>
+            </div>            
+
+
+          <div class="nykaarecommend center">
+            <div class="recommedprd">
+            <a href="http://www.nykaa.com/brands/innisfree.html?intcmp=hp|featured-brands|3|innisfree">
+            <div class="recprdimg">
+            <img class="lazy" src="http://www.nykaa.com/media/gicons/300X300.svg" data-original="http://www.nykaa.com/media/wysiwyg/innisfree_Mobile_vdvd.jpg">
+            </div>
+               <div class="recprdimgdesc">
+                  <div class="rehead">
+                Free Honey Mask Sheet
+                  </div>
+                  <div class="resubhead">              
+                On Purchase Of Rs.1000 & Above
+                  </div>
+               </div>
+            </a>
+            </div>     
+
+            <div class="recommedprd">
+            <a href="http://www.nykaa.com/brands/avon.html?intcmp=hp|featured-brands|4|avon">
+            <div class="recprdimg">
+            <img class="lazy" src="http://www.nykaa.com/media/gicons/300X300.svg" data-original="http://www.nykaa.com/media/wysiwyg/Avon_Mobile6_25july.jpg">
+            </div>
+               <div class="recprdimgdesc">
+                  Upto 30% OFF 
+                  <div class="resubhead"> 
+                Beauty For A Purpose
+                  </div>
+               </div>
+            </a>
+            </div>
+
+               
+      </div>
+</div>     
+
+        </div><!--added by bhakti --> 
+ <!--IN THE SPOTLIGHT   Part *********** End*********-->
+
+       <!-- BEAUTY BLOCKBUSTERS @ NYKAA Part ***************--> 
+      <div class="greywrap  ">
+         <div class="greywraphead">
+         Recommended @ Nykaa
+         </div>
+           <div class="catimgwrap center radius">
+           <a href="http://www.nykaa.com/nykaa-paintstix.html?intcmp=hp|recommended-at-nykaa|1|nykaa-paintstix">
+            <div class="cateimg">
+               <img class="lazy" src="http://www.nykaa.com/media/gicons/600X360.svg" data-original="http://www.nykaa.com/media/wysiwyg/HP_feature-Tile-Mobile_25july.jpg">
+            </div>
+            <div class="gradientbg">
+            <div class="fetimagedesc">
+               <div class="featuredtophead">
+              Paintstix
+               </div>
+               <div class="featuredsubhead">            
+               The Most Instense Lip Color 
+               </div>
+            </div>
+       </div>
+       </a>
+         </div>
+
+
+           <div class="catimgwrap center radius">
+          <a href="http://www.nykaa.com/luxe/sibling-love.html?intcmp=hp|recommended-at-nykaa|2|sibling-love">
+            <div class="cateimg">
+               <img class="lazy" src="http://www.nykaa.com/media/gicons/600X360.svg" data-original="http://www.nykaa.com/media/wysiwyg/MAC_HP_Tile_Mobile_rgrvv.jpg">
+            </div>
+            <div class="gradientbg">
+            <div class="fetimagedesc">
+               <div class="featuredtophead">
+                Upto 30% OFF  
+               </div>
+               <div class="featuredsubhead">                 
+                  Calvin Klein | Davidoff | Roberto Cavalli   
+               </div>
+            </div>
+          </div>
+          </a>
+          </div>
+
+               
+         <div class="catimgwrap center radius">
+                  <a href="http://www.nykaa.com/new-launches-at-nykaa?intcmp=hp|recommended-at-nykaa|3|new-launches-at-nykaa">
+            <div class="cateimg">
+               <img class="lazy" src="http://www.nykaa.com/media/gicons/600X360.svg" data-original="http://www.nykaa.com/media/bannerpro/Mobile-rakhi-store-Tile_14juFdsfsd.jpg">
+            </div>
+            <div class="gradientbg">
+            <div class="fetimagedesc">
+               <div class="featuredtophead">             
+               New Launches 
+               </div>
+               <div class="featuredsubhead">                    
+                    The Latest New Brands @ Nykaa
+            </div>
+            </div>
+            </div>
+          </a>
+         </div>
+      
+
+      </div>
+   
+     
+    
+<!-- BEAUTY BLOCKBUSTERS @ NYKAA Part -----End------------------------> 
+     
+              <!-- TRENDING SEARCHES Part ****************--> 
+      <div class="greywrap">
+         <div class="greywraphead">
+            TRENDING SEARCHES
+         </div>
+         <div class="catimgwrap radius">
+           
+            <a href="http://www.nykaa.com/search/result/?q=face+masks&root=hp|search" class="tresearch">
+               Face Masks
+            </a>
+            <a href="http://www.nykaa.com/nyx-professional-makeup-brand-store?root=hp|search" class="tresearch">
+              NYX Professional Makeup
+            </a>
+            <a href="http://www.nykaa.com/brands/lakme.html?root=hp|search" class="tresearch">
+               Lakme
+            </a>
+            <a href="http://www.nykaa.com/search/result/?q=matte+nail+polish&root=hp|search" class="tresearch">
+              Matte Nail Polish
+            </a>
+           <a href="http://www.nykaa.com/best-makeup-brushes-online-sale?&root=hp|search" class="tresearch">
+              Makeup Brushes 
+            </a>
+             <a href="http://www.nykaa.com/brands/the-body-shop.html?&root=hp|search" class="tresearch">
+              The Body Shop
+            </a>
+         </div>
+      </div>
+
+<!-- TRENDING SEARCHES Part ----End-------------------------> 
+     
+             <!--SignUp  Part **************-->    
+      <div class=" ">
+        <a href="javascript:void(0);" onclick="openSignUp();ga('send','event','Account','Sign in','header');try{_satellite.track('sign in  sign up click');
+                    }catch(err){}" class="menu-links jsUserAccount">
+         <div class="missingout">
+   
+                       
+        <div class="misouthead">
+               YOU’RE MISSING OUT!
+            </div >
+                   
+    
+            <div class="viewoffers white">
+               <div>Sign Up to Win Reward Points</div>
+               <div class="viewofferssubhead">First time users get <span>2000 Reward Points!</span></div>
+            </div>
+            </a>
+         </div>
+ 
+      <!--SignUp  Part -End****************--> 
+
+     <!-- NYKAA RECOMMENDS Part *******************--> 
+      <div class="greywrap">
+         <div class="greywraphead">
+            Editor's Choice
+         </div>
+
+
+        <div class="nykaarecommend center">
+  
+           <div class="recommedprd">
+              <a href="http://www.nykaa.com/makeup/lips/lip-crayon.html?intcmp=hp|editor-s-choice|1|lip-crayon">
+               <div class="recprdimg">
+                  <img class="lazy" src="http://www.nykaa.com/media/gicons/300X300.svg" data-original="http://www.nykaa.com/media/wysiwyg/New-Obsession-Lip-Crayon_14july.jpg">
+               </div>
+               <div class="recprdimgdesc">
+                  <div class="rehead">
+                   New Obsession: Lip Crayon!
+                  </div>
+                  <div class="resubhead">                
+                  BB Cream For Your Prettiest Lips Ever                  
+                  </div>
+                  <br>
+               </div>
+               </a>
+            </div>
+
+            <div class="recommedprd">
+              <a href="http://www.nykaa.com/makeup/eyes/eyeshadow.html?color_v1=11723_11725_11728_13750_10799_10783_13915_16777_13369&id=242&intcmp=hp|editor-s-choice|2|summer-eyeshadow-palettes">
+               <div class="recprdimg">
+                  <img class="lazy" src="http://www.nykaa.com/media/gicons/300X300.svg" data-original="http://www.nykaa.com/media/wysiwyg/Summer-Eyeshadow-Palettes_14july.jpg">
+               </div>
+               <div class="recprdimgdesc">
+                  <div class="rehead">
+                  Summer Eyeshadow Palettes
+                  </div>
+                  <div class="resubhead">
+                  A Rainbow Treat For Your Eyes 
+                  </div>
+               </div>
+              </a>
+            </div>
+       
+            <div class="recommedprd">
+            <a href="http://www.nykaa.com/best-pore-refiners-online-sale.html?intcmp=hp|editor-s-choice|3|best-pore-refiners-online-sale">
+               <div class="recprdimg">
+                  <img class="lazy" src="http://www.nykaa.com/media/gicons/300X300.svg" data-original="http://www.nykaa.com/media/wysiwyg/Powerful-Potions-For-Pesky-Pores_14july.jpg">
+               </div>
+               <div class="recprdimgdesc">
+                  <div class="rehead">
+                  Powerful Potions For Pores
+                  </div>
+                  <div class="resubhead">
+                  For A Flawless Matte Complexion 
+                  </div>
+               </div>
+              </a>
+            </div>
+ 
+            <div class="recommedprd">
+              <a href="http://www.nykaa.com/best-creamy-matte-lipsticks-online-sale.html?intcmp=hp|editor-s-choice|4|best-creamy-matte-lipsticks-online-sale">
+               <div class="recprdimg">
+                  <img class="lazy" src="http://www.nykaa.com/media/gicons/300X300.svg" data-original="http://www.nykaa.com/media/wysiwyg/Creamy-Matte-Lipsticks_14july.jpg">
+               </div>
+               <div class="recprdimgdesc">
+                  <div class="rehead">                  
+                 Best Creamy Matte Lipstick Collection                  
+                  </div>
+                  <div class="resubhead">
+                  Pampering Pout Pleasers
+                  </div>
+               </div>
+             </a>
+            </div>
+                       
+            <div class="recommedprd">
+              <a href="http://www.nykaa.com/makeup/eyes/eyeliner.html?ptype=lst&id=240&intcmp=hp|editor-s-choice|5|slicked-smokey-or-smudgy">
+               <div class="recprdimg">
+                  <img class="lazy" src="http://www.nykaa.com/media/gicons/300X300.svg" data-original="http://www.nykaa.com/media/wysiwyg/Slicked-Smokey-Or-Smudgy_14july.jpg">
+               </div>
+               <div class="recprdimgdesc">
+                  <div class="rehead">
+                   Slick, Smoky Or Smudgy? 
+                  </div>
+                  <div class="resubhead">
+                  Eyeliner Picks For Your Inner Artist 
+                  </div>
+                  <br>
+               </div>
+               </a>
+            </div>
+
+            <div class="recommedprd">
+              <a href="http://www.nykaa.com/best-nude-makeup-online-sale.html?intcmp=hp|editor-s-choice|6|best-nude-makeup-online-sale">
+               <div class="recprdimg">
+                  <img class="lazy" src="http://www.nykaa.com/media/gicons/300X300.svg" data-original="http://www.nykaa.com/media/wysiwyg/The-Nude-Makeup-Trend_14july.jpg">
+               </div>
+               <div class="recprdimgdesc">
+                  <div class="rehead">
+                The Nude Makeup Manual 
+                  </div>
+                  <div class="resubhead">
+                Polished Skin And Flushed Cheeks
+                  </div>
+               </div>
+              </a>
+            </div>
+      
+            <div class="recommedprd">
+            <a href="http://www.nykaa.com/best-bridal-makeup-online-sale.html?intcmp=hp|editor-s-choice|7|best-bridal-makeup-online-sale">
+               <div class="recprdimg">
+                  <img class="lazy" src="http://www.nykaa.com/media/gicons/300X300.svg" data-original="http://www.nykaa.com/media/wysiwyg/The-Bridal-Makeup-Manual_14july.jpg">
+               </div>
+               <div class="recprdimgdesc">
+                  <div class="rehead">
+                   The Bridal Makeup Collection 
+                  </div>
+                  <div class="resubhead">
+                  Let The Countdown Begin!
+                  </div>
+               </div>
+              </a>
+            </div>
+ 
+            <div class="recommedprd">
+              <a href="http://www.nykaa.com/charcoal-online-sale.html?intcmp=hp|editor-s-choice|8|charcoal-online-sale">
+               <div class="recprdimg">
+                  <img class="lazy" src="http://www.nykaa.com/media/gicons/300X300.svg" data-original="http://www.nykaa.com/media/wysiwyg/Charcoal-Infused-Beauty-Essentials_14july.jpg">
+               </div>
+               <div class="recprdimgdesc">
+                  <div class="rehead">
+                  Charcoal Infused Beauty
+                  </div>
+                  <div class="resubhead">
+                  The New "IT" Ingredient For Skin 
+                  </div>
+               </div>
+             </a>
+            </div>
+
+</div>
+</div> 
+<!-- NYKAA RECOMMENDS Part --------End--------------------->
+    
+
+
+    
+     <!-- Beauty to Go! Part ***********************-->
+      <div class=" ">
+        <a href="javascript:void(0)" onclick="openApp();">
+         <div class="viewoffers nykapp">
+            <div>Beauty to Go!</div>
+            <div class="viewofferssubhead">Download the App for the best deals</div>
+         </div>
+      </a>
+      </div>
+  <!-- Beauty to Go! Part ----End-------------------------> 
+      <!-- TOP OF THE CHARTS @ NYKAA Part ***********************-->    
+      <div class="greywrap mrtp">
+         <div class="greywraphead">
+            TOP OF THE CHARTS 
+         </div>
+         <div class="chartswrap">
+            <div class="chartimgrow">
+               <a href="http://www.nykaa.com/skin-care/face/masks-peels.html?root=hp_top_charts" class="chartimg">
+                  Sheet Mask
+               </a>
+              <a href="http://www.nykaa.com/makeup/lips/lipstick.html?root=hp_top_charts" class="chartimg">
+                 Lipstick
+               </a>
+            </div>
+            <div class="chartimgrow">
+              <a href="http://www.nykaa.com/makeup/eyes/kajal.html?root=hp_top_charts" class="chartimg">
+                  Kajal
+               </a>
+               <a href="http://www.nykaa.com/makeup/face/bb-cc-cream.html?root=hp_top_charts" class="chartimg">
+                  BB Cream
+               </a>
+            </div>
+            <div class="chartimgrow">
+               <a href="http://www.nykaa.com/makeup/face/face-bronzer.html?root=hp_top_charts" class="chartimg">
+                 Bronzer
+               </a>
+               <a href="http://www.nykaa.com/hair-care/hair/hair-serum.html?root=hp_top_charts" class="chartimg">
+                  Hair Serum
+               </a>
+            </div>
+         </div>
+      </div>
+       
+    <!-- TOP OF THE CHARTS @ NYKAA Part End***********************-->     
+    <!-- COLLECTIONS AT NYKAA  Part ***********************-->     
+      <div class="greywrap">
+         <div class="greywraphead">
+           Curated Collections           
+         </div>
+
+
+        <div class="catimgwrap center radius">
+           <a href="http://www.nykaa.com/monsoon-beauty-store-online-sale?intcmp=hp|curated-collections|1|monsoon-beauty-store-online-sale"> 
+            <div class="cateimg">
+               <img class="lazy" src="http://www.nykaa.com/media/gicons/600X360.svg" data-original="http://www.nykaa.com/media/wysiwyg/Mobile-Curated-Collections-Tile24thJUL.jpg">
+            </div>
+            <div class="gradientbg">
+            <div class="fetimagedesc">
+               <div class="featuredtophead">
+           <span>Splash Out Beauty</span>
+               </div>
+               <div class="featuredsubhead">               
+                Water-Proof Everything | Upto 40% OFF               
+               </div>
+            </div>
+       </div>
+       </a>
+         </div> 
+
+         <div class="catimgwrap center radius">
+           <a href="http://www.nykaa.com/skincare-koreanbeauty?intcmp=hp|curated-collections|2|skincare-koreanbeauty">
+            <div class="cateimg">
+            <img class="lazy" src="http://www.nykaa.com/media/gicons/600X360.svg" data-original="http://www.nykaa.com/media/wysiwyg/kbeauty-MobileHp-Tile_14july_mob.jpg">
+            </div>
+            <div class="gradientbg">
+            <div class="fetimagedesc">
+               <div class="featuredtophead">
+           <span>The K-Beauty Edit</span>
+               </div> 
+               <div class="featuredsubhead">
+              From Sheet Masks To Cushion Foundations
+               </div>
+            </div>
+            </div>
+       </a>
+         </div>
+     
+
+<!--          <div class="catimgwrap center radius">
+                <a href="http://www.nykaa.com/beauty-steals-n-deals.html?intcmp=hp|beauty_blockbuster|2|beauty-steals-n-deals">
+               <div class="cateimg">
+              <img class="lazy" src="http://www.nykaa.com/media/gicons/600X360.svg" data-original="http://www.nykaa.com/media/bannerpro/BeautyStealsDeals_Mobile_HP-tile-_25thjune.jpg">
+            </div>
+            <div class="gradientbg">
+            <div class="fetimagedesc">
+               <div class="featuredtophead">
+                  <span>Beauty Steals & Deals | Upto 50% OFF</span>          
+               </div> 
+               <div class="featuredsubhead">
+              Exclusive Offers, Kits & Combos & Much More 
+               </div>
+            </div>
+            </div>
+            </a>
+         </div> 
+ -->
+          <div class="catimgwrap center radius">
+                <a href="http://www.nykaa.com/best-kajal-eyeliner-online-sale.html?intcmp=hp|curated-collections|3|best-kajal-eyeliner-online-sale">
+               <div class="cateimg">
+              <img class="lazy" src="http://www.nykaa.com/media/gicons/600X360.svg" data-original="http://www.nykaa.com/media/wysiwyg/SwishFlick_Mobile_HPtile_zxds.jpg">
+            </div>
+            <div class="gradientbg">
+            <div class="fetimagedesc">
+               <div class="featuredtophead">
+                  <span>Ultra Glam Kajals & Liners</span>         
+               </div> 
+               <div class="featuredsubhead">
+              Go Dramatic or Go Demure. Your Choice. 
+               </div>
+            </div>
+            </div>
+            </a>
+         </div> 
+  
+  </div>      
+   <!-- COLLECTIONS AT NYKAA  Part End------------------------------>
+
+
+
+   
+   <!--  DISCOVER @ NYKAA  Part ***********************-->   
+      <div class="greywrap">
+         <div class="greywraphead">
+            Beauty Advice
+         </div>
+         <div class="catimgwrap center radius">
+          <a href="http://www.nykaa.com/beauty-blog/beauty-book-206?intcmp=hp|beauty-advice|1|the-new-wave-of-beauty-dive-into-our-aqua-edit">
+            <div class="cateimg">
+               <img class="lazy" src="http://www.nykaa.com/media/gicons/600X360.svg" data-original="http://www.nykaa.com/media/wysiwyg/BBtile_Mobile_HPtile_V1_14july_mob.jpg">
+            </div>
+            <div class="gradientbg">
+            <div class="fetimagedesc">
+               <div class="featuredtophead">
+              The New Wave Of Beauty
+               </div>
+               <div class="featuredsubhead">
+                Dive Into Our Aqua Edit
+               </div>
+            </div>
+       </div>
+       </a>
+         </div>
+
+         <div class="catimgwrap center radius">
+           <a href="http://www.nykaa.com/nykaa-top-picks-2017?intcmp=hp|beauty-advice|2|nykaa-top-picks-2017">
+            <div class="cateimg">
+            <img class="lazy" src="
+            http://www.nykaa.com/media/gicons/600X360.svg" data-original="http://www.nykaa.com/media/wysiwyg/EditorsChoice_Mobile_HPtile_V1_14july_mob.jpg">
+            </div>
+            <div class="gradientbg">
+            <div class="fetimagedesc">
+               <div class="featuredtophead">
+               Editor's Top Picks 
+               </div>
+               <div class="featuredsubhead">
+              Beauty Products We Absolutely Swear By
+               </div>
+            </div>
+        </div>
+       </a>
+         </div>
+
+         <div class="catimgwrap center radius">
+           
+            <div class="cateimg">
+    
+               
+               <div class="item youtube-player" data-id="8y9EIDJwFG0"><img class="lazy" src="http://www.nykaa.com/media/gicons/600X360.svg" data-original="http://www.nykaa.com/media/wysiwyg/Easy-Sun-Kissed-Makeup-Mobile-Video-Tile_jyhjy.jpg"></div>
+               
+               
+            </div>
+             <div class="recprdimgdesc nh">
+                  <div class="rehead">
+                   Easy Sun Kissed Makeup Tutorial
+                  </div>
+                  <div class="resubhead">
+                With 3 Lip Options | Corallista 
+                  </div>
+               </div>
+  
+      
+         </div>         
+         
+          <div class="catimgwrap center radius">
+            
+            <div class="cateimg">
+				<div class="item youtube-player" data-id="18ntx6X_3Y8">
+               	<img class="lazy" src="http://www.nykaa.com/media/gicons/600X360.svg" data-original="http://www.nykaa.com/media/wysiwyg/SohaAliKhan_MobileHpTile_14july.jpg">
+               </div>
+               
+            </div>
+            
+             <div class="recprdimgdesc nh">
+                  <div class="rehead">
+                  #BreakTheHashtag 
+                  </div>
+                  <div class="resubhead">
+                  With Soha Ali Khan
+                  </div>
+               </div>
+ 
+      
+         </div>
+
+
+      </div>
+ <!--  DISCOVER @ NYKAA  Part ----End-------------------------->
+     
+     <!--  TOP BRANDS  Part ***********************-->
+      <div class="greywrap">
+        
+         <div class="greywraphead ">
+            <div class="left">TOP BRANDS</div>
+                <div class="top-ten" id="seeallbrands"
+         onclick="ga('send', 'event', 'Open Menu Brands', 'From home page see all brands tile', 'See all brands',1);">
+            <div class="viewbrands right">
+          view all 700+ brands
+          </div></div>
+    <div class="clear"></div>
+         </div>
+         <div class="brandwrap">
+            <div class="chartimgrow">
+                
+                <a href="http://www.nykaa.com/brands/lakme.html?root=hp_top_brands" class="chartimg">
+                    <img src="http://www.nykaa.com/media/wysiwyg/nykaa-mobile/logo/lakme.png">                  
+               </a>
+                
+                <a href="http://www.nykaa.com/nykaa-brandstore?root=hp_top_brands" class="chartimg">
+                  <img src="http://www.nykaa.com/media/wysiwyg/nykaa_Cosmetic_NewLogo.png">                   
+               </a>
+            </div>
+            <div class="chartimgrow">
+                     
+                <a href="http://www.nykaa.com/maybelline-brand-store?root=hp_top_brands" class="chartimg">
+                  <img src="http://www.nykaa.com/media/wysiwyg/nykaa-mobile/logo/maybelline.png">                  
+               </a>
+                 <a href="http://www.nykaa.com/brands/loreal-paris.html?root=hp_top_brands"  class="chartimg">
+                  <img src="http://www.nykaa.com/media/wysiwyg/nykaa-mobile/logo/loreal.png">                 
+               </a>
+            </div>
+            <div class="chartimgrow">
+       
+                 <a href="http://www.nykaa.com/mac?root=hp_top_brands" class="chartimg">
+                  <img src="http://www.nykaa.com/media/wysiwyg/nykaa-mobile/logo/mac.png">                  
+               </a>
+            <a href="http://www.nykaa.com/the-face-shop-brandstore?root=hp_top_brands" class="chartimg">
+                  <img src="http://www.nykaa.com/media/wysiwyg/nykaa-mobile/logo/faceshop.png">                  
+               </a>
+            </div>
+            <div class="chartimgrow">
+         <a href="http://www.nykaa.com/brands/neutrogena.html?root=hp_top_brands" class="chartimg">                
+                  <img src="http://www.nykaa.com/media/wysiwyg/Neutrogena_mb_3may.jpg">                   
+               </a>        
+                  <a href="http://www.nykaa.com/nyxcosmetics-brandstore?root=hp_top_brands"  class="chartimg">
+                  <img src="http://www.nykaa.com/media/wysiwyg/nykaa-mobile/logo/nyx.png">                   
+               </a>
+            </div>
+         </div>
+      </div>
+ <!--  TOP BRANDS  Part -------End---------------------->
+     <!--   BEAUTY UNLIMITED  Part ***********************-->
+     
+      <div class="greywrap">
+         <div class="greywraphead">
+            POP UP STORES
+         </div>
+         <div class="catimgwrap center radius">
+           <a href="http://www.nykaa.com/glam-n-fit-at-nykaa?intcmp=hp|pop-ups|1|glam-n-fit-at-nykaa">
+            <div class="cateimg">
+               <img class="lazy" src="
+              http://www.nykaa.com/media/gicons/600X360.svg" data-original="http://www.nykaa.com/media/wysiwyg/Mobile-tile_brands-hp_14july_mob.jpg">
+            </div>
+            <div class="gradientbg">
+            <div class="fetimagedesc">
+               <div class="featuredtophead">
+              The Glam & Fit Store | Upto 50% OFF
+               </div>
+               <div class="featuredsubhead">            
+                Intimatewear | Activewear | Sleepwear | Swimwear              
+               </div>
+            </div>
+       </div>
+       </a>
+         </div>
+
+
+         <div class="catimgwrap center radius">
+           <a href="http://www.nykaa.com/accessories-at-nykaa?intcmp=hp|pop-ups|2|accessories-at-nykaa">
+            <div class="cateimg">
+               <img class="lazy" src="http://www.nykaa.com/media/gicons/600X360.svg" data-original="http://www.nykaa.com/media/wysiwyg/accessories_at_nykaa_14july_mob.jpg">
+            </div>
+            <div class="gradientbg">
+            <div class="fetimagedesc">
+               <div class="featuredtophead">
+               Accessories At Nykaa 
+               </div>
+               <div class="featuredsubhead">              
+                Sunglasses | Accessories | Watches           
+               </div>
+            </div>
+       </div>
+       </a>
+         </div>
+     
+     
+      <div class="catimgwrap center radius">
+          <a href="http://www.nykaa.com/beauty-partners/monsoon-store-beauty-services-online-sale.html?intcmp=hp|pop-ups|3|monsoon-store-beauty-services-online-sale">
+            <div class="cateimg">
+               <img class="lazy" src="http://www.nykaa.com/media/gicons/600X360.svg" data-original="http://www.nykaa.com/media/wysiwyg/Monsoonstore_Mobile_HP-tile_V1_14july_mob.jpg">
+            </div>
+            <div class="gradientbg">
+            <div class="fetimagedesc">
+               <div class="featuredtophead">
+               It's Raining Offers | Upto 50% OFF 
+               </div>
+               <div class="featuredsubhead">
+               Spa & Salon Services  
+               </div>
+            </div>
+       </div>
+       </a>
+         </div>
+         
+       
+  <!--   BEAUTY UNLIMITED  Part --End--------------------------->
+
+<!--   Nykaa Gift Cards  Part ***********************-->
+
+            <div class="catimgwrap center radius">
+           <a href="http://www.nykaa.com/giftcard.html?intcmp=hp|pop-ups|4|giftcards">
+            <div class="cateimg">
+            <img class="lazy" src="http://www.nykaa.com/media/gicons/600X360.svg" data-original="http://www.nykaa.com/media/wysiwyg/Giftcard_Mobile_HPtile_14july.jpg">
+            </div>
+            <div class="gradientbg">
+            <div class="fetimagedesc">
+               <div class="featuredtophead">             
+                Share The Beauty Instantly!
+               </div>
+               <div class="featuredsubhead">
+                Buy A Nykaa Gift Card Today
+               </div>
+            </div>
+       </div>
+       </a>
+         </div>
+          
+      </div> 
+          
+  <!--   Nykaa Gift Cards  Part ---End-------------------------->      
+
+</div><!--simplediv-->
+ 
+ </div><!--wrapclosed-->
+  <!--menu-->
+    <script type="text/javascript"> 
+  
+  jQuery(document).ready(function (e) { 
+  jQuery('.menuwrap').hide() 
+  //$('.menuwrap:first-of-type').show() 
+  jQuery('.catimg').click(function () { 
+  //$('.bigimg').removeClass('tab-active')
+  if(jQuery(this).hasClass('active')){
+    index0 = jQuery('.catimg').index(this);
+    jQuery('.menuwrap').eq(index0).slideUp();
+    jQuery('.catimg').removeClass('active');
+  }else{
+    jQuery('.catimg').removeClass('active'); 
+    jQuery(this).addClass('active'); 
+    jQuery('.menuwrap').hide() 
+    index0 = jQuery('.catimg').index(this) 
+    jQuery('.menuwrap').eq(index0).slideDown() 
+  }
+  });
+  jQuery('.catimgext.morebtn').click(function () { 
+  //$('.bigimg').removeClass('tab-active') 
+  //jQuery('.showmorecate').removeClass('active'); 
+  //jQuery(this).addClass('active'); 
+  jQuery('.catimgext.morebtn').hide() 
+  jQuery('.menuwrap').hide() 
+  jQuery('.showmorecate').css('display','inline-block') 
+  //var index0 = jQuery('.catimg').index(this) 
+  //jQuery('.menuwrap').eq(index0).slideDown() 
+  }); 
+  }); 
+  
+  </script> 
+  <!--menu-->
+<script type="text/javascript">
+ /* 
+ * author : fang yongbao
+ * data : 2014.12.24
+ * model : 垂直多级导航
+ * info ：知识在于积累，每天一小步，成功永远属于坚持的人。
+ * blog : http://www.best-html5.net
+ */
+
+/*
+ *
+ * @param {type} option
+ * {
+ *   @param Speed: num,//动画收缩时间
+ *   @param autostart: ture/false,//初次加载是否将菜单全部展开
+ *   @param autohide: true/false,//同级菜单是否隐藏
+ * }
+ * return obj
+ *   none
+ *
+ *
+ */
+(function($) {
+  $.fn.vmenuModule = function(option) {
+    var obj,
+      item;
+    var options = $.extend({
+        Speed: 220,
+        autostart: true,
+        autohide: 1
+      },
+      option);
+    obj = $(this);
+
+    item = obj.find("ul").parent("li").children("a");
+    item.attr("data-option", "off");
+
+    item.unbind('click').on("click", function() {
+      var a = $(this);
+      if (options.autohide) {
+        a.parent().parent().find("a[data-option='on']").parent("li").children("ul").slideUp(options.Speed / 1.2,
+          function() {
+            $(this).parent("li").children("a").attr("data-option", "off");
+          })
+      }
+      if (a.attr("data-option") == "off") {
+        a.parent("li").children("ul").slideDown(options.Speed,
+          function() {
+            a.attr("data-option", "on");
+          });
+      }
+      if (a.attr("data-option") == "on") {
+        a.attr("data-option", "off");
+        a.parent("li").children("ul").slideUp(options.Speed)
+      }
+    });
+    if (options.autostart) {
+      obj.find("a").each(function() {
+
+        $(this).parent("li").parent("ul").slideDown(options.Speed,
+          function() {
+            $(this).parent("li").children("a").attr("data-option", "on");
+          })
+      })
+    }
+
+  }
+})(window.jQuery || window.Zepto);
+   
+   </script>  
+<script type="text/javascript">
+      jQuery(document).ready(function() {
+        jQuery(".u-vmenu").vmenuModule({
+          Speed: 200,
+          autostart: false,
+          autohide: true
+        });
+      });
+    </script>
+  <!--leftside accordian menu-->
+   <script>
+      ;(function ( $ ) {
+      
+        $.fn.smk_Accordion = function( options ) {
+          
+          if (this.length > 1){
+            this.each(function() { 
+              $(this).smk_Accordion(options);
+            });
+            return this;
+          }
+          
+          // Defaults
+          var settings = $.extend({
+            animation:  true,
+            showIcon:   true,
+            closeAble:  false,
+            closeOther: true,
+            slideSpeed: 150,
+            activeIndex: false
+          }, options );
+      
+          if( $(this).data('close-able') )    settings.closeAble = $(this).data('close-able');
+          if( $(this).data('animation') )     settings.animation = $(this).data('animation');
+          if( $(this).data('show-icon') )     settings.showIcon = $(this).data('show-icon');
+          if( $(this).data('close-other') )   settings.closeOther = $(this).data('close-other');
+          if( $(this).data('slide-speed') )   settings.slideSpeed = $(this).data('slide-speed');
+          if( $(this).data('active-index') )  settings.activeIndex = $(this).data('active-index');
+      
+          // Cache current instance
+          // To avoid scope issues, use 'plugin' instead of 'this'
+          // to reference this class from internal events and functions.
+          var plugin = this;
+      
+          //"Constructor"
+          var init = function() {
+            plugin.createStructure();
+            plugin.clickHead();
+          }
+      
+          // Add .smk_accordion class
+          this.createStructure = function() {
+      
+            //Add Class
+            plugin.addClass('smk_accordion');
+            if( settings.showIcon ){
+              plugin.addClass('acc_with_icon');
+            }
+      
+            //Create sections if they were not created already
+            if( plugin.find('.accordion_in').length < 1 ){
+              plugin.children().addClass('accordion_in');
+            }
+      
+            //Add classes to accordion head and content for each section
+            plugin.find('.accordion_in').each(function(index, elem){
+              var childs = $(elem).children();
+              $(childs[0]).addClass('acc_head');
+              $(childs[1]).addClass('acc_content');
+            });
+            
+            //Append icon
+            if( settings.showIcon ){
+              plugin.find('.acc_head').prepend('<div class="acc_icon_expand"></div>');
+            }
+      
+            //Hide inactive
+            plugin.find('.accordion_in .acc_content').not('.acc_active .acc_content').hide();
+      
+            //Active index
+            if( settings.activeIndex === parseInt(settings.activeIndex) ){
+              if(settings.activeIndex === 0){
+                plugin.find('.accordion_in').addClass('acc_active').show();
+                plugin.find('.accordion_in .acc_content').addClass('acc_active').show();
+              }
+              else{
+                plugin.find('.accordion_in').eq(settings.activeIndex - 1).addClass('acc_active').show();
+                plugin.find('.accordion_in .acc_content').eq(settings.activeIndex - 1).addClass('acc_active').show();
+              }
+            }
+            
+          }
+      
+          // Action when the user click accordion head
+          this.clickHead = function() {
+      
+            plugin.on('click', '.acc_head', function(){
+              
+              var s_parent = $(this).parent();
+              
+              if( s_parent.hasClass('acc_active') == false ){
+                if( settings.closeOther ){
+                  plugin.find('.acc_content').slideUp(settings.slideSpeed);
+                  plugin.find('.accordion_in').removeClass('acc_active');
+                } 
+              }
+      
+              if( s_parent.hasClass('acc_active') ){
+                if( false !== settings.closeAble ){
+                  s_parent.children('.acc_content').slideUp(settings.slideSpeed);
+                  s_parent.removeClass('acc_active');
+                }
+              }
+              else{
+                $(this).next('.acc_content').slideDown(settings.slideSpeed);
+                s_parent.addClass('acc_active');
+              }
+      
+            });
+      
+          }
+      
+          //"Constructor" init
+          init();
+          return this;
+      
+        };
+      
+      
+      }( jQuery ));
+      
+   </script> 
+   <script type="text/javascript">
+      jQuery(document).ready(function($){
+      
+        jQuery(".accordion_example1").smk_Accordion();
+      
+        jQuery(".accordion_example2").smk_Accordion({
+          closeAble: true, //boolean
+           
+        });
+      
+        jQuery(".accordion_example3").smk_Accordion({
+          showIcon: false, //boolean
+        });
+      
+
+        jQuery(".accordion_example4").smk_Accordion({
+          closeAble: true, //boolean
+          closeOther: false, //boolean
+        });
+      
+        jQuery(".accordion_example5").smk_Accordion({closeAble: true});
+      
+        jQuery(".accordion_example6").smk_Accordion();
+        
+        jQuery(".accordion_example7").smk_Accordion({
+          activeIndex: 2 //second section open
+        });
+        jQuery(".accordion_example8, .accordion_example9").smk_Accordion();
+      
+      
+        // Demo text. Let's save some space to make the code readable. ;)
+        //$('.acc_content').not('.nodemohtml').html('<p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Fusce aliquet neque et accumsan fermentum. Aliquam lobortis neque in nulla  tempus, molestie fermentum purus euismod.</p>');
+        
+      });
+   </script> 
+   <!--leftside accordian menu--> 
+   <script>
+
+      jQuery(document).ready(function(e) {
+      jQuery('.product_list_ul1').slick({
+          slidesToShow:1,
+        dots:true,
+        slide: 'li',
+        arrows:true,
+        autoplay:true,
+      autoplaySpeed:1500,
+         
+      });
+      });
+   </script>
+   <script>
+      jQuery(document).ready(function(e) {
+      jQuery('.product_list_ul2').slick({
+      
+      
+                    slidesToShow: 2.1,
+            dots:false,
+            slide: 'li',
+            arrows:true,
+            responsive: [
+      
+      
+            {
+              breakpoint:767,
+              settings: {
+              arrows: true,
+              centerMode: true,
+              centerPadding: '0px',
+              slidesToShow: 2.1
+              }
+            }
+            ]
+      
+                });
+      
+      });
+   </script>
+   <script type="text/javascript" src="/skin/frontend/nykaa/theme202/js/ajaxaddtocart.js"></script>
+   <script type="text/javascript" src="/skin/frontend/nykaa/theme202/js/catalog.js"></script>
+   <script type="text/javascript" src="/js/varien/product.js"></script>
+   <script type="text/javascript" src="/js/varien/configurable.js"></script>
+ 
+ <script type="text/javascript">
+    jQuery('#seeallbrands1').on('click', function () {
+        jQuery('.burgure-menu-list').toggleClass('burgure-menu-list-on'), jQuery('.burgure-overlay').toggleClass('hide');
+        jQuery('.burgure-menu-list ul li a.m-header__nav-menu--brands').trigger('click');
+    });
+    jQuery('#seeallbrands').on('click', function () {
+        jQuery('.burgure-menu-list').toggleClass('burgure-menu-list-on'), jQuery('.burgure-overlay').toggleClass('hide');
+        jQuery('.burgure-menu-list ul li a.m-header__nav-menu--brands').trigger('click');
+    });
+   
+</script>
+<!-- lazyloading  start-->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.js" type="text/javascript"></script>
+<script>
+  jQuery('img.lazy').lazyload({
+    load : function()
+    {
+      jQuery(this).css('background-color','#ffffff');
+    }
+  });
+</script>
+<!-- lazyloading ends -->
+<script>jQuery(document).ready(function () {
+  // jQuery(".home-bestseller").show();
+   jQuery("#home-banner img").show();
+    
+     if(getCookie("head_data") && getCookie("head_data").length>0)
+        {
+          headData = JSON.parse(getCookie("head_data"));
+          if(headData.success == 'true'){ jQuery('.missingout').hide(); }else{ jQuery('.missingout').show(); }
+
+        }   
+   });
+  
+  
+</script>
+<script>jQuery(window).load(function () {
+  // jQuery(".home-bestseller").show();
+   jQuery("#home-banner img").show();
+   jQuery('#home-banner').slick({ 
+   lazyLoad: 'ondemand'     
+   });
+   });
+</script>
+<script>
+window.datalayer = window.datalayer || {};
+window.datalayer['pageName'] = 'Nykaa : Home Page';
+</script>
+<script>
+jQuery(window).load(function(){
+console.log('HomePageConsoleLog');
+});
+</script>
+<!--youtube script-->
+<script>
+document.addEventListener("DOMContentLoaded",
+        function() {
+            var div, n,
+                v = document.getElementsByClassName("youtube-player");
+            for (n = 0; n < v.length; n++) {
+                div = document.createElement("div");
+                div.setAttribute("data-id", v[n].dataset.id);
+                div.innerHTML = labnolThumb(v[n].dataset.id);
+                div.onclick = labnolIframe;
+                v[n].appendChild(div);
+            }
+        });
+ 
+    function labnolThumb(id) {
+        var thumb = '',
+            play = '<div class="play"></div>';
+        return thumb.replace("ID", id) + play;
+    }
+ 
+    function labnolIframe() {
+        var iframe = document.createElement("iframe");
+        var embed = "https://www.youtube.com/embed/ID?autoplay=1&enablejsapi=1&loop=1&playlist="+this.dataset.id;
+        iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute("id", this.dataset.id); // Added by AA
+        iframe.setAttribute("allowfullscreen", "1");
+        this.parentNode.replaceChild(iframe, this);
+        LoadVideo(this.dataset.id); // Added by AA
+    }
+ 
+
+</script>
+<!--youtube script-->
