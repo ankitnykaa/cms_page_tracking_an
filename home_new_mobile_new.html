@@ -54,6 +54,10 @@ a.chartimg:hover,a.tresearch:hover{color:#3f414d}
   .greywrap{background-color: #f9f9f9; 
     box-shadow:inset 0px 2px 2px 0 rgba(0, 0, 0, 0.07), inset 0px -2px 2px 0 rgba(0, 0, 0, 0.07); padding: 0 10px;overflow: hidden; border-radius: 6px;
   margin-top: 10%}
+  .dl_greywrap{background-color: #f9f9f9; 
+    box-shadow:inset 0px 2px 2px 0 rgba(0, 0, 0, 0.07), inset 0px -2px 2px 0 rgba(0, 0, 0, 0.07); overflow: hidden; border-radius: 6px;
+  margin-top: 10%}
+  .dl_greywrap.mrtp{margin-top:0}
   .greywrap.mrtp{margin-top:0}
   .greywraphead{color:#3f414d; font-size:4.6vw; font-weight: bold; margin: 7% 0 5% 10px; text-transform: uppercase}
   .catimgwrap{background: #fff; padding:10px; border-radius: 3px; margin-bottom:7%;box-shadow: 0px 2px 1px 0 rgba(56, 56, 56, 0.07); position: relative}
@@ -76,6 +80,7 @@ a.chartimg:hover,a.tresearch:hover{color:#3f414d}
   .featuredsubthirdhead{color:#8c8d94;font-size:4.2vw; margin: 10px 0px }
   .featuredsubthirdhead.subsec{font-size:4.2vw; color: #1cbbb4; margin:10px 0px }
   .whitewrap{background:#fff; box-shadow:inset 0px 2px 2px 0 rgba(0, 0, 0, 0.07), inset 0px -2px 2px 0 rgba(0, 0, 0, 0.07); margin-bottom: 50px }
+  .dl_viewoffers{margin-top:17px;}
   .viewoffers{background: url(http://www.nykaa.com/media/wysiwyg/Mobile_view_all_14july.jpg) no-repeat center; margin:4% 10px; font-size: 4.6vw; background-size:100%; font-weight: 600;
   border-radius: 3px; color: #000; padding: 9% 0 9% 14vw}
   .viewoffers.blue{background: url(http://www.nykaa.com/media/wysiwyg/nykaa-mobile/vaba.jpg) no-repeat center; background-size:100%}
@@ -1624,13 +1629,13 @@ Website&utm_medium=MegaMenu&utm_campaign=Beauty Blog">Foundation Guide</a></li>
         
          </div>
       </div>
-      <div class="">
+      <div class="dl_greywrap">
           <div class="widget" data-id="5978c23434ac533db4d06289">
              <esi:include src="http://nykaa-widgets-staging.nykaa.com/inventory/5978c23434ac533db4d06289/html/?platform=mobile" />
          </div>       
       </div>
       <!-- View All Offers  Part -->  
-      <div class=" ">
+      <div class="dl_viewoffers">
          <div class="widget" data-id="5978c27434ac533db4d0628c">
              <esi:include src="http://nykaa-widgets-staging.nykaa.com/inventory/5978c27434ac533db4d0628c/html/?platform=mobile" />
          </div>
@@ -1638,14 +1643,14 @@ Website&utm_medium=MegaMenu&utm_campaign=Beauty Blog">Foundation Guide</a></li>
       <!-- View All Offers  Part End --> 
       
       <!-- QUICK LINKS  Part  --> 
-      <div class="">
+      <div class="dl_greywrap mrtp">
          <div class="widget" data-id="5978c2cf34ac533db4d0628f">
              <esi:include src="http://nykaa-widgets-staging.nykaa.com/inventory/5978c2cf34ac533db4d0628f/html/?platform=mobile" />
          </div>
       </div>
       <!-- QUICK LINKS  Part End -->
       <!--View All Brands  Part -->
-      <div class=" ">
+      <div class="dl_viewoffers">
             <div class="" id="seeallbrands1"
          onclick="ga('send', 'event', 'Open Menu Brands', 'From home page see all brands tile', 'See all brands',1);">
          <div class="">
@@ -1659,7 +1664,7 @@ Website&utm_medium=MegaMenu&utm_campaign=Beauty Blog">Foundation Guide</a></li>
       
 
       <!-- IN THE SPOTLIGHT   Part -->
-      <div class="">
+      <div class="dl_greywrap mrtp">
         <div class="widget" data-id="5978c36334ac533db4d06295">
              <esi:include src="http://nykaa-widgets-staging.nykaa.com/inventory/5978c36334ac533db4d06295/html/?platform=mobile" />
          </div>
@@ -1670,7 +1675,7 @@ Website&utm_medium=MegaMenu&utm_campaign=Beauty Blog">Foundation Guide</a></li>
  <!--IN THE SPOTLIGHT   Part -->
 
        <!--  BEAUTY BLOCKBUSTERS @ NYKAA Part  --> 
-      <div class="">
+      <div class="dl_greywrap">
            <div class="widget" data-id="5978c3cd34ac533db4d06298">
              <esi:include src="http://nykaa-widgets-staging.nykaa.com/inventory/5978c3cd34ac533db4d06298/html/?platform=mobile" />
          </div>
@@ -1681,7 +1686,7 @@ Website&utm_medium=MegaMenu&utm_campaign=Beauty Blog">Foundation Guide</a></li>
 <!-- BEAUTY BLOCKBUSTERS @ NYKAA Part --> 
      
               <!-- TRENDING SEARCHES Part --> 
-      <div class="">
+      <div class="dl_greywrap" style="padding-bottom:25px">
         <div class="widget" data-id="5978c4ff34ac533db2d06290">
              <esi:include src="http://nykaa-widgets-staging.nykaa.com/inventory/5978c4ff34ac533db2d06290/html/?platform=mobile" />
          </div>
@@ -1711,7 +1716,7 @@ Website&utm_medium=MegaMenu&utm_campaign=Beauty Blog">Foundation Guide</a></li>
       <!-- SignUp  Part -End --> 
 
      <!-- NYKAA RECOMMENDS Part --> 
-      <div class="">
+      <div class="dl_greywrap">
           <div class="widget" data-id="5978c53134ac533db4d0629c">
              <esi:include src="http://nykaa-widgets-staging.nykaa.com/inventory/5978c53134ac533db4d0629c/html/?platform=mobile" />
           </div> 
@@ -1723,7 +1728,7 @@ Website&utm_medium=MegaMenu&utm_campaign=Beauty Blog">Foundation Guide</a></li>
 
     
      <!-- Beauty to Go! Part -->
-      <div class=" ">
+      <div class="dl_viewoffers">
         <a href="javascript:void(0)" onclick="openApp();">
          <div class="" style="">
             <div class="widget" data-id="5978c56334ac533db4d0629f">
@@ -1734,7 +1739,7 @@ Website&utm_medium=MegaMenu&utm_campaign=Beauty Blog">Foundation Guide</a></li>
       </div>
   <!-- Beauty to Go! Part End --> 
       <!-- TOP OF THE CHARTS @ NYKAA Part -->    
-      <div class="">
+      <div class="dl_greywrap mrtp" style="padding-bottom: 12px;">
          <div class="widget" data-id="5978c5bf34ac533db4d062a2">
             <esi:include src="http://nykaa-widgets-staging.nykaa.com/inventory/5978c5bf34ac533db4d062a2/html/?platform=mobile" />
          </div> 
@@ -1742,7 +1747,7 @@ Website&utm_medium=MegaMenu&utm_campaign=Beauty Blog">Foundation Guide</a></li>
        
     <!-- TOP OF THE CHARTS @ NYKAA Part End -->     
     <!-- COLLECTIONS AT NYKAA  Part -->     
-      <div class="">
+      <div class="dl_greywrap">
         <div class="widget" data-id="5978c61034ac533db4d062a5">
             <esi:include src="http://nykaa-widgets-staging.nykaa.com/inventory/5978c61034ac533db4d062a5/html/?platform=mobile" />
          </div> 
@@ -1750,7 +1755,7 @@ Website&utm_medium=MegaMenu&utm_campaign=Beauty Blog">Foundation Guide</a></li>
    <!-- COLLECTIONS AT NYKAA  Part End -->
 
    <!--  DISCOVER @ NYKAA  Part -->   
-      <div class="">
+      <div class="dl_greywrap">
         <div class="widget" data-id="5978c67b34ac533db4d062a8">
             <esi:include src="http://nykaa-widgets-staging.nykaa.com/inventory/5978c67b34ac533db4d062a8/html/?platform=mobile" />
          </div> 
@@ -1770,8 +1775,8 @@ Website&utm_medium=MegaMenu&utm_campaign=Beauty Blog">Foundation Guide</a></li>
     <div class="clear"></div>
          </div>
          <div class="brandwrap" style="margin:0 -3%;">
-            <div class="widget" data-id="5978c5bf34ac533db4d062a2">
-               <esi:include src="http://nykaa-widgets-staging.nykaa.com/inventory/5978c5bf34ac533db4d062a2/html/?platform=mobile" />
+            <div class="widget" data-id="5978c6a734ac533db4d062ab">
+               <esi:include src="http://nykaa-widgets-staging.nykaa.com/inventory/5978c6a734ac533db4d062ab/html/?platform=mobile" />
             </div> 
             
          </div>
@@ -1779,7 +1784,7 @@ Website&utm_medium=MegaMenu&utm_campaign=Beauty Blog">Foundation Guide</a></li>
  <!--  TOP BRANDS  Part End -->
      <!--   BEAUTY UNLIMITED  Part -->
      
-      <div class="">
+      <div class="dl_greywrap">
          <div class="widget" data-id="5978c6d134ac533db4d062ae">
             <esi:include src="http://nykaa-widgets-staging.nykaa.com/inventory/5978c6d134ac533db4d062ae/html/?platform=mobile" />
          </div> 
