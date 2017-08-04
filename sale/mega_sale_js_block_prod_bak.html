@@ -1,0 +1,1332 @@
+<!--script start here-->
+<!-- smooth scrolling starts-->
+<script type="text/javascript"> 
+   jQuery(document).ready(function (e) { 
+   //jQuery('.navlist li:first-child').addClass('active') 
+   jQuery('.navlist li').click(function () { 
+    var navTrackParam = "'"+jQuery(this).find('a').text()+"'";
+    ga('send','event','jump to',navTrackParam,'mega_sale');
+    jQuery(this).addClass('active'); 
+   jQuery('.navlist li').removeClass('active') 
+   var index0 = jQuery('.navlist li').index(this) 
+   jQuery('.navlist li').eq(index0).addClass('active') 
+   }); 
+   }); 
+</script> 
+<!-- smooth scrolling starts-->
+<!-- smooth scrolling starts-->
+<script>
+   jQuery(document).ready(function(){
+     // Add smooth scrolling to all links
+     jQuery("a").on('click', function(event) {
+   
+       // Make sure this.hash has a value before overriding default behavior
+       if (this.hash !== "") {
+         // Prevent default anchor click behavior
+         event.preventDefault();
+   
+         // Store hash
+         var hash = this.hash;
+   
+         // Using jQuery's animate() method to add smooth page scroll
+         // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+         jQuery('html, body').animate({
+           scrollTop: jQuery(hash).offset().top
+         }, 800, function(){
+      
+           // Add hash (#) to URL when done scrolling (default click behavior)
+           window.location.hash = hash;
+         });
+       } // End if
+     });
+   });
+</script>
+<!-- smooth scrolling close-->
+<!-- sticky starts-->
+<script>
+   jQuery(document).ready(function() {
+       jQuery(window).scroll(function() {
+           if (jQuery(this).scrollTop() > 350) {
+               jQuery('.stickypart').addClass("stick");
+   
+           } else {
+               jQuery('.stickypart').removeClass("stick");
+   
+           }
+       });
+   });
+</script>
+<!-- sticky close--> 
+<!-- category slider start-->
+<script src="http://darsa.in/sly/examples/js/vendor/plugins.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Sly/1.6.1/sly.min.js"></script> 
+<script >
+   jQuery(function($) {
+     'use strict';
+   
+     // -------------------------------------------------------------
+     //   Basic Navigation
+     // -------------------------------------------------------------
+     (function() {
+       var $frame = $('#slide');
+       var $slidee = $frame.children('ul').eq(0);
+       var $wrap = $frame.parent();
+   
+       // Call Sly on frame
+       $frame.sly({
+         horizontal: 1,
+         itemNav: 'basic',
+         smart: 1,
+         activateOn: 'click',
+         mouseDragging: 1,
+         touchDragging: 1,
+         releaseSwing: 1,
+         startAt: 0,
+         scrollBar: $wrap.find('.scrollbar'),
+         scrollBy: 1,
+         pagesBar: $wrap.find('.pages'),
+         activatePageOn: 'click',
+         speed: 300,
+         elasticBounds: 1,
+         easing: 'easeOutExpo',
+         dragHandle: 1,
+         dynamicHandle: 1,
+         clickBar: 1,
+   
+         // Buttons
+         forward: $wrap.find('.forward'),
+         backward: $wrap.find('.backward'),
+         prev: $wrap.find('.prev'),
+         next: $wrap.find('.next'),
+         prevPage: $wrap.find('.prevPage'),
+         nextPage: $wrap.find('.nextPage')
+       });
+    
+   
+       // To Start button
+       $wrap.find('.toStart').on('click', function() {
+         var item = $(this).data('item');
+         // Animate a particular item to the start of the frame.
+         // If no item is provided, the whole content will be animated.
+         $frame.sly('toStart', item);
+       });
+   
+       // To Center button
+       $wrap.find('.toCenter').on('click', function() {
+         var item = $(this).data('item');
+         // Animate a particular item to the center of the frame.
+         // If no item is provided, the whole content will be animated.
+         $frame.sly('toCenter', item);
+       });
+   
+       // To End button
+       $wrap.find('.toEnd').on('click', function() {
+         var item = $(this).data('item');
+         // Animate a particular item to the end of the frame.
+         // If no item is provided, the whole content will be animated.
+         $frame.sly('toEnd', item);
+       });
+   
+       // Add item
+       $wrap.find('.add').on('click', function() {
+         $frame.sly('add', '<li>' + $slidee.children().length + '</li>');
+       });
+   
+       // Remove item
+       $wrap.find('.remove').on('click', function() {
+         $frame.sly('remove', -1);
+       });
+     }());
+     (function() {
+       var $frame = $('#slide1');
+       var $slidee = $frame.children('ul').eq(0);
+       var $wrap = $frame.parent();
+   
+       // Call Sly on frame
+       $frame.sly({
+         horizontal: 1,
+         itemNav: 'basic',
+         smart: 1,
+         activateOn: 'click',
+         mouseDragging: 1,
+         touchDragging: 1,
+         releaseSwing: 1,
+         startAt: 0,
+         scrollBar: $wrap.find('.scrollbar'),
+         scrollBy: 1,
+         pagesBar: $wrap.find('.pages'),
+         activatePageOn: 'click',
+         speed: 300,
+         elasticBounds: 1,
+         easing: 'easeOutExpo',
+         dragHandle: 1,
+         dynamicHandle: 1,
+         clickBar: 1,
+   
+         // Buttons
+         forward: $wrap.find('.forward'),
+         backward: $wrap.find('.backward'),
+         prev: $wrap.find('.prev'),
+         next: $wrap.find('.next'),
+         prevPage: $wrap.find('.prevPage'),
+         nextPage: $wrap.find('.nextPage')
+       });
+    
+   
+       
+     }());
+     (function() {
+       var $frame = $('#slide2');
+       var $slidee = $frame.children('ul').eq(0);
+       var $wrap = $frame.parent();
+   
+       // Call Sly on frame
+       $frame.sly({
+         horizontal: 1,
+         itemNav: 'basic',
+         smart: 1,
+         activateOn: 'click',
+         mouseDragging: 1,
+         touchDragging: 1,
+         releaseSwing: 1,
+         startAt: 0,
+         scrollBar: $wrap.find('.scrollbar'),
+         scrollBy: 1,
+         pagesBar: $wrap.find('.pages'),
+         activatePageOn: 'click',
+         speed: 300,
+         elasticBounds: 1,
+         easing: 'easeOutExpo',
+         dragHandle: 1,
+         dynamicHandle: 1,
+         clickBar: 1,
+   
+         // Buttons
+         forward: $wrap.find('.forward'),
+         backward: $wrap.find('.backward'),
+         prev: $wrap.find('.prev'),
+         next: $wrap.find('.next'),
+         prevPage: $wrap.find('.prevPage'),
+         nextPage: $wrap.find('.nextPage')
+       });
+    
+   
+       
+     }());
+     (function() {
+       var $frame = $('#slide3');
+       var $slidee = $frame.children('ul').eq(0);
+       var $wrap = $frame.parent();
+   
+       // Call Sly on frame
+       $frame.sly({
+         horizontal: 1,
+         itemNav: 'basic',
+         smart: 1,
+         activateOn: 'click',
+         mouseDragging: 1,
+         touchDragging: 1,
+         releaseSwing: 1,
+         startAt: 0,
+         scrollBar: $wrap.find('.scrollbar'),
+         scrollBy: 1,
+         pagesBar: $wrap.find('.pages'),
+         activatePageOn: 'click',
+         speed: 300,
+         elasticBounds: 1,
+         easing: 'easeOutExpo',
+         dragHandle: 1,
+         dynamicHandle: 1,
+         clickBar: 1,
+   
+         // Buttons
+         forward: $wrap.find('.forward'),
+         backward: $wrap.find('.backward'),
+         prev: $wrap.find('.prev'),
+         next: $wrap.find('.next'),
+         prevPage: $wrap.find('.prevPage'),
+         nextPage: $wrap.find('.nextPage')
+       });
+    
+     }());
+     (function() {
+       var $frame = $('#slide4');
+       var $slidee = $frame.children('ul').eq(0);
+       var $wrap = $frame.parent();
+   
+       // Call Sly on frame
+       $frame.sly({
+         horizontal: 1,
+         itemNav: 'basic',
+         smart: 1,
+         activateOn: 'click',
+         mouseDragging: 1,
+         touchDragging: 1,
+         releaseSwing: 1,
+         startAt: 0,
+         scrollBar: $wrap.find('.scrollbar'),
+         scrollBy: 1,
+         pagesBar: $wrap.find('.pages'),
+         activatePageOn: 'click',
+         speed: 300,
+         elasticBounds: 1,
+         easing: 'easeOutExpo',
+         dragHandle: 1,
+         dynamicHandle: 1,
+         clickBar: 1,
+   
+         // Buttons
+         forward: $wrap.find('.forward'),
+         backward: $wrap.find('.backward'),
+         prev: $wrap.find('.prev'),
+         next: $wrap.find('.next'),
+         prevPage: $wrap.find('.prevPage'),
+         nextPage: $wrap.find('.nextPage')
+       });
+    
+     }());
+     (function() {
+       var $frame = $('#slide5');
+       var $slidee = $frame.children('ul').eq(0);
+       var $wrap = $frame.parent();
+   
+       // Call Sly on frame
+       $frame.sly({
+         horizontal: 1,
+         itemNav: 'basic',
+         smart: 1,
+         activateOn: 'click',
+         mouseDragging: 1,
+         touchDragging: 1,
+         releaseSwing: 1,
+         startAt: 0,
+         scrollBar: $wrap.find('.scrollbar'),
+         scrollBy: 1,
+         pagesBar: $wrap.find('.pages'),
+         activatePageOn: 'click',
+         speed: 300,
+         elasticBounds: 1,
+         easing: 'easeOutExpo',
+         dragHandle: 1,
+         dynamicHandle: 1,
+         clickBar: 1,
+   
+         // Buttons
+         forward: $wrap.find('.forward'),
+         backward: $wrap.find('.backward'),
+         prev: $wrap.find('.prev'),
+         next: $wrap.find('.next'),
+         prevPage: $wrap.find('.prevPage'),
+         nextPage: $wrap.find('.nextPage')
+       });
+    
+     }());
+     (function() {
+       var $frame = $('#slide6');
+       var $slidee = $frame.children('ul').eq(0);
+       var $wrap = $frame.parent();
+   
+       // Call Sly on frame
+       $frame.sly({
+         horizontal: 1,
+         itemNav: 'basic',
+         smart: 1,
+         activateOn: 'click',
+         mouseDragging: 1,
+         touchDragging: 1,
+         releaseSwing: 1,
+         startAt: 0,
+         scrollBar: $wrap.find('.scrollbar'),
+         scrollBy: 1,
+         pagesBar: $wrap.find('.pages'),
+         activatePageOn: 'click',
+         speed: 300,
+         elasticBounds: 1,
+         easing: 'easeOutExpo',
+         dragHandle: 1,
+         dynamicHandle: 1,
+         clickBar: 1,
+   
+         // Buttons
+         forward: $wrap.find('.forward'),
+         backward: $wrap.find('.backward'),
+         prev: $wrap.find('.prev'),
+         next: $wrap.find('.next'),
+         prevPage: $wrap.find('.prevPage'),
+         nextPage: $wrap.find('.nextPage')
+       });
+    
+     }());
+     (function() {
+       var $frame = $('#slide7');
+       var $slidee = $frame.children('ul').eq(0);
+       var $wrap = $frame.parent();
+   
+       // Call Sly on frame
+       $frame.sly({
+         horizontal: 1,
+         itemNav: 'basic',
+         smart: 1,
+         activateOn: 'click',
+         mouseDragging: 1,
+         touchDragging: 1,
+         releaseSwing: 1,
+         startAt: 0,
+         scrollBar: $wrap.find('.scrollbar'),
+         scrollBy: 1,
+         pagesBar: $wrap.find('.pages'),
+         activatePageOn: 'click',
+         speed: 300,
+         elasticBounds: 1,
+         easing: 'easeOutExpo',
+         dragHandle: 1,
+         dynamicHandle: 1,
+         clickBar: 1,
+   
+         // Buttons
+         forward: $wrap.find('.forward'),
+         backward: $wrap.find('.backward'),
+         prev: $wrap.find('.prev'),
+         next: $wrap.find('.next'),
+         prevPage: $wrap.find('.prevPage'),
+         nextPage: $wrap.find('.nextPage')
+       });
+    
+     }());
+     (function() {
+       var $frame = $('#slide8');
+       var $slidee = $frame.children('ul').eq(0);
+       var $wrap = $frame.parent();
+   
+       // Call Sly on frame
+       $frame.sly({
+         horizontal: 1,
+         itemNav: 'basic',
+         smart: 1,
+         activateOn: 'click',
+         mouseDragging: 1,
+         touchDragging: 1,
+         releaseSwing: 1,
+         startAt: 0,
+         scrollBar: $wrap.find('.scrollbar'),
+         scrollBy: 1,
+         pagesBar: $wrap.find('.pages'),
+         activatePageOn: 'click',
+         speed: 300,
+         elasticBounds: 1,
+         easing: 'easeOutExpo',
+         dragHandle: 1,
+         dynamicHandle: 1,
+         clickBar: 1,
+   
+         // Buttons
+         forward: $wrap.find('.forward'),
+         backward: $wrap.find('.backward'),
+         prev: $wrap.find('.prev'),
+         next: $wrap.find('.next'),
+         prevPage: $wrap.find('.prevPage'),
+         nextPage: $wrap.find('.nextPage')
+       });
+    
+     }());
+     
+   
+   });
+   
+</script>  
+<!--category slider close -->
+<!--seemore scripts start--> 
+<script type="text/javascript">
+   jQuery(document).ready(function () {
+         
+                   jQuery('#seeless').hide();
+                   jQuery('#seemore').click(function () {
+                        jQuery('.freeprdoffers').slideDown('slow');
+            jQuery('#seemore').hide();
+            jQuery('#seeless').show();
+          });
+          jQuery('#seeless').click(function () {
+            jQuery('.freeprdoffers').slideUp('slow');
+            jQuery('#seemore').show();
+            jQuery('#seeless').hide();
+            jQuery('html, body').animate({
+               scrollTop: jQuery(".freeprdoffers-top").offset().top
+             }, 1000);
+          });
+        });
+</script> 
+<!--seemore scripts start--> 
+<!--scroll scripts-->
+<script type="text/javascript">
+   jQuery(window).scroll(function() {
+       if (jQuery(this).scrollTop() >
+           350) {
+           jQuery('.megasalejune .navlist li').removeClass("active");
+           jQuery('.megasalejune .navlist li:nth-child(1)').addClass("active");
+       }
+   });
+   jQuery(window).scroll(function() {
+       if (jQuery(this).scrollTop() >
+           3916) {
+           jQuery('.megasalejune .navlist li').removeClass("active");
+           jQuery('.megasalejune .navlist li:nth-child(2)').addClass("active");
+       }
+   });
+   jQuery(window).scroll(function() {
+       if (jQuery(this).scrollTop() >
+           4766) {
+           jQuery('.megasalejune .navlist li').removeClass("active");
+           jQuery('.megasalejune .navlist li:nth-child(3)').addClass("active");
+       }
+   });
+    jQuery(window).scroll(function() {
+       if (jQuery(this).scrollTop() >
+           5598) {
+           jQuery('.megasalejune .navlist li').removeClass("active");
+           jQuery('.megasalejune .navlist li:nth-child(4)').addClass("active");
+       }
+   });
+    jQuery(window).scroll(function() {
+       if (jQuery(this).scrollTop() >
+           7672) {
+           jQuery('.megasalejune .navlist li').removeClass("active");
+           jQuery('.megasalejune .navlist li:nth-child(5)').addClass("active");
+       }
+   });
+    jQuery(window).scroll(function() {
+       if (jQuery(this).scrollTop() >
+           8784) {
+           jQuery('.megasalejune .navlist li').removeClass("active");
+           jQuery('.megasalejune .navlist li:nth-child(6)').addClass("active");
+       }
+   });
+</script>
+<!--scroll scripts-->
+<!-- popuptab starts-->
+<script type="text/javascript"> 
+   jQuery(document).ready(function (e) { 
+   jQuery('.bigimg').hide() 
+   jQuery('.bigimg:first-child').show() 
+   jQuery('.tabx').click(function () { 
+   //$('.bigimg').removeClass('tab-active') 
+   jQuery('.tabx').removeClass('active'); 
+   jQuery(this).addClass('active'); 
+   jQuery('.bigimg').hide() 
+   var index0 = jQuery('.tabx').index(this) 
+   jQuery('.bigimg').eq(index0).show() 
+   });    
+   
+   
+      jQuery('.filterbtn').click(function () { 
+   //$('.bigimg').removeClass('tab-active') 
+     
+   jQuery('#popup1').css('display','block'); 
+   jQuery('.overlay').css('display','block') 
+   
+   }); 
+   jQuery('.overlay').click(function () { 
+   //$('.bigimg').removeClass('tab-active') 
+   
+   jQuery('#popup1').css('display','none'); 
+   jQuery('.overlay').css('display','none') 
+   
+   }); 
+   jQuery('#brandclick').click(function () { 
+     jQuery('.slider').get(0).slick.setPosition();
+   
+   
+   }); 
+   
+    
+   }); 
+   
+    jQuery(document).ready(function(){
+      jQuery('.twodiv,.threediv,.fourdiv,.popularBrand,.brand,.catwrap').addClass('custom-block');
+      jQuery('.megasalejune').addClass('custom-category');
+      jQuery('input[type="checkbox"]').click(function(){
+        if(jQuery(this).prop("checked") == true){
+            jQuery(this).next().addClass('check-sucess');
+            jQuery(this).closest('.checkbox').addClass('slect-box');
+        }
+        else if(jQuery(this).prop("checked") == false){
+            jQuery(this).next().removeClass('check-sucess');
+            jQuery(this).closest('.checkbox').removeClass('slect-box');
+        }
+        var numCF = jQuery('.checkbox.cat-filter.slect-box').length;
+        var numBF = jQuery('.checkbox.brand-filter.slect-box').length;
+        jQuery('.count-number').text(numCF);
+        jQuery('.brand-count-number').text(numBF); 
+      });
+      jQuery('.tabBrand').click(function(){
+        var brandsToShow = '';
+        jQuery('.checkbox.cat-filter.slect-box').each(function(index){
+          if(0 == index){
+            brandsToShow += '.'+jQuery(this).find('input[type="checkbox"]').val();
+          }else{
+            brandsToShow += ',.'+jQuery(this).find('input[type="checkbox"]').val();
+          }
+        });
+        if(brandsToShow == ''){
+          jQuery('.checkbox.brand-filter').show();
+        }else{
+          jQuery('.checkbox.brand-filter').hide();
+          jQuery(brandsToShow).show();  
+        }
+      });
+    });
+
+    jQuery('.applybtn').on('click', function(){
+
+
+var j=0;
+jQuery(".twodiv:visible").css("margin-right", function(i) {
+j=j+1;
+if(j%2 && j!=0){
+   return '1.7%';
+}
+});
+
+
+   jQuery( ".goldbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+   
+   jQuery( ".silverbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+   
+   jQuery( ".popular:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+   
+   jQuery( ".editobx:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+   
+   jQuery( ".brandbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+   
+   jQuery( ".platinumbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+   
+   jQuery( ".freeprdoffersbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+   
+   jQuery( ".goldplusbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+     var filter = '';
+      var showCatFilters = showBrandFilters = catgFiltersForTracking = brandFiltersForTracking = '';
+      var catgIndex = brandIndex = 1;
+      jQuery('.checkbox.slect-box').each(function(index){
+        jQuery("#cat").show();
+        if(index == 0){
+          filter += '.'+jQuery(this).find('input[type="checkbox"]').val();
+        }else{
+         filter += ',.'+jQuery(this).find('input[type="checkbox"]').val();  
+        }
+        if(jQuery(this).hasClass('cat-filter')){
+          if(1 == catgIndex){
+            showCatFilters += jQuery(this).find('span').text();
+            catgFiltersForTracking += jQuery(this).find('span').text().toLowerCase();
+          }
+          if(2 == catgIndex){
+            showCatFilters += ','+jQuery(this).find('span').text();
+            catgFiltersForTracking += '|'+jQuery(this).find('span').text().toLowerCase();
+          }
+          if(3 == catgIndex){
+            showCatFilters += '...';
+            catgFiltersForTracking += '|'+jQuery(this).find('span').text().toLowerCase();
+          }
+          if(catgIndex > 3){
+            catgFiltersForTracking += '|'+jQuery(this).find('span').text().toLowerCase();
+          }
+          catgIndex++;
+        }else if(jQuery(this).hasClass('brand-filter')){
+          jQuery("#cat").hide();
+          if(1 == brandIndex){
+            showBrandFilters += jQuery(this).find('span').text();
+            brandFiltersForTracking += jQuery(this).find('span').text().toLowerCase();
+          }
+          if(2 == brandIndex){
+            showBrandFilters += ','+jQuery(this).find('span').text();
+            brandFiltersForTracking += '|'+jQuery(this).find('span').text().toLowerCase();
+          }
+          if(3 == brandIndex){
+            showBrandFilters += '...';
+            brandFiltersForTracking += '|'+jQuery(this).find('span').text().toLowerCase();
+          }
+          if(brandIndex > 3){
+            brandFiltersForTracking += '|'+jQuery(this).find('span').text().toLowerCase();
+          }
+          brandIndex++;
+        }
+      });
+      if(filter == ''){
+        jQuery('.custom-block, .custom-category, .see-more').css('display','inline-block');
+        jQuery('.category .brand-text .font-color').text('All Categories').css('color', '#9a9aa3');
+        jQuery('.brands .brand-text .font-color').text('All Brands').css('color', '#9a9aa3');
+   
+   jQuery( ".goldbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+   
+   jQuery( ".silverbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+   
+   jQuery( ".popular:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+   
+   jQuery( ".editobx:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+   
+   jQuery( ".brandbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+   
+   jQuery( ".platinumbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+   
+   jQuery( ".freeprdoffersbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+   
+   jQuery( ".goldplusbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+   
+   
+      }else{
+        //jQuery('.hidden_div_container').show()
+        jQuery('#seemore').trigger('click');
+        jQuery('#seeless').hide();
+        jQuery('.custom-block').hide();
+        jQuery(filter).css('display','inline-block'); 
+        jQuery('.custom-category').each(function(){
+          if(jQuery(this).find('.custom-block:visible').length == 0){
+            jQuery(this).hide();
+          }
+        });
+        jQuery('.see-more').hide();
+        if(showCatFilters == ''){
+          jQuery('.category .brand-text .font-color').text('All Categories').css('color', '#9a9aa3');
+        }else{
+          jQuery('.category .brand-text .font-color').text(showCatFilters).css('color', '#fc2779');
+        }
+        if(showBrandFilters == ''){
+          jQuery('.brands .brand-text .font-color').text('All Brands').css('color', '#9a9aa3');
+        }else{
+          jQuery('.brands .brand-text .font-color').text(showBrandFilters).css('color', '#fc2779');
+        }
+
+        var trackingParam = "'" + catgFiltersForTracking + ":" + brandFiltersForTracking + "'";
+        ga('send','event','Mega Sale','category:brand', trackingParam);
+
+   jQuery("#apply-desk-filter").html(parseInt(jQuery(".brand-count-number").html()) + parseInt(jQuery(".count-number").html()));
+   
+   
+   
+   var count=1;
+   
+   jQuery(".custom-category .platinumbox:visible .custom-block").each(function(){
+    if(jQuery(this).is(":visible")) { 
+      if(count % 2 != 0){ 
+        jQuery(this).addClass("margin-left-ten");
+      }
+      else {
+        jQuery(this).addClass("margin-left-zero");
+      }
+      count++;
+      
+    }
+
+   });
+   
+   var count=1;
+   
+   jQuery(".custom-category .goldplusbox:visible .custom-block").each(function(){
+    if(jQuery(this).is(":visible")) { 
+      if(count < 3 ){ 
+        jQuery(this).addClass("margin-left-ten");
+      }
+      else {
+        jQuery(this).addClass("margin-left-zero");
+        if(count == 3) {count = 0;}
+      }
+      count++;
+      
+    }
+   });
+   
+   
+   var count=1;
+   
+   jQuery(".custom-category .freeprdoffersbox:visible .custom-block").each(function(){
+    if(jQuery(this).is(":visible")) { 
+      if(count %2 != 0){ 
+        jQuery(this).addClass("margin-left-ten");
+      }
+      else {
+        jQuery(this).addClass("margin-left-zero");
+      }
+      count++;
+   
+    }
+   });
+   
+   var count=1;
+   
+   jQuery(".custom-category .goldbox:visible .custom-block").each(function(){
+      if(jQuery(this).is(":visible")) { 
+      if(count < 4){ 
+        jQuery(this).addClass("margin-left-ten");
+      }
+      else {
+        jQuery(this).addClass("margin-left-zero");
+        if(count == 4) {count = 0; }
+      }
+      count++;
+      
+    }
+   });
+   var count=1;
+   jQuery(".custom-category .silverbox:visible .custom-block").each(function(){
+    if(jQuery(this).is(":visible")) { 
+      if(count < 4){ 
+        jQuery(this).addClass("margin-left-ten");
+      }
+      else {
+        jQuery(this).addClass("margin-left-zero");
+        if(count == 4) {count = 0; }
+      }
+      count++;
+      
+    }
+   });
+   var count=1;
+   jQuery(".custom-category .popular:visible .custom-block").each(function(){
+    if(jQuery(this).is(":visible")) { 
+      if(count < 4){ 
+        jQuery(this).addClass("margin-left-ten");
+      }
+      else {
+        jQuery(this).addClass("margin-left-zero");
+        if(count == 4) {count = 0; }
+      }
+      count++;
+      
+    }
+   });
+   var count=1;
+   jQuery(".custom-category .editobx:visible .custom-block").each(function(){
+    if(jQuery(this).is(":visible")) { 
+      if(count < 4 ){ 
+        jQuery(this).addClass("margin-left-ten");
+      }
+      else {
+        jQuery(this).addClass("margin-left-zero");
+        if(count == 4) {count = 0;}
+      }
+      count++;
+      
+    }
+   });
+   
+   var count=1;
+   jQuery(".custom-category .brandbox:visible .custom-block").each(function(){
+    if(jQuery(this).is(":visible")) { 
+      if(count < 4){ 
+        jQuery(this).addClass("margin-left-ten");
+      }
+      else {
+        jQuery(this).addClass("margin-left-zero");
+        if(count == 4) {count = 0;}
+      }
+      count++;
+      
+    }
+   });
+   
+   var flag_parent_show = 0;
+   jQuery("#popular .custom-block").each(function(){
+    if(jQuery(this).css('display') == "none"){
+      flag_parent_show = 1;
+    }else{
+      flag_parent_show = 0;
+      return false;
+    }
+   });
+   if(flag_parent_show == 1){
+    jQuery("#popular").hide();
+   }
+   else{
+    jQuery("#popular").show();
+   }
+   
+   flag_parent_show = 0;
+   jQuery("#featured .custom-block").each(function(){
+    if(jQuery(this).css('display') == "none"){
+      flag_parent_show = 1;
+    }else{
+      flag_parent_show = 0;
+      return false;
+    }
+   });
+   if(flag_parent_show == 1){
+    jQuery("#featured").hide();
+   }
+   else{
+    jQuery("#featured").show();
+   }
+   
+   
+   flag_parent_show = 0;
+   jQuery("#editor .custom-block").each(function(){
+    if(jQuery(this).css('display') == "none"){
+      flag_parent_show = 1;
+    }else{
+      flag_parent_show = 0;
+      return false;
+    }
+   });
+   if(flag_parent_show == 1){
+    jQuery("#editor").hide();
+   }else{
+    jQuery("#editor").show();
+   }
+   
+   flag_parent_show = 0;
+   jQuery("#free  .custom-block").each(function(){
+    if(jQuery(this).css('display') == "none"){
+      flag_parent_show = 1;
+    }else{
+      flag_parent_show = 0;
+      return false;
+    }
+   });
+   if(flag_parent_show == 1){
+    jQuery("#free").hide();
+   }else{
+    jQuery("#free").show();
+   }
+   
+   flag_parent_show = 0;
+   jQuery("#all  .custom-block").each(function(){
+    if(jQuery(this).css('display') == "none"){
+      flag_parent_show = 1;
+    }else{
+      flag_parent_show = 0;
+      return false;
+    }
+   });
+   if(flag_parent_show == 1){
+    jQuery("#all").hide();
+   }else{
+    jQuery("#all").show();
+   }
+   
+   }
+     jQuery('.overlay').css('display','none');
+      jQuery('#popup1').css('display','none');
+           jQuery('.filterbtn').addClass('active');
+    });
+    jQuery('.clearbtn').on('click', function(){
+      jQuery('#seeless').trigger('click');
+      jQuery("#cat").show();
+      jQuery("#popular").show();
+      jQuery("#featured").show();
+      jQuery("#editor").show();
+      jQuery("#free").show();
+      jQuery("#all").show();
+      jQuery('.checkbox').removeClass('slect-box');
+      jQuery('.count-number, .brand-count-number').text('0');
+     jQuery('#apply-desk-filter').text('0');
+     jQuery('.filterbtn').removeClass('active');
+    });
+   jQuery('.slider').slick({
+    slidesToShow: 1,
+          dots:true,
+          slide: 'li',
+          arrows:true,adaptiveHeight: true,
+   
+    });
+    jQuery('.applybtn').on('click', function(){
+      jQuery("img.lazy").lazyload({load : function(){}});
+    }); 
+</script> 
+<!--filter script close--> 
+<!-- lazyloading  start-->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.js" type="text/javascript"></script>
+<script>
+   jQuery('img.lazy').lazyload({
+     load : function()
+     {
+       //jQuery(this).css('background-color','#ffffff');
+     }
+   });
+</script>
+<!-- lazyloading ends -->
+<script type="text/javascript">
+   var checkedBrands = [];
+   var allBrands = [
+     "Aaranyaa",
+     "Agaro",
+     "Age Lock",
+     "AHAVA",
+     "Alan Truman",
+     "All Good Scents",
+     "Aloe Veda",
+     "Amway",
+     "Anatomicals",
+     "Andis",
+     "Archies",
+     "Ardell",
+     "Arganic",
+     "Aroma Treasures",
+     "Aryanveda",
+     "Astaberry",
+     "Aura Essence",
+     "Australis",
+     "Avene",
+     "Avene",
+     "Avon",
+     "Axe",
+     "Azafran Organics",
+     "Babor",
+     "BaByliss",
+     "Balmain Paris",
+     "Batiste",
+     "B'atude",
+     "BBlunt",
+     "Beardo",
+     "Belcam",
+     "Bella",
+     "Bentley Organic",
+     "Beverly Hills Polo Club",
+     "Bharat & Dorris",
+     "Bio Oil",
+     "BioCare",
+     "Bioderma",
+     "Biotique",
+     "Blue Heaven",
+     "BodyHerbals",
+     "Bomb Cosmetics",
+     "Bombay Shaving Company",
+     "Boroplus",
+     "Braun",
+     "Breathe Aromatherapy",
+     "Brylcreem",
+     "C.A.L Los Angeles",
+     "Casmara",
+     "Chambor",
+     "Chaoba",
+     "Chicco",
+     "Ciate London",
+     "Clean & Clear",
+     "Close-Up",
+     "Coccoon",
+     "Colgate",
+     "Colorbar",
+     "Coloressence",
+     "Concept II",
+     "Corioliss",
+     "Creme 21",
+     "Da Yogis",
+     "Dabur",
+     "Dalan",
+     "Deborah",
+     "Denver",
+     "Dettol",
+     "D'free",
+     "Diana Of London",
+     "Dove",
+     "Dr. Vaidya's",
+     "Dr.Batra's",
+     "Durex",
+     "Elchim",
+     "Elle 18",
+     "Enchanteur",
+     "Engage",
+     "Enliven",
+     "Envy 1000",
+     "Epique Switzerland",
+     "Essence",
+     "Eva",
+     "ExxelUSA",
+     "Eyova",
+     "Faces",
+     "Fair And Lovely",
+     "Fem",
+     "Filone",
+     "Fogg",
+     "Forest Essentials",
+     "ForeverTeen",
+     "Foxmen",
+     "Fran Wilson Moodmatcher",
+     "Freedom",
+     "FreshLook",
+     "Gala of London",
+     "Garnier",
+     "Gillette",
+     "GlamGals",
+     "Grace Cole",
+     "Gratia",
+     "GUBB USA",
+     "Hair For Sure",
+     "HAIR4REAL",
+     "HairPro",
+     "HE",
+     "Head & Shoulders",
+     "HealthAid",
+     "HealthKart",
+     "HealthVit",
+     "HealthViva",
+     "Hedonista",
+     "Herbal Hills",
+     "Herbalife",
+     "Himalaya",
+     "Iba Halal Care",
+     "Ikonic Professional",
+     "Inatur",
+     "India Grooming Club",
+     "Indulekha",
+     "Inlife",
+     "Innisfree",
+     "Inveda",
+     "Invisibobble",
+     "Iraa",
+     "Iraya",
+     "Island Kiss",
+     "Ital Veloce",
+     "Jaquline USA",
+     "Jeva",
+     "Johnson's",
+     "Jovees",
+     "Just Herbs",
+     "Kama Ayurveda",
+     "KamaSutra",
+     "Kara",
+     "Kaya",
+     "Kent",
+     "Keshking",
+     "Khadi",
+     "Kinetics",
+     "Krishkare",
+     "L.A. Colors",
+     "L.A.Girl",
+     "Lacto Calamine",
+     "Lakme",
+     "LASplash",
+     "Lass Naturals",
+     "Layer'r",
+     "Lever Ayush",
+     "Lifebuoy",
+     "Livon",
+     "L'Oreal Paris",
+     "L'Oreal Paris Men",
+     "L'Oreal Professionnel",
+     "Lottie London",
+     "Lotus Herbals",
+     "Lovea",
+     "Lushveda",
+     "Lux",
+     "Macadamia",
+     "Make Up Tools",
+     "Makeup Obsession",
+     "Makeup Revolution",
+     "Mamaearth",
+     "Man Arden",
+     "ManCave",
+     "Matra",
+     "Matrix",
+     "Maybelline New York",
+     "MCaffeine",
+     "Mee Mee",
+     "MIB",
+     "Milani",
+     "MOND'SUB",
+     "Morpheme Remedies",
+     "MUA",
+     "MuscleXP",
+     "Nanogen",
+     "Natio",
+     "Natural Bath And Body",
+     "Naturalium",
+     "Nature's Essence",
+     "Naturyz",
+     "Navratna",
+     "Neutrogena",
+     "Nicka K",
+     "Nike",
+     "Nivea",
+     "Note",
+     "Nourish Vitals",
+     "Nova",
+     "NutraVigour",
+     "NutroActive",
+     "Nutrovea",
+     "Nyassa",
+     "NYX Professional Makeup",
+     "O3+",
+     "Odiva",
+     "Olay",
+     "Olivia Garden",
+     "OMORFEE",
+     "Optimum Nutrition",
+     "Organic India",
+     "Organix",
+     "Oriflame",
+     "Original Source",
+     "OxyLife",
+     "Palmer's",
+     "Palmolive",
+     "Panache",
+     "Pantene",
+     "Park Avenue",
+     "Patisserie De Bain",
+     "Philips",
+     "Pigeon",
+     "Plum",
+     "Ponds",
+     "Provoc",
+     "PROWOMEN",
+     "Pure Nutrition",
+     "Puresense",
+     "QVS",
+     "Real Techniques",
+     "Rebul by Archies",
+     "ReinPlatz",
+     "Remington",
+     "Revlon",
+     "Rica",
+     "Richfeel",
+     "Rimmel",
+     "Roots",
+     "Roots & Herbs",
+     "Rose & Co.",
+     "Ruby's Organics",
+     "Sally Hansen",
+     "Sara",
+     "Scholl",
+     "Schwarzkopf",
+     "SeaSoul",
+     "Sebamed",
+     "Secret Senses",
+     "Secret Temptation",
+     "Shany",
+     "Soulflower",
+     "Spa Ceylon Luxury Ayurveda",
+     "Spars",
+     "Spice Island",
+     "SSCPL Herbals",
+     "St.Botanica",
+     "Streax PRO",
+     "Street Wear",
+     "SUGAR",
+     "Suncros",
+     "Sunsilk",
+     "Swati Khadi",
+     "Swiss Tempelle",
+     "Tampax",
+     "Tangle Teezer",
+     "Thalgo",
+     "The Body Shop",
+     "The Brush Tools",
+     "The Face Shop",
+     "The Man Company",
+     "The Nature's Co.",
+     "The Shave Doctor",
+     "Toni&Guy",
+     "Toppik",
+     "Tresemme",
+     "Tvam",
+     "Unived",
+     "Ustraa",
+     "Vaadi Herbals",
+     "Vanesa",
+     "Vaseline",
+     "Vedic Line",
+     "Veet",
+     "Versace 19.69",
+     "Victoria's Secret",
+     "VLCC",
+     "Votre",
+     "VWash",
+     "Wella Professionals",
+     "West Coast",
+     "Wet Brush",
+     "Whisper",
+     "Wild Earth",
+     "Wild Stone",
+     "Wow",
+     "XLR8",
+     "Yardley",
+     "Yoga India",
+     "Yves Rocher",
+     "Zodiac",
+     "Zuci"
+     ];
+   
+   
+   
+     var createOuterWrapper = function (brandName) {
+       var totalStruct = "";
+       l1Div = "";
+       while(brandName.length){
+         l1 = brandName.splice(0,30);
+         l1Div = l1Div + '<li>  <div class="checkboxwrap">  ';
+         l2Div = "";
+         while(l1.length){
+           l2 = l1.splice(0,6);
+           l2Div = l2Div + '<div class="brandclmn">';
+           l3Div = "";
+           jQuery.each(l2,function(index, value){
+   
+             newValueName = value.replace(/\ /g,"-");
+             newValueName = newValueName.replace(/\'/g,"-");
+             newValueName = newValueName.replace(/&/g,"");
+             newValueName = newValueName.replace(/\./g,"-");
+   
+             newValueName = newValueName.toLowerCase() + '-f';
+   
+             newValueName = newValueName.replace(/--/g,"-");
+   
+             if(jQuery.inArray(newValueName, checkedBrands) == -1) {
+               l3Div = l3Div + '<div class="checkbox brand-filter"><input type="checkbox" value="'+ newValueName +'" > <span> '+ value +' </span></div>';
+             } else {
+               l3Div = l3Div + '<div class="checkbox brand-filter slect-box"><input type="checkbox" checked value="'+ newValueName +'" > <span class="check-sucess"> '+ value +' </span></div>';
+             }
+           });
+           l2Div = l2Div + l3Div + '</div>';
+         }
+         l1Div = l1Div + l2Div + '</div></li>';
+       }
+       return l1Div;
+     };
+   
+   jQuery("#brandSearch").on("keyup",function(){
+   
+   jQuery('.checkbox.slect-box').each(function(index){
+     checkedBrands.push(jQuery(this).find('input[type="checkbox"]').val());
+   });
+   checkedBrands = jQuery.unique(checkedBrands);
+   
+   
+   
+     var copyBrands = allBrands.slice();
+     var completeWrapper = "";
+     jQuery(".slider").unslick();
+     if (jQuery(this).val().trim() != "" ) {
+       var searchTerm = jQuery(this).val().trim();
+       copyBrands2 = jQuery.grep(copyBrands, function( item, index ) {
+         key = item.toLowerCase().indexOf(searchTerm.toLowerCase());
+         if (key > -1) {return true};
+       });
+       completeWrapper = createOuterWrapper(copyBrands2);
+     } else {
+       completeWrapper = createOuterWrapper(copyBrands);
+     }
+   
+     jQuery("#popup1 .owl-wrapper #product_list_ul_1").empty().append(completeWrapper);
+     jQuery('.slider').slick({
+       slidesToShow: 1,
+       dots:true,
+       slide: 'li',
+       arrows:true,
+      
+     });
+   
+     jQuery('input[type="checkbox"]').off().on("click",function(){
+       if(jQuery(this).prop("checked") == true){
+           jQuery(this).next().addClass('check-sucess');
+           jQuery(this).closest('.checkbox').addClass('slect-box');
+       }
+       else if(jQuery(this).prop("checked") == false){
+           jQuery(this).next().removeClass('check-sucess');
+           jQuery(this).closest('.checkbox').removeClass('slect-box');
+       }
+       var numCF = jQuery('.checkbox.cat-filter.slect-box').length;
+       var numBF = jQuery('.checkbox.brand-filter.slect-box').not(".slick-cloned").length;
+       jQuery('.count-number').text(numCF);
+       jQuery('.brand-count-number').text(numBF+checkedBrands.length); 
+     });
+   });
+</script>
+
+
+<!--script close here-->
