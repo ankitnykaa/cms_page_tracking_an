@@ -1,0 +1,905 @@
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+<style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style-type: none
+    }
+    .wrap {
+        font-family: 'Source Sans Pro';
+    }
+    img {
+        max-width: 100%;
+    }
+    i {
+        background: url(http://www.nykaa.com/media/wysiwyg/Mega-sale-jun-2017/sprite.png) no-repeat;
+        float: left
+    }
+    i.brandicon {
+        height: 19px;
+        width: 20px;
+        margin-right: 20px;
+    }
+    i.cat {
+        height: 21px;
+        width: 24px;
+        margin-right: 20px;
+        background-position: 0 -42px
+    }
+    i.popfilterbtn {
+        height: 28px;
+        width: 23px;
+        margin-right: 20px;
+        background-position: 0 -84px
+    }
+    .pagecontainer {
+        max-width: 70em;
+        margin: 0 auto;
+        width: 98%;
+    }
+    .bgf3f3f3 {
+        background: #f3f3f3;
+        overflow: hidden;
+		padding-top: 40px;
+        padding-bottom: 40px;
+        position: relative;
+    }
+    .bgf7f7f7 {
+        background: #f7f7f7;
+        overflow: hidden;
+		padding-top: 40px;
+        padding-bottom: 40px;
+        position: relative;
+        border: solid 1px #ebebeb;
+    }
+    .slidingbanner {
+        line-height: 0
+    }
+    .clear {
+        clear: both
+    }
+    .center {
+        text-align: center
+    }
+    .stickypart.bgf7f7f7 {
+        padding-bottom: 0;
+    }
+	.stickypart.bgf3f3f3 {
+        padding-bottom: 0;
+		padding-top: 0;
+    }
+    /*placeholder*/
+    
+    input:focus::-webkit-input-placeholder {
+        color: transparent;
+    }
+    input:focus:-moz-placeholder {
+        color: transparent;
+    }
+    /* Firefox 18- */
+    
+    input:focus::-moz-placeholder {
+        color: transparent;
+    }
+    /* Firefox 19+ */
+    
+    input:focus:-ms-input-placeholder {
+        color: transparent;
+    }
+    /* oldIE ;) */
+    
+    textarea:focus::-webkit-input-placeholder {
+        color: transparent;
+    }
+    textarea:focus:-moz-placeholder {
+        color: transparent;
+    }
+    /* Firefox 18- */
+    
+    textarea:focus::-moz-placeholder {
+        color: transparent;
+    }
+    /* Firefox 19+ */
+    
+    textarea:focus:-ms-input-placeholder {
+        color: transparent;
+    }
+    /* oldIE ;) */
+    
+    ::-webkit-input-placeholder {
+        opacity: 1;
+    }
+    :-moz-placeholder {
+        /* Firefox 18- */
+        
+        opacity: 1;
+    }
+    ::-moz-placeholder {
+        /* Firefox 19+ */
+        
+        opacity: 1;
+    }
+    :-ms-input-placeholder {
+        opacity: 1;
+    }
+    /*placeholder*/
+    /*navcss starts here*/
+    
+    .megasalejune .navwithfilter {
+        margin: 10px auto 10px;
+        max-width: 70em;
+        width: 100%;
+	    height: 50px;	
+		background: #ffffff;
+		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    }
+    .megasalejune .stick .navwithfilter {
+        position: relative
+    }
+    .megasalejune .navlist {
+        display: inline-block;
+        width: calc(100% - 265px);
+        border-radius: 2px;
+		float:left;
+    }
+    .megasalejune .navlist li {
+        display: inline-block;
+       /* margin: 0 1.5%;*/
+		color: #353548;
+        /*padding: 0 2.851%;
+	    height: 50px;
+    	line-height: 50px;	*/
+    }
+    .megasalejune .navlist li:first-child {
+        margin-left: 0
+    }
+    .megasalejune .navlist li a {
+        color: #353548;
+        font-size: 16px;
+        text-transform: uppercase;
+        display: inline-block;
+		margin: 0 1.5%;
+		width: 180px;
+		height: 50px;
+		line-height: 50px;
+    }
+    .megasalejune .navlist li a.active {
+        border-bottom: 3px solid #fc2779;
+        font-weight: 600;
+		color: #fc2779;
+    }
+
+    .megasalejune .filterbtn {
+        display: inline-block;
+        width: 265px;
+        height: 50px;
+        line-height: 50px;
+        color: #fff;
+        background: #fc2779 url(http://www.nykaa.com/media/wysiwyg/Mega-sale-jun-2017/filteractive.png) no-repeat 76px center;
+        cursor: pointer;
+        border-top-right-radius: 2px;
+		border-bottom-right-radius: 2px;
+        font-size: 16px;
+    }
+    .megasalejune .filterbtn.active,
+    .megasalejune .filterbtn:hover {
+        color: #fff;
+        background: #fc2779 url(http://www.nykaa.com/media/wysiwyg/Mega-sale-jun-2017/filteractive.png) no-repeat 76px center;
+        webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+    .hvr-underline-reveal {
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        position: relative;
+        overflow: hidden;
+    }
+    .hvr-underline-reveal::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #fc2779;
+        height: 3px;
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px);
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+    .megasalejune .navlist li:hover .hvr-underline-reveal:before,
+    .megasalejune .hvr-underline-reveal:hover:before,
+    .megasalejune .hvr-underline-reveal.active:before,
+    .megasalejune .navlist li.active .hvr-underline-reveal:before {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    /*navcss close here*/
+    /*navcontent starts here*/
+    
+    .megasalejune .twodiv,
+    .megasalejune .threediv,
+    .megasalejune .fourdiv,
+    .megasalejune .popularBrand,
+    .megasalejune .brand {
+        display: inline-block;
+        margin-bottom: 1.7%;
+        border-radius: 2px;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+        line-height: 0;
+        overflow: hidden;
+        vertical-align: top;
+    }
+    .megasalejune .twodiv {
+        width: 49%;
+    }
+    /*.megasalejune .twodiv:nth-child(even){margin-right:0}*/
+    
+    .megasalejune .threediv {
+        width: 32%;
+        margin-right: 1.7%
+    }
+    .megasalejune .threediv:nth-child(3n+3) {
+        margin-right: 0
+    }
+    .megasalejune .fourdiv {
+        width: 23.5%;
+        margin-right: 1.7%
+    }
+    .megasalejune .fourdiv:nth-child(4n+4) {
+        margin-right: 0
+    }
+    .megasalejune .stick {
+        position: fixed;
+        top: 90px;
+        left: 0;
+        right: 0;
+        z-index: 9
+    }
+    .megasalejune .popularBrand {
+        width: 23.5%;
+        margin-right: 1.7%;
+    }
+    .megasalejune .popularBrand:nth-child(4n+4) {
+        margin-right: 0
+    }
+    .megasalejune .popdiscripdesc {
+        background: #fff;
+        padding: 15px 10px;
+        line-height: normal
+    }
+    .megasalejune .divi {
+        margin-bottom: 20px;
+    }
+    .freeprdoffers {
+        display: none
+    }
+    /*navcontent close here*/
+    
+    .megasalejune .navcnthead {
+        font-size: 24px;
+        letter-spacing: 0.5px;
+        font-family: Georgia;
+        color: #353548;
+        text-transform: uppercase;
+        margin: 60px 0 40px;
+    }
+    .megasalejune .popdiscrip {
+        line-height: normal;
+        padding: 10px;
+        color: #000
+    }
+    .megasalejune .popbrandimg {
+        line-height: 0;
+    }
+    .megasalejune .brand .popbrandimg {
+        width: 130px;
+        height: 40px;
+        margin: 0 auto
+    }
+    /*brandtiles starts here*/
+    
+    .megasalejune .brand {
+        border-radius: 2px;
+        width: 23.5%;
+        margin-right: 1.7%;
+        padding: 20px 0 0
+    }
+    .megasalejune .brand:nth-child(4n+4) {
+        margin-right: 0
+    }
+    .megasalejune .pophead,
+    .megasalejune .popheadnxt {
+        font-weight: bold;
+        font-size: 18px;
+        margin: 8px 0 15px
+    }
+    .megasalejune .popheadnxt {
+        font-size: 20px;
+    }
+    .megasalejune .popheadnxt span {
+        color: #fc2779
+    }
+    .megasalejune .pophead .sizeoff {
+        font-size: 30px;
+    }
+    .megasalejune .popretext {
+        background: #fff;
+        font-size: 14px;
+        margin: 6% 2% 2%;
+        border-radius: 2px;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+        padding: 15px 5px;
+        font-weight: 600;
+        height: 67px;
+        text-transform: uppercase
+    }
+    .megasalejune .popretextnxt {
+        font-size: 14px
+    }
+    /*brandtiles.close here*/
+    
+    .megasalejune .filtertab {
+        border-radius: 2px;
+        background: #d8d8d8;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+        position: relative;
+        padding: 10px 0;
+        margin-top: -1px;
+    }
+    /*.megasalejune .filtertab:before{content: ""; border-left: 10px solid transparent;border-right: 10px solid transparent;border-bottom: 10px solid #d8d8d8;position: absolute;top: -10px; width: 0px; right: 10%}*/
+    
+    .megasalejune .selecteditem {
+        background: #fff url(http://www.nykaa.com/media/wysiwyg/Mega-sale-jun-2017/x.png) no-repeat right center;
+        display: inline-block;
+        padding: 6px 32px 4px 8px;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+        border-radius: 2px;
+        color: #353548;
+        margin: 0 5px;
+        cursor: pointer
+    }
+    .megasalejune .popupwrap {
+        border-radius: 2px;
+        background-color: #ffffff;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+        transition: all 5s ease-in-out;
+    }
+    .megasalejune .poptabwrap {
+        display: inline-block
+    }
+    .megasalejune .tabx {
+        display: inline-block;
+        padding: 20px 18px;
+        position: relative;
+        cursor: pointer;
+        margin: 0 15px;
+        color: #353548
+    }
+    .megasalejune .popupwrap .slide-images {
+        float: none;
+        width: 100%;
+        padding-right: 0;
+        height: auto;
+        padding-top: 0
+    }
+    .megasalejune .popupwrap .frame {
+        padding-top: 20px;
+    }
+    .megasalejune .popupwrap .checkbox {
+        width: 19.5%;
+        text-align: left;
+        display: inline-block
+    }
+    .megasalejune .popupwrap .brandclmn .checkbox {
+        width: 100%;
+    }
+    .megasalejune .tabx:hover,
+    .megasalejune .tabx.active {
+        color: #fc2779;
+    }
+    .megasalejune .tabx.active {
+        font-weight: 600
+    }
+    .megasalejune .tabx:hover i.cat,
+    .megasalejune .tabx.active i.cat {
+        background-position: 0 -61px;
+    }
+    .megasalejune .tabx:hover i.brandicon,
+    .megasalejune .tabx.active i.brandicon {
+        background-position: 0 -23px;
+    }
+    .megasalejune .popfilter {
+        float: left;
+        padding: 12px 0;
+        margin: 0 0 0 20px;
+        font-size: 20px;
+        line-height: 31px;
+    }
+    .megasalejune .bigimg {
+        border-top: solid 1px rgba(151, 151, 151, 0.4);
+        margin-top: -2px
+    }
+    .megasalejune .aplyc {
+        float: right;
+        padding: 12px 0 0;
+        height: 36px;
+        line-height: 36px;
+    }
+    .megasalejune .clearbtn,
+    .megasalejune .applybtn {
+        font-weight: 600;
+        float: left;
+        cursor: pointer;
+        font-size: 16px
+    }
+    .megasalejune .clearbtn {
+        color: #fc2779;
+    }
+    .megasalejune .applybtn {
+        width: 83px;
+        border-radius: 2px;
+        background-color: #fc2779;
+        color: #fff;
+        margin: 0 20px 0 30px
+    }
+
+    .megasalejune .searchtab input {
+        display: inline-block;
+        text-align: center;
+        width: 210px;
+        height: 36px;
+        border-radius: 2px;
+        border: solid 1px rgba(151, 151, 151, 0.4);
+        margin: 10px 0;
+        font-size: 14px;
+        text-align: left;
+        color: rgba(3, 2, 26, 0.4);
+        background: rgba(216, 216, 216, 0.4) url(http://www.nykaa.com/media/wysiwyg/Mega-sale-jun-2017/search-brand.png) no-repeat 0 12px;
+        padding-left: 36px;
+    }
+    .coimg {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+        border-radius: 100px;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    }
+    /*checkbox*/
+    
+    .megasalejune .searchtab {
+        border-bottom: solid 1px rgba(151, 151, 151, 0.4)
+    }
+    .megasalejune .checkbox {
+        margin: 10px 0;
+        display: inline-block;
+        width: 16%
+    }
+    .megasalejune .checkbox input[type="checkbox"] {
+        opacity: 0;
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        height: 24px;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+    .megasalejune .checkbox span {
+        padding-left: 35px;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 15px;
+        position: relative
+    }
+    .megasalejune .checkbox.slect-box input[type="checkbox"]:checked + span::before {
+        border-radius: 5px;
+        background-color: #5cd285;
+        border-color: #5cd285;
+    }
+    .megasalejune .checkbox span::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+        border: solid 2px #979797;
+        left: 5px;
+        margin-top: 0px;
+        background-color: #fff;
+        -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+        -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+        transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+    }
+    .megasalejune .checkbox span::after {
+        display: inline-block;
+        position: absolute;
+        width: 18px;
+        height: 15px;
+        left: 2px;
+        top: 6px;
+        padding-left: 2px;
+        padding-top: 0px;
+        font-size: 11px;
+        color: #636466;
+    }
+    .megasalejune .checkbox.slect-box input[type="checkbox"]:checked ~ span {
+        color: #000;
+        font-weight: 600;
+    }
+    .megasalejune .checkbox.slect-box input[type="checkbox"]:checked + span::after {
+        top: 4px;
+        left: 6px;
+        content: '';
+        background: url("http://www.nykaa.com/media/wysiwyg/Mega-sale-jun-2017/shade-select-tick.png") no-repeat center center;
+    }
+    .megasalejune .checkbox-success input[type="checkbox"]:checked + span::after {
+        color: #fff;
+    }
+    #slide9 .checkbox {
+        width: 10%;
+        float: left;
+        text-align: left
+    }
+    .megasalejune .checkboxwrap {
+        overflow: hidden;
+        padding: 20px
+    }
+    .overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        transition: opacity 100ms;
+        z-index: 99;
+        height: 100%
+    }
+    .overlay:target {
+        visibility: visible;
+        opacity: 1;
+    }
+    /*checkbox*/
+    /*category css starts here*/
+    
+    .catwrap {
+        max-width: 1120px;
+        width: 100%;
+        height: 192px;
+        background-color: #f7f7f7;
+        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+        margin: 0 auto 20px;
+    }
+    .catwraphaed {
+        width: 380px;
+        height: 192px;
+        background-color: #f3f3f3;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+        float: left;
+        text-transform: uppercase;
+        box-sizing: border-box
+    }
+    .slide-images {
+        float: left;
+        position: relative;
+        width: calc(100% - 380px);
+        box-sizing: border-box;
+        height: 192px;
+        overflow: hidden;
+        padding: 40px 75px 0;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        background-color: #f7f7f7;
+    }
+    .frame {
+        overflow: hidden;
+    }
+    .frame ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .frame ul li {
+        float: left;
+        margin: 0 0 0;
+        padding: 0;
+        text-align: center;
+        cursor: pointer;
+    }
+    /* Scrollbar */
+    
+    .scrollbar {
+    height: 3px ;
+    background: #e1e1e1 ;
+    line-height: 0;
+    position: absolute;
+    bottom: 10px;
+    width: 590px;
+	border-radius: 3px;	
+	display: none;	
+    }
+    .scrollbar .handle {
+        width: 330px !important;
+        height: 100%;
+        background: #d8d8d8;
+        cursor: pointer;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px
+    }
+	.scrollbar .handle1{
+		height: 100%;
+		background: #8c8d94;
+		cursor: pointer;
+		border-radius: 3px;
+	
+	}
+	.scrollbar .handle1 .mousearea {
+        position: absolute;
+        top: -9px;
+        left: 0;
+        width: 100%;
+        height: 20px;
+    }
+    .scrollbar .handle .mousearea {
+        position: absolute;
+        top: -9px;
+        left: 0;
+        width: 100%;
+        height: 20px;
+    }
+    .btn.nextPage {
+        position: absolute;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+        width: 80px;
+        height: 192px;
+        line-height: 165px;
+		background: none !important;
+    }
+    .btn.prevPage {
+    position: absolute;
+    left: 0 ;
+    top: 0 ;
+    cursor: pointer;
+    width: 80px;
+    height: 192px;
+    line-height: 165px ;
+	background: none !important;	
+    }
+    .btn.prevPage.disabled, .btn.nextPage.disabled {
+       opacity: 0.2;
+    }
+    .cowrap {
+        width: 155px;
+        text-transform: uppercase;
+    }
+    .cheadimg {
+        float: left;
+    }
+    .cheadtitle {
+        font-size: 22px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        color: #fc2779;
+    }
+    .cheadcta {
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .shp {
+        background: url(http://www.nykaa.com/media/wysiwyg/Mega-sale-jun-2017/shpbtn.png) no-repeat 95% center;
+        /*border-bottom:2px solid #fc2779; color: #fc2779;*/
+        
+        padding-right: 17px;
+        display: inline-block;
+        color: #323245
+    }
+    .cheaddescs {
+        color: #323245;
+        margin: 15px 0 15px
+    }
+    .upto {
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .disamt {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 35px;
+    }
+    .disamt span {
+        font-size: 48px;
+    }
+    .coname {
+        font-size: 16px;
+        color: rgba(3, 2, 26, 0.8);
+        margin: 20px 0 2px
+    }
+    a.popularBrand {
+        color: rgba(3, 2, 26, 0.6);
+        color: var(--midnight-60);
+    }
+    /*category css close here*/
+    /*navigation position csss*/
+    
+   /*#Featured-Brands,
+     #Popular-Brands,
+    #Editors-Choice,
+    #Category-Offers,
+    #Free-Product-Offers,
+    #All-Offers {
+        position: absolute;
+        margin-top: -350px
+    }
+    #Editors-Choice,
+    #Category-Offers,
+    #Free-Product-Offers,
+    #Brand-Offers {
+        margin-top: -200px
+    }*/
+    #popup1,
+    .overlay {
+        display: none
+    }
+    #seemore,
+    #seeless {
+        cursor: pointer
+    }
+    #popup1 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        max-width: 70em;
+        width: 100%;
+        margin: 8% auto
+    }
+    /*navigation position csss*/
+    /*nnnn*/
+    
+    .megasalejune .slick-slider {
+        margin-bottom: 0
+    }
+    .megasalejune .slick-slider .checkboxwrap {
+        padding-bottom: 0
+    }
+    .megasalejune .owl-wrapper {
+        padding-bottom: 10px;
+    }
+    .megasalejune .slider {
+        width: auto;
+    }
+    .megasalejune .slick-prev:before,
+    .megasalejune .slick-next:before {
+        color: black;
+    }
+    .megasalejune .slick-prev,
+    .megasalejune .slick-next {
+        display: inline-block;
+        margin: 0;
+        top: auto;
+        height: 20px;
+        width: 20px;
+    }
+    .megasalejune .slick-dots {
+        position: relative;
+        bottom: 0;
+        width: 310px;
+        margin: 8px auto
+    }
+    .megasalejune .slick-dots li button::before {
+        display: none
+    }
+    .megasalejune .slick-dots li {
+        height: 10px;
+        width: 10px;
+    }
+    .megasalejune .slick-dots li button {
+        height: 10px;
+        width: 10px;
+        background: #efefef;
+        border-radius: 100px;
+    }
+    .megasalejune .slick-dots li.slick-active button {
+        background: #fc2779;
+    }
+    .megasalejune .slick-prev {
+        left: 353px;
+        background: url(http://www.nykaa.com/media/wysiwyg/Mega-sale-jun-2017/bprev.png) no-repeat;
+        width: 67px;
+        height: 59px;
+        background-size: 60%;
+        bottom: -32px
+    }
+    .megasalejune .slick-next {
+        right: 331px;
+        background: url(http://www.nykaa.com/media/wysiwyg/Mega-sale-jun-2017/bnext.png) no-repeat;
+        width: 67px;
+        height: 59px;
+        background-size: 60%
+    }
+    .megasalejune .brandclmn {
+        width: 19.5%;
+        display: inline-block;
+        vertical-align: top
+    }
+    .megasalejune .brandbg1 {
+        background-image: radial-gradient(circle at 53% 17%, rgba(255, 255, 255, 0), #91cadb), linear-gradient(#ffffff, #ffffff);
+    }
+    .megasalejune .brandbg2 {
+        background-image: radial-gradient(circle at 53% 17%, rgba(255, 255, 255, 0), #ffc2c3), linear-gradient(#ffffff, #ffffff);
+    }
+    .megasalejune .brandbg3 {
+        background-image: radial-gradient(circle at 53% 17%, rgba(255, 255, 255, 0), #f4ead9), linear-gradient(#ffffff, #ffffff);
+    }
+    .megasalejune .brandbg4 {
+        background-image: radial-gradient(circle at 53% 17%, rgba(255, 255, 255, 0), #abd866), linear-gradient(#ffffff, #ffffff);
+    }
+    /*.margin-left-ten{margin-right:1.7% !important}
+.margin-left-zero{margin-right:0 !important}*/
+    
+    @media screen and (max-width: 1075px) {
+        .megasalejune .twodiv,
+        .megasalejune .threediv,
+        .megasalejune .fourdiv,
+        .megasalejune .popularBrand,
+        .megasalejune .brand {
+            margin-right: 1.5%
+        }
+    }
+    @media screen and (max-width: 1030px) {
+        .megasalejune .navlist li {
+            padding: 0 13px
+        }
+
+		
+		 .megasalejune .navlist li a:hover {
+        border-bottom: 3px solid #fc2779;
+        font-weight: 600;
+		color: #fc2779;
+   	 }
+		
+    }
+	@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  {
+	.scrollbar{width:500px;}		
+	.megasalejune .navlist li a{width:150px;font-size:15px;}
+	}
+    @media screen and (max-width: 1023px) {
+		
+        .megasalejune .navlist {
+            width: calc(100% - 119px)
+        }
+        .megasalejune .filterbtn {
+            width: 115px;
+            background-position: 5px 0;
+            height: 45px;
+            font-size: 15px;
+            background-size: 18%
+        }
+        .megasalejune .navlist li {
+            padding: 0 0.7vw;
+            margin: 0 1px
+        }
+        .megasalejune .navlist li a {
+            font-size: 1.5vw
+        }
+    }
+
+</style>
+<link rel="stylesheet" type="text/css" href="http://www.nykaa.com/skin/frontend/nykaa/theme202/css/slick.css?v=1.4.3.65" media="all" />
+<script type="text/javascript" src="https://rawgit.com/kenwheeler/slick/master/slick/slick.js"></script>

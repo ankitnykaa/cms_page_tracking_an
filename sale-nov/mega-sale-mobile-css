@@ -1,0 +1,823 @@
+<!--<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>-->
+
+<style type="text/css">
+@font-face {
+  
+  font-family: 'SourceSansPro-Semibold';
+  
+  src: url('/skin/frontend/nykaa/theme202/css/font/SourceSansPro/SourceSansPro-Semibold.eot');  
+  
+  src: url('/skin/frontend/nykaa/theme202/css/font/SourceSansPro/SourceSansPro-Semibold.eot?#iefix') format('embedded-opentype'),
+    
+     url('/skin/frontend/nykaa/theme202/css/font/SourceSansPro/SourceSansPro-Semibold.ttf')  format('truetype'), 
+    
+     url('/skin/frontend/nykaa/theme202/css/font/SourceSansPro/SourceSansPro-Semibold.svg#SourceSansPro-Semibold') format('svg');
+  
+  font-weight: normal;
+  
+  font-style: normal;
+}
+@font-face {
+  
+  font-family: 'Source Sans Pro';
+  
+  src: url('/skin/frontend/nykaa/theme202/css/font/SourceSansPro/SourceSansPro-Regular.eot');
+  
+  src: url('/skin/frontend/nykaa/theme202/css/font/SourceSansPro/SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'),
+        
+     url('/skin/frontend/nykaa/theme202/css/font/SourceSansPro/SourceSansPro-Regular.ttf')  format('truetype'),
+    
+     url('/skin/frontend/nykaa/theme202/css/font/SourceSansPro/SourceSansPro-Regular.svg#SourceSansPro-Regular') format('svg');
+  
+  font-weight: normal;
+  
+  font-style: normal;
+}
+	
+.logowidth{ width:100%;}
+	.margin-left-zero {margin-left: 0px !important;}
+.margin-left-ten {margin-left: 10px !important;}
+.m-footer__copyrights-text {
+  padding: 0 !important;
+}
+.megasaleJun {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+	background: #f7f7f7;
+}
+.megasaleJunContainInner {
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.brandbox{text-align: center;}
+.megasaleJun .filter-part {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 5vw;
+  font-weight: normal;
+  text-align: center;
+  margin: 4% auto;
+}
+.megasaleJun .category-part {
+  width: 94%;
+  margin: 0 auto;
+  padding: 1% 0;
+  border-top: 1px solid #ccc;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.megasaleJun .category-part .category {
+  display: inline-block;
+  border-right: 1px solid #ccc;
+ padding-right: 7%; 
+    /* padding-left: 7%; */
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+.megasaleJun .category-part .brands {
+  display: inline-block;
+  /* padding-left: 5%; */
+  width: 48%;
+  text-align: center;
+}
+.megasaleJun .category-part .category-image {
+  display: inline-block;
+  vertical-align: top;
+  margin: 6% 2px 0;
+  width: 23%;
+}
+.megasaleJun .category-part .brand-image {
+  display: inline-block;
+  vertical-align: top;
+  margin: 8% 2px 0;
+  width: 30%;
+}
+.megasaleJun .category-part .brand-text {
+  display: inline-block;
+  color: #000;
+  font-size: 3vw;
+  text-align: left;
+}
+.font-size {
+  font-size: 4vw
+}
+.font-color {
+  color: #9a9aa3
+}
+.megasaleJun .featured-part {
+  padding: 1px 0;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+}
+.megasaleJun .box-bg1 {
+  background: #f3f3f3;
+}
+.megasaleJun .box-bg2 {
+  background: #f7f7f7;
+}
+.megasaleJun .heading {
+  font-family: Georgia;
+  text-align: center;
+  font-weight: 500;
+  font-size: 6vw;
+  color: #323245;
+  margin: 8% 0 4% 10px;
+}
+.megasaleJun .platinum-image {
+  margin: 10px 0;
+  display: block;
+  width: 100%;
+  border-radius: 2px;
+}
+.megasaleJun .goldplus {
+  margin: 20px 0;
+  text-align: center;
+}
+.megasaleJun .gold {
+  border-radius: 2px;
+  display: inline-block;
+  vertical-align: top;
+  width: 47.5%;
+  margin-bottom: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+}
+.megasaleJun .popular {
+  text-align: center;
+  margin-bottom: 5%;
+}
+.megasaleJun .popularBrand {
+  font-family: 'Source Sans Pro', sans-serif;
+  background: #fff;
+  border-radius: 3px;
+  display: inline-block;
+  vertical-align: top;
+  width: 47.5%;
+  margin-bottom: 14px;
+  overflow: hidden;
+  box-shadow: 0px 2px 1px 0 rgba(56, 56, 56, 0.07);
+}
+.megasaleJun .popularBrand:nth-child(2n+2) {
+  margin-left: 10px;
+}
+.megasaleJun .gold:nth-child(2n+2) {
+  margin-left: 10px;
+}
+.megasaleJun .showBrandtile:nth-child(2n+2) {
+  margin-left: 10px;
+}
+.megasaleJun .popbrandimg {
+	    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+}
+.megasaleJun .editerimg {
+	    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}	
+.freeprdoffers {
+  display: none
+}
+.megasaleJun .popdiscrip {
+  font-size: 4.2vw;
+  color: #3f414d;
+  margin: 0% 0 3%;
+  padding: 5px;
+  line-height: normal;
+	text-align: center;
+/* height: 84px;*/}
+.megasaleJun .pophead {
+  font-size: 4.8vw
+}
+.color {
+  color: #fc2779
+}
+.box-shadow {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+}
+.megasaleJun .popretext {
+  color: #8c8d94;
+	height: 58px;
+	overflow: hidden;
+}
+.brandbg1 {
+  background-image: radial-gradient(circle at 53% 17%, rgba(255, 255, 255, 0), #91cadb), linear-gradient(#ffffff, #ffffff);
+}
+.brandbg2 {
+  background-image: radial-gradient(circle at 53% 17%, rgba(255, 255, 255, 0), #ffc2c3), linear-gradient(#ffffff, #ffffff);
+}
+.brandbg3 {
+  background-image: radial-gradient(circle at 53% 17%, rgba(255, 255, 255, 0), #f4ead9), linear-gradient(#ffffff, #ffffff);
+}
+.brandbg4 {
+  background-image: radial-gradient(circle at 53% 17%, rgba(255, 255, 255, 0), #abd866), linear-gradient(#ffffff, #ffffff);
+}
+.megasaleJun .brand {
+  font-family: 'Source Sans Pro', sans-serif;
+  border-radius: 2px;
+  padding: 2% 2% 0;
+  display: inline-block;
+  vertical-align: top;
+  width: 47.5%;
+  margin-bottom: 14px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+}
+.sizeoff {
+  font-size: 8vw;
+  font-weight: bold;
+}
+.bgb {
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+  padding: 3% 2%;
+  margin: 7% 0 0 0;
+  font-size: 3.5vw;
+  text-transform: uppercase;
+}
+.clear {
+  clear: both;
+}
+a {
+  text-decoration: none
+}
+/* Category Css---------------*/
+.bgColor1{
+		  background-color: #000000;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+	}
+	.bgColor2{
+		background-image: linear-gradient(to left, #f7e0cc, #ffffff);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+	}
+	.bgColor3{
+		 background-image: linear-gradient(to right, #000000, #38221c 93%, #533b35 97%, #523c35 99%, #4d372f);
+		box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+	}
+	.bgColor4{
+		 background-image: linear-gradient(to right, #ffffff, #e3e4e6);
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+	}
+	.bgColor6{
+	 background-image: linear-gradient(to right, #ffffff, #fafafb);
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);	
+	}
+	.bgColor8{
+	background-image: linear-gradient(to right, #ffffff, #d8cab1 74%, #e4cec7);
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);	
+	}
+	.bgColor9{
+		background-image: linear-gradient(to right, #000000, #949e9f 77%, #8b9595);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+	}
+	.bgColor10{
+		background-image: linear-gradient(91deg, #ffffff, #eff1f1 90%, #f2f4f3 96%, #f3f4f5);
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+	}
+.megasaleJun .catimgwrap {
+  
+  padding:10px 0;  
+  margin-bottom: 7%;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.nw-pagecontainer{
+  
+  padding: 10px 0;
+  border-radius: 5px;
+  padding-bottom:7%;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.megasaleJun .catedesc {
+  font-size: 4vw;
+  text-transform: uppercase;
+  position:absolute;
+  top: 30px;
+  left: 30px;
+  font-weight: 600; 
+  letter-spacing: 0.2px;
+  text-align: left !important; 	
+}
+/*.SmallerFont{font-weight: 400;}*/
+.txtWhite{    color: #ffffff !important;}
+	.txtBlack{ color: #3f414d !important;}
+	.txtPink{ color: #fc2779;}	
+.megasaleJun .catimg {
+  width: 100%;
+ margin:0 auto;
+  cursor: pointer;
+  position: relative;	
+}
+
+.megasaleJun .catimgwrap.radius {
+  border-radius: 5px;
+  padding: 0 0;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+  overflow: hidden
+}
+.megasaleJun .catemenu .cateimg {
+  line-height: 0;
+}
+.cateimg {
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+}	
+.MarginBottom{
+  margin-bottom: 10px;	
+}	
+.megasaleJun .catimg.active .cateimg img {
+  
+}
+.megasaleJun .catimg.active {
+
+}
+.megasaleJun .catimg.active .catedesc {
+
+}
+.megasaleJun .catimgwrap.saverimg {
+  margin-top: 30px
+}
+.megasaleJun .addclass {
+  background: #f3f3f3;
+}
+.megasaleJun .recommedprd {
+  background: #fff;
+  border-radius: 5px;
+  display: inline-block;
+  width: 47.7%;
+  margin-bottom: 10px;
+  overflow: hidden
+}
+.megasaleJun .menuwrap {
+  top: -6px;
+  position: relative;
+  padding-bottom: 10px; 	
+}
+.megasaleJun .recommedprd:nth-child(2n+2) {
+  margin-left: 10px
+}
+/*accordian*/
+.megasaleJun .smk_accordion {
+  position: relative;
+  margin: 0 15px 2%;
+  list-style: none;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);	  
+}
+.megasaleJun .smk_accordion .accordion_in {
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+.megasaleJun .smk_accordion .accordion_in .acc_head {
+  position: relative;
+  line-height: normal;
+  margin: 0 10px;
+  padding:0 5px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  display: block;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ebebeb;
+}
+.megasaleJun .smk_accordion .accordion_in .acc_head .acc_icon_expand {
+  display: block;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  margin-top: -9px;
+}
+.megasaleJun .smk_accordion .accordion_in .acc_content {
+  color: #7B7E85;
+  padding: 0 16px 0;
+}
+.megasaleJun .smk_accordion .accordion_in .acc_content h1:first-of-type, .megasaleJun .smk_accordion .accordion_in .acc_content h2:first-of-type, .megasaleJun .smk_accordion .accordion_in .acc_content h3:first-of-type, .megasaleJun .smk_accordion .accordion_in .acc_content h4:first-of-type, .megasaleJun .smk_accordion .accordion_in .acc_content h5:first-of-type, .megasaleJun .smk_accordion .accordion_in .acc_content h6:first-of-type {
+  margin-top: 5px;
+}
+.megasaleJun .acc_content ul {
+  margin-left: 16px;
+}
+.megasaleJun .acc_content li {
+  list-style-type: none;
+  margin-top: 12px;
+}
+.megasaleJun .acc_content li:last-child {
+  margin-bottom: 0
+}
+.megasaleJun .shopallbtn.mrnone {
+  margin-top: 0
+}
+.megasaleJun .smk_accordion .accordion_in:first-of-type, .megasaleJun .smk_accordion .accordion_in:first-of-type .acc_head {
+}
+.megasaleJun .smk_accordion .accordion_in:last-of-type, .megasaleJun .smk_accordion .accordion_in:last-of-type .acc_content {
+  border-radius: 0 0 3px 3px;
+}
+
+.megasaleJun .smk_accordion .accordion_in.acc_active > .acc_content {
+  display: block;
+}
+.megasaleJun .smk_accordion .accordion_in.acc_active > .acc_head {
+  padding-bottom: 0
+}
+.megasaleJun .smk_accordion .accordion_in.acc_active > .acc_head .acc_icon_expand {
+  background: url(http://www.nykaa.com/media/wysiwyg/nykaa-mobile/plusicon.png) no-repeat;
+  height: 21px;
+  display: block;
+  height: 21px;
+  right: 0;
+  margin-top: -11px;
+  position: absolute;
+  top: 40%;
+  width: 21px;
+}
+.megasaleJun .smk_accordion.acc_with_icon .accordion_in .acc_head, .megasaleJun .smk_accordion.acc_with_icon .accordion_in .acc_content {
+  font-size: 4vw;
+  color: #3f414d
+}
+.megasaleJun .accordion_in.nac .acc_head .acc_icon_expand {
+  display: none !important
+}
+.megasaleJun.accordion_in.nac .acc_head {
+  padding-left: 17px;
+}
+.megasaleJun .smk_accordion .accordion_in .acc_head .acc_icon_expand {
+  background: url(http://www.nykaa.com/media/wysiwyg/nykaa-mobile/nxticon.png) no-repeat right 0;
+  height: 23px;
+  background-position: center center;
+  width: 14px;
+  background-size: 60%
+}
+.megasaleJun .smk_accordion .accordion_in.acc_active > .acc_head .acc_icon_expand {
+  background: url(http://www.nykaa.com/media/wysiwyg/nykaa-mobile/nxticon.png) no-repeat;
+  background-size: 60%;
+  background-position: right center
+}
+.megasaleJun .smk_accordion.acc_with_icon .accordion_in:first-child .acc_head {
+}
+.megasaleJun .smk_accordion .accordion_in:first-child .acc_head .acc_icon_expand {
+  background: url(http://www.nykaa.com/media/wysiwyg/nykaa-mobile/nxticon.png) no-repeat;
+  background-position: center center;
+  height: 23px;
+  width: 14px;
+  background-size: 60%
+}
+.megasaleJun .stick {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  z-index: 999;
+}
+.see-more {
+  margin: 9% auto;
+  position: relative;
+  text-align: center;
+}
+/*.see-more  {
+    width: 140px;
+    height: 40px;
+    background-color: #ffffff;
+    border: 0 none;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.22);
+    color: #03021a;
+    cursor: pointer;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    outline: 0 none;
+    position: relative;
+    text-align: center;
+    margin: 9% auto;
+      text-transform: uppercase;
+    line-height: 40px;
+  }
+  .arrow {
+    width: 0;
+    height: 0;
+    border-radius: 50px;
+    display: inline-block;
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    top: 50%;
+    right: 0;
+  }
+  .arrow:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+  }
+  .arrow-bottom {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #03021a;
+  }
+  .arrow-bottom:after {
+    bottom: 2px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #fff;
+    right: -5px;
+  }
+  .see-more span {
+    right: 5%;
+  }*/
+  /* poup Css--------------------------*/
+.header-div {
+  height: 50px;
+  line-height: 50px;
+}
+.megasaleJun .modal-box {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  background: white;
+  bottom: 0;
+  top: 0;
+  padding-bottom: 0;
+  margin-bottom: 40%;
+}
+.modal-box header {
+  border-bottom: 1px solid #ddd;
+  position: fixed;
+  z-index: 99999999999999999999;
+  width: 100%;
+  background: #fff;
+}
+
+@media (min-width: 32em) {
+.megasaleJun .modal-box {
+  width: 70%;
+}
+}
+.megasaleJun .modal-box header, .megasaleJun .modal-box .modal-header {
+  border-bottom: 1px solid #ddd;
+}
+.megasaleJun .modal-box .modal-body {
+  height: 100%;
+  background: #f3f3f3;
+  padding: 19% 0 0;
+  padding-bottom: 5%;
+}
+.modal-box footer, .modal-box .modal-footer {
+  padding: 1em;
+  border-top: 1px solid #ddd;
+  background: rgba(0, 0, 0, 0.02);
+  text-align: right;
+
+}
+.modal-overlay {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  position:fixed;
+  top: 0;
+  left: 0;
+  z-index:900;
+  width: 100%;
+  height: 100%;
+  background:#fff !important;
+}
+
+.megasaleJun a.close {
+  font-size: 5vw;
+  margin-right: 4%;
+  text-decoration: none;
+  color: #fc2779;
+  vertical-align: middle;
+  opacity: 1;
+  line-height: 50px;
+}
+.megasaleJun a.close:hover {
+  color: #fc2779;
+  -webkit-transition: color 1s ease;
+  -moz-transition: color 1s ease;
+  transition: color 1s ease;
+}
+.megasaleJun .tabs {
+  margin: 0;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  background: none;
+}
+.megasaleJun .tabs nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin-left: 12px;
+  width: 35%;
+}
+.megasaleJun .tabCategory {
+  margin: 0;
+  background: #fff;
+  padding: 10% 0;
+  font-size: 4vw;
+  color: #fc2779;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+  border-radius: 2px;
+}
+.megasaleJun .selected .tabCategory {
+  background: #ffa22d;
+  color: #fff;
+}
+.numberimg {
+  background: url(http://www.nykaa.com/media/wysiwyg/images/category_mobile_pink.svg) no-repeat;
+  width: 20px;
+  height: 19px;
+  text-align: center;
+  margin: 10% auto;
+}
+.count-number {
+  text-align: right;
+  margin-right: 11%;
+}
+.selected .numberimg {
+  background: url(http://www.nykaa.com/media/wysiwyg/images/category_mobile_white.svg) no-repeat;
+}
+.megasaleJun .tabBrand {
+  margin: 0;
+  background: #fff;
+  padding: 10% 0;
+  font-size: 4vw;
+  color: #fc2779;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+  border-radius: 5px;
+}
+.brand-numberimg {
+  background: url(http://www.nykaa.com/media/wysiwyg/images/brand_icon_mobile_filter_screen_pink.svg) no-repeat;
+  width: 20px;
+  height: 19px;
+  text-align: center;
+  margin: 10% auto;
+}
+.selected .brand-numberimg {
+  background: url(http://www.nykaa.com/media/wysiwyg/images/brand_icon_mobile_filter_screen_white.svg) no-repeat;
+}
+.brand-count-number {
+  text-align: right;
+  margin-right: 10%
+}
+.megasaleJun .selected .tabBrand {
+  background: #ffa22d;
+  color: #fff;
+}
+.megasaleJun .arrow-img {
+  display: inline-block;
+  width: 3%;
+  margin-left: 4%;
+}
+.megasaleJun .filter-name {
+  display: inline-block;
+  margin-left: 7%;
+}
+.megasaleJun .tabs nav a {
+  padding: 0px;
+  text-align: center;
+  width: 60%;
+  cursor: pointer;
+  margin: 0 0 10% 0;
+}
+.megasaleJun .tabs nav a:hover, .megasaleJun .tabs nav a.selected {
+}
+.megasaleJun .tabs .content {
+  padding: 0px;
+  position: absolute;
+  top: 0;
+  left: 28%;
+  color: #6C5D5D;
+  width: 0px;
+  height: auto;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.1s linear 0s;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+  max-height: 470px;
+}
+.megasaleJun .tabs .content.visible {
+  width: calc(100% - 31%);
+  overflow-y: scroll;
+  opacity: 1;
+  background: #fff;
+  border-radius: 5px;
+}
+.megasaleJun .tabs .content p {
+  padding-bottom: 2px;
+}
+.megasaleJun .tabs .content p:last-of-type {
+  padding-bottom: 0px;
+}
+.megasaleJun .chekboxwrap {
+  padding: 1% 0 14%;
+}
+/* checkbox css-----------------------*/
+
+
+
+.apply-filter {
+  width: 100%;
+  background: #fc2779;
+  color: #fff;
+  padding: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 9999;
+  height: 50px;
+  line-height: 50px;
+}
+.apply-filter a {
+  color: #fff;
+}
+.filter-img {
+  width: 7%;
+  margin-right: 2%;
+}
+.checkbox {
+  position: relative;
+  border-bottom: 1px solid #eee;
+  padding: 5% 4%;
+}
+.checkbox input[type="checkbox"] {
+  opacity: 0;
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 16px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.checkbox span {
+  margin-left: 18%;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 4.6vw;
+}
+.checkbox.slect-box input[type="checkbox"]:checked + span::before {
+  border-radius: 5px;
+  background-color: #5cd285;
+  border-color: #5cd285;
+}
+.checkbox span::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: solid 2px #979797;
+  left: 12px;
+  margin-top: 0px;
+  background-color: #fff;
+  -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+.checkbox span::after {
+  display: inline-block;
+  position: absolute;
+  width: 18px;
+  height: 16px;
+  left: 2px;
+  top: 6px;
+  padding-left: 2px;
+  padding-top: 0px;
+  font-size: 11px;
+  color: #636466;
+}
+.checkbox.slect-box input[type="checkbox"]:checked ~ span {
+  color: #000;
+  font-weight: 600;
+}
+.checkbox.slect-box input[type="checkbox"]:checked + span::after {
+  top: 34%;
+  left: 6%;//
+  content: '';
+  background: url("http://www.nykaa.com/media/wysiwyg/Mega-sale-jun-2017/shade-select-tick.png") no-repeat center center;
+}
+.checkbox-success input[type="checkbox"]:checked + span::after {
+  color: #fff;
+}
+img {
+  max-width: 100%;
+  width: auto\9;
+  height: auto;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+</style>
