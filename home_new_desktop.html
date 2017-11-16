@@ -283,7 +283,7 @@ article.Nykaa-Sale-Banner-Img img {
   color:#fc2779;
   margin-top:-3px;
   }
-.Trending-Box-Div-Wrapper{width:74.562%; margin:0 auto;}  
+.Trending-Box-Div-Wrapper{  margin:0 auto; text-align: center}  
 .Trending-Box-Div{
   background:url('http://www.nykaa.com/media/wysiwyg/Homepage/trending-search-icon.png') 92% center no-repeat;
   width:31.765%;
@@ -300,7 +300,7 @@ article.Nykaa-Sale-Banner-Img img {
 
 .trending-search-home{
   background:url('http://www.nykaa.com/media/wysiwyg/Homepage/trending-search-icon.png') 92% center no-repeat;
-  width:31.765%;
+  width:22.765%;
   height: 50px;
   line-height: 50px;
   display: inline-block;
@@ -743,13 +743,20 @@ only screen and (min-width: 1410px) and (max-width: 1649px) {
       
   </div><!--End Recommended @Nykaa bgColor_lightGrey ends here-->
    <div class="Homepage-Content-Wrapper bgColor_darkGrey addbdr_btm">
-    <div class="Homepage-Content-Inner Homepage-Content-Inner-Bottom-Spacing">
-       <div class="widget"  data-id="5a0c07fa5902034e99b08d44">
-      <esi:include src="http://nykaa-widgets.nykaa.com/inventory/5a0c07fa5902034e99b08d44/html/" />
-</div>
-  
-    </div><!--Homepage-Content-Inner ends here--> 
-  </div><!--End Trending searches bgColor_darkGrey ends here-->
+        <div class="Homepage-Content-Inner">
+          <div class="Homepage-Heading">
+            TRENDING SEARCHES
+          </div><!--Homepage-Heading ends here-->
+          
+          <section class="Homepage-Banners-Wrapper">
+            <section class="Trending-Box-Div-Wrapper">
+             
+            </section><!--Trending-Box-Div-Wrapper ends here-->
+          </section><!--Homepage-Banners-Wrapper ends here-->
+      
+        </div><!--Homepage-Content-Inner ends here-->
+          
+      </div><!--End TRENDING SEARCHES bgColor_lightGrey ends here-->
 
 
   <div class="Homepage-Content-Wrapper bgColor_darkGrey addbdr_btm">
@@ -1106,7 +1113,7 @@ function getUnbxdData(param)
         unbxd_string=JSON.parse(unbxd_trending);
        
 
-        for (i = 0; i < 6; i++) 
+        for (i = 0; i < 8; i++) 
         {
           var unbxdstr= unbxd_string[i].autosuggest;
           str = unbxdstr.substring(0,10);
