@@ -78,7 +78,10 @@
           </div>
           
         </div>
-         <div class="content">
+         <div class="content mobile-wrapper">
+      <div class="searchtab center">
+      <input id="brandSearch" placeholder="Search Brands">
+      </div>
           <div class="chekboxwrap">
 
 <div class="checkbox brand-filter"><input type="checkbox" value="aaranyaa-f"/> <span>Aaranyaa</span></div>
@@ -655,3 +658,439 @@
 
 
 <script> function JSGET(param) { var vars = {}; window.location.href.replace( location.hash, '' ).replace( /[?&]+([^=&]+)=?([^&]*)?/gi, /* regexp */function( m, key, value ) { /* callback */vars[key] = value !== undefined ? value : ''; } ); if ( param ) return vars[param] ? vars[param] : null; return vars; } if(window.datalayer == undefined){ window.datalayer = {}; } window.datalayer['pageName'] = 'nykaa : Diwali Offers on Cosmetics: Online Diwali Sale on Makeup & Beauty Products'; window.datalayer['dataeVar91'] = 'Sale Page'; if(JSGET('intcmp')){ window.datalayer['dataeVar34'] = 'Internal Campaigns'; window.datalayer['dataeVar35'] = 'Internal Campaigns : '+JSGET('intcmp'); }else{ window.datalayer['dataeVar34'] = 'Sale Page'; window.datalayer['dataeVar35'] = 'Sale Page : beauty-sale-online'; } if(window.DTM_tag_params == undefined){ window.DTM_tag_params = {}; } window.DTM_tag_params['dtm_pagetype'] = 'cmspage'; </script>
+
+
+<!-- filter search code start -->
+<style>
+.searchtab.center {
+    text-align: center;
+    position: fixed;
+    height:48px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+    padding: 6px;
+    width: calc(100% - 31%);
+}
+.megasaleJun .tabs .content.visible.mobile-wrapper{
+background: transparent;
+height: auto;
+overflow-y: hidden;
+ box-shadow: none;
+}
+.megasaleJun .mobile-wrapper .chekboxwrap {
+    background: #fff;
+    overflow-y: scroll;
+    max-height: 470px;
+    padding: 0;
+    margin-top:60px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    overflow-x: hidden;
+
+
+    }
+input#brandSearch {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    height: 36px;
+    border-radius: 2px;
+    border: solid 1px #cdcdcd;
+    font-size: 14px;
+    text-align: left;
+    text-indent: 37px;
+    color: rgba(3, 2, 26, 0.4);
+    background: rgba(216, 216, 216, 0.4) url(http://www.nykaa.com/media/wysiwyg/Mega-sale-jun-2017/search-brand.png) no-repeat 0 12px;
+}
+</style>
+
+
+
+<script type="text/javascript">
+var checkedBrands = [];
+   var allBrands = [
+     "Aaranyaa",
+     "Agaro",
+     "Age Lock",
+     "AHAVA",
+     "Alan Truman",
+     "All Good Scents",
+     "Aloe Veda",
+     "Amway",
+     "Anatomicals",
+     "Andis",
+     "Archies",
+     "Ardell",
+     "Arganic",
+     "Aroma Treasures",
+     "Aryanveda",
+     "Astaberry",
+     "Aura Essence",
+     "Australis",
+     "Avene",
+     "Avene",
+     "Avon",
+     "Axe",
+     "Azafran Organics",
+     "Babor",
+     "BaByliss",
+     "Balmain Paris",
+     "Batiste",
+     "B'atude",
+     "BBlunt",
+     "Beardo",
+     "Belcam",
+     "Bella",
+     "Bentley Organic",
+     "Beverly Hills Polo Club",
+     "Bharat & Dorris",
+     "Bio Oil",
+     "BioCare",
+     "Bioderma",
+     "Biotique",
+     "Blue Heaven",
+     "BodyHerbals",
+     "Bomb Cosmetics",
+     "Bombay Shaving Company",
+     "Boroplus",
+     "Braun",
+     "Breathe Aromatherapy",
+     "Brylcreem",
+     "C.A.L Los Angeles",
+     "Casmara",
+     "Chambor",
+     "Chaoba",
+     "Chicco",
+     "Ciate London",
+     "Clean & Clear",
+     "Close-Up",
+     "Coccoon",
+     "Colgate",
+     "Colorbar",
+     "Coloressence",
+     "Concept II",
+     "Corioliss",
+     "Creme 21",
+     "Da Yogis",
+     "Dabur",
+     "Dalan",
+     "Deborah",
+     "Denver",
+     "Dettol",
+     "D'free",
+     "Diana Of London",
+     "Dove",
+     "Dr. Vaidya's",
+     "Dr.Batra's",
+     "Durex",
+     "Elchim",
+     "Elle 18",
+     "Eleanor",
+     "Enchanteur",
+     "Engage",
+     "Enliven",
+     "Envy 1000",
+     "Epique Switzerland",
+     "Essence",
+     "Eva",
+     "ExxelUSA",
+     "Eyova",
+     "Faces",
+     "Fair And Lovely",
+     "Fem",
+     "Filone",
+     "Fogg",
+     "Forest Essentials",
+     "ForeverTeen",
+     "Foxmen",
+     "Fran Wilson Moodmatcher",
+     "Freedom",
+     "FreshLook",
+     "Gala of London",
+     "Garnier",
+     "Gillette",
+     "GlamGals",
+     "Grace Cole",
+     "Gratia",
+     "GUBB USA",
+     "Hair For Sure",
+     "HAIR4REAL",
+     "HairPro",
+     "HE",
+     "Head & Shoulders",
+     "HealthAid",
+     "HealthKart",
+     "HealthVit",
+     "HealthViva",
+     "Hedonista",
+     "Herbal Hills",
+     "Herbalife",
+     "Himalaya",
+     "Iba Halal Care",
+     "Ikonic Professional",
+     "Inatur",
+     "India Grooming Club",
+     "Indulekha",
+     "Inlife",
+     "Innisfree",
+     "Inveda",
+     "Invisibobble",
+     "Iraa",
+     "Iraya",
+     "Island Kiss",
+     "Ital Veloce",
+     "Jaquline USA",
+     "Jeva",
+     "Johnson's",
+     "Jovees",
+     "Just Herbs",
+     "Kama Ayurveda",
+     "KamaSutra",
+     "Kara",
+     "Kaya",
+     "Kent",
+     "Keshking",
+     "Khadi",
+     "Kinetics",
+     "Krishkare",
+     "L.A. Colors",
+     "L.A.Girl",
+     "Lacto Calamine",
+     "Lakme",
+     "LASplash",
+     "Lass Naturals",
+     "Layer'r",
+     "Lever Ayush",
+     "Lifebuoy",
+     "Livon",
+     "L'Oreal Paris",
+     "L'Oreal Paris Men",
+     "L'Oreal Professionnel",
+     "Lottie London",
+     "Lotus Herbals",
+     "Lovea",
+     "Lushveda",
+     "Lux",
+     "Macadamia",
+     "Make up for Life",
+     "Make Up Tools",
+     "Makeup Obsession",
+     "Makeup Revolution",
+     "Mamaearth",
+     "Man Arden",
+     "ManCave",
+     "Matra",
+     "Matrix",
+     "Maybelline New York",
+     "MCaffeine",
+     "Mee Mee",
+     "Megaga",
+     "MIB",
+     "Milani",
+     "MOND'SUB",
+     "Morpheme Remedies",
+     "MUA",
+     "MuscleXP",
+     "Nanogen",
+     "Natio",
+     "Natural Bath And Body",
+     "Naturalium",
+     "Nature's Essence",
+     "Naturyz",
+     "Navratna",
+     "Neutrogena",
+     "Nicka K",
+     "Nike",
+     "Nivea",
+     "Note",
+     "Nourish Vitals",
+     "Nova",
+     "NutraVigour",
+     "NutroActive",
+     "Nutrovea",
+     "Nyassa",
+     "Nykaa Cosmetics",
+     "NYX Professional Makeup",
+     "O3+",
+     "Odiva",
+     "Olay",
+     "Olivia Garden",
+     "OMORFEE",
+     "OPI",
+     "Optimum Nutrition",
+     "Organic India",
+     "Organix",
+     "Oriflame",
+     "Original Source",
+     "OxyLife",
+     "Palmer's",
+     "Palmolive",
+     "Panache",
+     "Pantene",
+     "Park Avenue",
+     "Patisserie De Bain",
+     "Philips",
+     "Pigeon",
+     "Plum",
+     "Ponds",
+     "Provoc",
+     "PROWOMEN",
+     "Pure Nutrition",
+     "Puresense",
+     "QVS",
+     "Real Techniques",
+     "Rebul by Archies",
+     "ReinPlatz",
+     "Remington",
+     "Revlon",
+     "Rica",
+     "Richfeel",
+     "Rimmel",
+     "Roots",
+     "Roots & Herbs",
+     "Rose & Co.",
+     "Ruby's Organics",
+     "Sally Hansen",
+     "Sara",
+     "Scholl",
+     "Schwarzkopf",
+     "SeaSoul",
+     "Sebamed",
+     "Secret Senses",
+     "Secret Temptation",
+     "Shany",
+     "Soulflower",
+     "Spa Ceylon Luxury Ayurveda",
+     "Spars",
+     "Spice Island",
+     "SSCPL Herbals",
+     "St.Botanica",
+     "Streax PRO",
+     "Street Wear",
+     "SUGAR",
+     "Suncros",
+     "Sunsilk",
+     "Swati Khadi",
+     "Swiss Tempelle",
+     "Tampax",
+     "Tangle Teezer",
+     "Thalgo",
+     "The Body Shop",
+     "The Brush Tools",
+     "The Face Shop",
+     "The Man Company",
+     "The Nature's Co.",
+     "The Shave Doctor",
+     "Toni&Guy",
+     "Toppik",
+     "Tresemme",
+     "Tvam",
+     "Unived",
+     "Ustraa",
+     "Vaadi Herbals",
+     "Vanesa",
+     "Vaseline",
+     "Vedic Line",
+     "Veet",
+     "Versace 19.69",
+     "Victoria's Secret",
+     "VLCC",
+     "Votre",
+     "VWash",
+     "Wella Professionals",
+     "West Coast",
+     "Wet Brush",
+     "Whisper",
+     "Wild Earth",
+     "Wild Stone",
+     "Wow",
+     "XLR8",
+     "Yardley",
+     "YBP",
+     "Yoga India",
+     "Yves Rocher",
+     "Zodiac",
+     "Zuci"
+     ];
+       var createOuterWrapper = function (brandName) {
+       var totalStruct = "";
+       l1Div = "";
+       while(brandName.length){
+         l1 = brandName.splice(0,30);
+         l1Div = l1Div + '<div>  <div class="checkboxwrap">  ';
+         l2Div = "";
+         while(l1.length){
+           l2 = l1.splice(0,6);
+           l2Div = l2Div + '<div class="brandclmn">';
+           l3Div = "";
+           jQuery.each(l2,function(index, value){
+   
+             newValueName = value.replace(/\ /g,"-");
+             newValueName = newValueName.replace(/\'/g,"-");
+             newValueName = newValueName.replace(/&/g,"");
+             newValueName = newValueName.replace(/\./g,"-");
+   
+             newValueName = newValueName.toLowerCase() + '-f';
+   
+             newValueName = newValueName.replace(/--/g,"-");
+   
+             if(jQuery.inArray(newValueName, checkedBrands) == -1) {
+               l3Div = l3Div + '<div class="checkbox brand-filter"><input type="checkbox" value="'+ newValueName +'" > <span> '+ value +' </span></div>';
+             } else {
+               l3Div = l3Div + '<div class="checkbox brand-filter slect-box"><input type="checkbox" checked value="'+ newValueName +'" > <span class="check-sucess"> '+ value +' </span></div>';
+             }
+           });
+           l2Div = l2Div + l3Div + '</div>';
+         }
+         l1Div = l1Div + l2Div + '</div></div>';
+       }
+       return l1Div;
+     };
+   
+
+   
+    jQuery("#brandSearch").on("keyup",function(){
+   jQuery('.checkbox.slect-box').each(function(index){
+     checkedBrands.push(jQuery(this).find('input[type="checkbox"]').val());
+   });
+   checkedBrands = jQuery.unique(checkedBrands);
+   
+   
+   
+     var copyBrands = allBrands.slice();
+     var completeWrapper = "";
+     try { jQuery(".slider").unslick(); } catch(err) {  }
+     if (jQuery(this).val().trim() != "" ) {
+       var searchTerm = jQuery(this).val().trim();
+       copyBrands2 = jQuery.grep(copyBrands, function( item, index ) {
+         key = item.toLowerCase().indexOf(searchTerm.toLowerCase());
+         if (key > -1) {return true};
+       });
+       completeWrapper = createOuterWrapper(copyBrands2);
+     } else {
+       completeWrapper = createOuterWrapper(copyBrands);
+     }
+   
+     jQuery(".mobile-wrapper .chekboxwrap").empty().append(completeWrapper);
+   
+     jQuery('input[type="checkbox"]').off().on("click",function(){
+       if(jQuery(this).prop("checked") == true){
+           jQuery(this).next().addClass('check-sucess');
+           jQuery(this).closest('.checkbox').addClass('slect-box');
+       }
+       else if(jQuery(this).prop("checked") == false){
+           jQuery(this).next().removeClass('check-sucess');
+           jQuery(this).closest('.checkbox').removeClass('slect-box');
+       }
+       var numCF = jQuery('.checkbox.cat-filter.slect-box').length;
+       var numBF = jQuery('.checkbox.brand-filter.slect-box').not(".slick-cloned").length;
+       jQuery('.count-number').text(numCF);
+       jQuery('.brand-count-number').text(numBF+checkedBrands.length); 
+     });
+   });
+
+</script>
+
+
+<!-- filter search code end -->
