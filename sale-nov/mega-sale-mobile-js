@@ -1,7 +1,9 @@
 <script type="text/javascript"> 
 
     jQuery(document).ready(function (e) { 
-    jQuery('.menuwrap').hide() 
+	
+    jQuery('.menuwrap').hide() ;
+	jQuery('.menuwrap:first').show();
     //$('.menuwrap:first-of-type').show() 
   jQuery('.catimg').click(function () { 
   //$('.bigimg').removeClass('tab-active')

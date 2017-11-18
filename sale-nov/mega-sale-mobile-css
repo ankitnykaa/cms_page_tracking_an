@@ -283,6 +283,10 @@ a {
   margin-bottom: 7%;
   font-family: 'Source Sans Pro', sans-serif;
 }
+.nw-featured-tiles .nw-pagecontainer{
+  padding: 10px 0 0 0;
+ margin-bottom:-10px;
+}
 .nw-pagecontainer{
   
   padding: 10px 0;
