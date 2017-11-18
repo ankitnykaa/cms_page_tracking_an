@@ -1,905 +1,1453 @@
-<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
-<style type="text/css">
-    * {
-        margin: 0;
-        padding: 0;
-        text-decoration: none;
-        list-style-type: none
-    }
-    .wrap {
-        font-family: 'Source Sans Pro';
-    }
-    img {
-        max-width: 100%;
-    }
-    i {
-        background: url(http://www.nykaa.com/media/wysiwyg/Mega-sale-jun-2017/sprite.png) no-repeat;
-        float: left
-    }
-    i.brandicon {
-        height: 19px;
-        width: 20px;
-        margin-right: 20px;
-    }
-    i.cat {
-        height: 21px;
-        width: 24px;
-        margin-right: 20px;
-        background-position: 0 -42px
-    }
-    i.popfilterbtn {
-        height: 28px;
-        width: 23px;
-        margin-right: 20px;
-        background-position: 0 -84px
-    }
-    .pagecontainer {
-        max-width: 70em;
-        margin: 0 auto;
-        width: 98%;
-    }
-    .bgf3f3f3 {
-        background: #f3f3f3;
-        overflow: hidden;
-		padding-top: 40px;
-        padding-bottom: 40px;
-        position: relative;
-    }
-    .bgf7f7f7 {
-        background: #f7f7f7;
-        overflow: hidden;
-		padding-top: 40px;
-        padding-bottom: 40px;
-        position: relative;
-        border: solid 1px #ebebeb;
-    }
-    .slidingbanner {
-        line-height: 0
-    }
-    .clear {
-        clear: both
-    }
-    .center {
-        text-align: center
-    }
-    .stickypart.bgf7f7f7 {
-        padding-bottom: 0;
-    }
-	.stickypart.bgf3f3f3 {
-        padding-bottom: 0;
-		padding-top: 0;
-    }
-    /*placeholder*/
+<!--script start here-->
+<!-- smooth scrolling starts-->
+<script type="text/javascript"> 
+ jQuery(document).ready(function (e) { 
+   //jQuery('.navlist li:first-child').addClass('active') 
+  jQuery('.navlist li a').click(function () { 
+    var navTrackParam = "'"+jQuery(this).find('a').text()+"'";
+    ga('send','event','jump to',navTrackParam,'mega_sale');
+    jQuery(this).addClass('active'); 
+   jQuery('.navlist li a').removeClass('active') 
+   var index0 = jQuery('.navlist li a').index(this) 
+   jQuery('.navlist li a').eq(index0).addClass('active') 
+   }); 
+   }); 
+</script> 
+<!-- smooth scrolling starts-->
+<!-- smooth scrolling starts-->
+<script>
+jQuery(document).ready(function () {
+    jQuery(document).on("scroll", onScroll);
     
-    input:focus::-webkit-input-placeholder {
-        color: transparent;
-    }
-    input:focus:-moz-placeholder {
-        color: transparent;
-    }
-    /* Firefox 18- */
-    
-    input:focus::-moz-placeholder {
-        color: transparent;
-    }
-    /* Firefox 19+ */
-    
-    input:focus:-ms-input-placeholder {
-        color: transparent;
-    }
-    /* oldIE ;) */
-    
-    textarea:focus::-webkit-input-placeholder {
-        color: transparent;
-    }
-    textarea:focus:-moz-placeholder {
-        color: transparent;
-    }
-    /* Firefox 18- */
-    
-    textarea:focus::-moz-placeholder {
-        color: transparent;
-    }
-    /* Firefox 19+ */
-    
-    textarea:focus:-ms-input-placeholder {
-        color: transparent;
-    }
-    /* oldIE ;) */
-    
-    ::-webkit-input-placeholder {
-        opacity: 1;
-    }
-    :-moz-placeholder {
-        /* Firefox 18- */
+    //smoothscroll
+    jQuery(".navlist").find('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        jQuery(document).off("scroll");
         
-        opacity: 1;
-    }
-    ::-moz-placeholder {
-        /* Firefox 19+ */
+        jQuery('a').each(function () {
+            jQuery(this).removeClass('active');
+        })
+        jQuery(this).addClass('active');
+      
+        var target = this.hash,
+            menu = target;
+        jQuerytarget = jQuery(target);
         
-        opacity: 1;
-    }
-    :-ms-input-placeholder {
-        opacity: 1;
-    }
-    /*placeholder*/
-    /*navcss starts here*/
-    
-    .megasalejune .navwithfilter {
-        margin: 10px auto 10px;
-        max-width: 70em;
-        width: 100%;
-	    height: 50px;	
-		background: #ffffff;
-		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
-    }
-    .megasalejune .stick .navwithfilter {
-        position: relative
-    }
-    .megasalejune .navlist {
-        display: inline-block;
-        width: calc(100% - 265px);
-        border-radius: 2px;
-		float:left;
-    }
-    .megasalejune .navlist li {
-        display: inline-block;
-       /* margin: 0 1.5%;*/
-		color: #353548;
-        /*padding: 0 2.851%;
-	    height: 50px;
-    	line-height: 50px;	*/
-    }
-    .megasalejune .navlist li:first-child {
-        margin-left: 0
-    }
-    .megasalejune .navlist li a {
-        color: #353548;
-        font-size: 16px;
-        text-transform: uppercase;
-        display: inline-block;
-		margin: 0 1.5%;
-		width: 180px;
-		height: 50px;
-		line-height: 50px;
-    }
-    .megasalejune .navlist li a.active {
-        border-bottom: 3px solid #fc2779;
-        font-weight: 600;
-		color: #fc2779;
-    }
+		//if(jQuery(window).width() < 1024) {
+		
+				      jQuery('html, body').stop().animate({
+            			'scrollTop': jQuerytarget.offset().top -150
 
-    .megasalejune .filterbtn {
-        display: inline-block;
-        width: 265px;
-        height: 50px;
-        line-height: 50px;
-        color: #fff;
-        background: #fc2779 url(http://www.nykaa.com/media/wysiwyg/Mega-sale-jun-2017/filteractive.png) no-repeat 76px center;
-        cursor: pointer;
-        border-top-right-radius: 2px;
-		border-bottom-right-radius: 2px;
-        font-size: 16px;
-    }
-    .megasalejune .filterbtn.active,
-    .megasalejune .filterbtn:hover {
-        color: #fff;
-        background: #fc2779 url(http://www.nykaa.com/media/wysiwyg/Mega-sale-jun-2017/filteractive.png) no-repeat 76px center;
-        webkit-transition-duration: 0.3s;
-        transition-duration: 0.3s;
-        -webkit-transition-timing-function: ease-out;
-        transition-timing-function: ease-out;
-    }
-    .hvr-underline-reveal {
-        display: inline-block;
-        vertical-align: middle;
-        -webkit-transform: perspective(1px) translateZ(0);
-        transform: perspective(1px) translateZ(0);
-        position: relative;
-        overflow: hidden;
-    }
-    .hvr-underline-reveal::before {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: #fc2779;
-        height: 3px;
-        -webkit-transform: translateY(4px);
-        transform: translateY(4px);
-        -webkit-transition-property: transform;
-        transition-property: transform;
-        -webkit-transition-duration: 0.3s;
-        transition-duration: 0.3s;
-        -webkit-transition-timing-function: ease-out;
-        transition-timing-function: ease-out;
-    }
-    .megasalejune .navlist li:hover .hvr-underline-reveal:before,
-    .megasalejune .hvr-underline-reveal:hover:before,
-    .megasalejune .hvr-underline-reveal.active:before,
-    .megasalejune .navlist li.active .hvr-underline-reveal:before {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-    /*navcss close here*/
-    /*navcontent starts here*/
-    
-    .megasalejune .twodiv,
-    .megasalejune .threediv,
-    .megasalejune .fourdiv,
-    .megasalejune .popularBrand,
-    .megasalejune .brand {
-        display: inline-block;
-        margin-bottom: 1.7%;
-        border-radius: 2px;
-        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
-        line-height: 0;
-        overflow: hidden;
-        vertical-align: top;
-    }
-    .megasalejune .twodiv {
-        width: 49%;
-    }
-    /*.megasalejune .twodiv:nth-child(even){margin-right:0}*/
-    
-    .megasalejune .threediv {
-        width: 32%;
-        margin-right: 1.7%
-    }
-    .megasalejune .threediv:nth-child(3n+3) {
-        margin-right: 0
-    }
-    .megasalejune .fourdiv {
-        width: 23.5%;
-        margin-right: 1.7%
-    }
-    .megasalejune .fourdiv:nth-child(4n+4) {
-        margin-right: 0
-    }
-    .megasalejune .stick {
-        position: fixed;
-        top: 90px;
-        left: 0;
-        right: 0;
-        z-index: 9
-    }
-    .megasalejune .popularBrand {
-        width: 23.5%;
-        margin-right: 1.7%;
-    }
-    .megasalejune .popularBrand:nth-child(4n+4) {
-        margin-right: 0
-    }
-    .megasalejune .popdiscripdesc {
-        background: #fff;
-        padding: 15px 10px;
-        line-height: normal
-    }
-    .megasalejune .divi {
-        margin-bottom: 20px;
-    }
-    .freeprdoffers {
-        display: none
-    }
-    /*navcontent close here*/
-    
-    .megasalejune .navcnthead {
-        font-size: 24px;
-        letter-spacing: 0.5px;
-        font-family: Georgia;
-        color: #353548;
-        text-transform: uppercase;
-        margin: 60px 0 40px;
-    }
-    .megasalejune .popdiscrip {
-        line-height: normal;
-        padding: 10px;
-        color: #000
-    }
-    .megasalejune .popbrandimg {
-        line-height: 0;
-    }
-    .megasalejune .brand .popbrandimg {
-        width: 130px;
-        height: 40px;
-        margin: 0 auto
-    }
-    /*brandtiles starts here*/
-    
-    .megasalejune .brand {
-        border-radius: 2px;
-        width: 23.5%;
-        margin-right: 1.7%;
-        padding: 20px 0 0
-    }
-    .megasalejune .brand:nth-child(4n+4) {
-        margin-right: 0
-    }
-    .megasalejune .pophead,
-    .megasalejune .popheadnxt {
-        font-weight: bold;
-        font-size: 18px;
-        margin: 8px 0 15px
-    }
-    .megasalejune .popheadnxt {
-        font-size: 20px;
-    }
-    .megasalejune .popheadnxt span {
-        color: #fc2779
-    }
-    .megasalejune .pophead .sizeoff {
-        font-size: 30px;
-    }
-    .megasalejune .popretext {
-        background: #fff;
-        font-size: 14px;
-        margin: 6% 2% 2%;
-        border-radius: 2px;
-        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
-        padding: 15px 5px;
-        font-weight: 600;
-        height: 67px;
-        text-transform: uppercase
-    }
-    .megasalejune .popretextnxt {
-        font-size: 14px
-    }
-    /*brandtiles.close here*/
-    
-    .megasalejune .filtertab {
-        border-radius: 2px;
-        background: #d8d8d8;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-        position: relative;
-        padding: 10px 0;
-        margin-top: -1px;
-    }
-    /*.megasalejune .filtertab:before{content: ""; border-left: 10px solid transparent;border-right: 10px solid transparent;border-bottom: 10px solid #d8d8d8;position: absolute;top: -10px; width: 0px; right: 10%}*/
-    
-    .megasalejune .selecteditem {
-        background: #fff url(http://www.nykaa.com/media/wysiwyg/Mega-sale-jun-2017/x.png) no-repeat right center;
-        display: inline-block;
-        padding: 6px 32px 4px 8px;
-        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
-        border-radius: 2px;
-        color: #353548;
-        margin: 0 5px;
-        cursor: pointer
-    }
-    .megasalejune .popupwrap {
-        border-radius: 2px;
-        background-color: #ffffff;
-        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
-        transition: all 5s ease-in-out;
-    }
-    .megasalejune .poptabwrap {
-        display: inline-block
-    }
-    .megasalejune .tabx {
-        display: inline-block;
-        padding: 20px 18px;
-        position: relative;
-        cursor: pointer;
-        margin: 0 15px;
-        color: #353548
-    }
-    .megasalejune .popupwrap .slide-images {
-        float: none;
-        width: 100%;
-        padding-right: 0;
-        height: auto;
-        padding-top: 0
-    }
-    .megasalejune .popupwrap .frame {
-        padding-top: 20px;
-    }
-    .megasalejune .popupwrap .checkbox {
-        width: 19.5%;
-        text-align: left;
-        display: inline-block
-    }
-    .megasalejune .popupwrap .brandclmn .checkbox {
-        width: 100%;
-    }
-    .megasalejune .tabx:hover,
-    .megasalejune .tabx.active {
-        color: #fc2779;
-    }
-    .megasalejune .tabx.active {
-        font-weight: 600
-    }
-    .megasalejune .tabx:hover i.cat,
-    .megasalejune .tabx.active i.cat {
-        background-position: 0 -61px;
-    }
-    .megasalejune .tabx:hover i.brandicon,
-    .megasalejune .tabx.active i.brandicon {
-        background-position: 0 -23px;
-    }
-    .megasalejune .popfilter {
-        float: left;
-        padding: 12px 0;
-        margin: 0 0 0 20px;
-        font-size: 20px;
-        line-height: 31px;
-    }
-    .megasalejune .bigimg {
-        border-top: solid 1px rgba(151, 151, 151, 0.4);
-        margin-top: -2px
-    }
-    .megasalejune .aplyc {
-        float: right;
-        padding: 12px 0 0;
-        height: 36px;
-        line-height: 36px;
-    }
-    .megasalejune .clearbtn,
-    .megasalejune .applybtn {
-        font-weight: 600;
-        float: left;
-        cursor: pointer;
-        font-size: 16px
-    }
-    .megasalejune .clearbtn {
-        color: #fc2779;
-    }
-    .megasalejune .applybtn {
-        width: 83px;
-        border-radius: 2px;
-        background-color: #fc2779;
-        color: #fff;
-        margin: 0 20px 0 30px
-    }
+					}, 500, 'swing', function () {
+						window.location.hash = target;
+						jQuery(document).on("scroll", onScroll);
+					});
+		
+		
+		//}
+		
+    });
+});
 
-    .megasalejune .searchtab input {
-        display: inline-block;
-        text-align: center;
-        width: 210px;
-        height: 36px;
-        border-radius: 2px;
-        border: solid 1px rgba(151, 151, 151, 0.4);
-        margin: 10px 0;
-        font-size: 14px;
-        text-align: left;
-        color: rgba(3, 2, 26, 0.4);
-        background: rgba(216, 216, 216, 0.4) url(http://www.nykaa.com/media/wysiwyg/Mega-sale-jun-2017/search-brand.png) no-repeat 0 12px;
-        padding-left: 36px;
-    }
-    .coimg {
-        width: 80px;
-        height: 80px;
-        margin: 0 auto;
-        border-radius: 100px;
-        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
-    }
-    /*checkbox*/
-    
-    .megasalejune .searchtab {
-        border-bottom: solid 1px rgba(151, 151, 151, 0.4)
-    }
-    .megasalejune .checkbox {
-        margin: 10px 0;
-        display: inline-block;
-        width: 16%
-    }
-    .megasalejune .checkbox input[type="checkbox"] {
-        opacity: 0;
-        z-index: 1;
-        position: absolute;
-        width: 100%;
-        height: 24px;
-        font-family: 'Source Sans Pro', sans-serif;
-    }
-    .megasalejune .checkbox span {
-        padding-left: 35px;
-        font-family: 'Source Sans Pro', sans-serif;
-        font-size: 15px;
-        position: relative
-    }
-    .megasalejune .checkbox.slect-box input[type="checkbox"]:checked + span::before {
-        border-radius: 5px;
-        background-color: #5cd285;
-        border-color: #5cd285;
-    }
-    .megasalejune .checkbox span::before {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        border-radius: 5px;
-        border: solid 2px #979797;
-        left: 5px;
-        margin-top: 0px;
-        background-color: #fff;
-        -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
-        -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
-        transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
-    }
-    .megasalejune .checkbox span::after {
-        display: inline-block;
-        position: absolute;
-        width: 18px;
-        height: 15px;
-        left: 2px;
-        top: 6px;
-        padding-left: 2px;
-        padding-top: 0px;
-        font-size: 11px;
-        color: #636466;
-    }
-    .megasalejune .checkbox.slect-box input[type="checkbox"]:checked ~ span {
-        color: #000;
-        font-weight: 600;
-    }
-    .megasalejune .checkbox.slect-box input[type="checkbox"]:checked + span::after {
-        top: 4px;
-        left: 6px;
-        content: '';
-        background: url("http://www.nykaa.com/media/wysiwyg/Mega-sale-jun-2017/shade-select-tick.png") no-repeat center center;
-    }
-    .megasalejune .checkbox-success input[type="checkbox"]:checked + span::after {
-        color: #fff;
-    }
-    #slide9 .checkbox {
-        width: 10%;
-        float: left;
-        text-align: left
-    }
-    .megasalejune .checkboxwrap {
-        overflow: hidden;
-        padding: 20px
-    }
-    .overlay {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: rgba(0, 0, 0, 0.7);
-        transition: opacity 100ms;
-        z-index: 99;
-        height: 100%
-    }
-    .overlay:target {
-        visibility: visible;
-        opacity: 1;
-    }
-    /*checkbox*/
-    /*category css starts here*/
-    
-    .catwrap {
-        max-width: 1120px;
-        width: 100%;
-        height: 192px;
-        background-color: #f7f7f7;
-        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
-        margin: 0 auto 20px;
-    }
-    .catwraphaed {
-        width: 380px;
-        height: 192px;
-        background-color: #f3f3f3;
-        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
-        float: left;
-        text-transform: uppercase;
-        box-sizing: border-box
-    }
-    .slide-images {
-        float: left;
-        position: relative;
-        width: calc(100% - 380px);
-        box-sizing: border-box;
-        height: 192px;
-        overflow: hidden;
-        padding: 40px 75px 0;
-        border-top-right-radius: 2px;
-        border-bottom-right-radius: 2px;
-        background-color: #f7f7f7;
-    }
-    .frame {
-        overflow: hidden;
-    }
-    .frame ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    .frame ul li {
-        float: left;
-        margin: 0 0 0;
-        padding: 0;
-        text-align: center;
-        cursor: pointer;
-    }
-    /* Scrollbar */
-    
-    .scrollbar {
-    height: 3px ;
-    background: #e1e1e1 ;
-    line-height: 0;
-    position: absolute;
-    bottom: 10px;
-    width: 590px;
-	border-radius: 3px;	
-	display: none;	
-    }
-    .scrollbar .handle {
-        width: 330px !important;
-        height: 100%;
-        background: #d8d8d8;
-        cursor: pointer;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px
-    }
-	.scrollbar .handle1{
-		height: 100%;
-		background: #8c8d94;
-		cursor: pointer;
-		border-radius: 3px;
+function onScroll(event){
+console.log("start");
+    var scrollPos = jQuery(document).scrollTop();
+    jQuery(".navlist").find('a[href^="#"]').each(function () {
+        var currLink = jQuery(this);
+        var refElement = jQuery(currLink.attr("href"));
+
+console.log(currLink.attr("href"));
+console.log(refElement.position().top);
+console.log(scrollPos);
+console.log(refElement.height());
+        if (refElement.position().top <= (scrollPos + 300) && refElement.position().top + refElement.height() > scrollPos) {
+            jQuery('.navlist ul li a').removeClass("active");
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
+console.log("end");
+}
+
 	
-	}
-	.scrollbar .handle1 .mousearea {
-        position: absolute;
-        top: -9px;
-        left: 0;
-        width: 100%;
-        height: 20px;
-    }
-    .scrollbar .handle .mousearea {
-        position: absolute;
-        top: -9px;
-        left: 0;
-        width: 100%;
-        height: 20px;
-    }
-    .btn.nextPage {
-        position: absolute;
-        right: 0;
-        top: 0;
-        cursor: pointer;
-        width: 80px;
-        height: 192px;
-        line-height: 165px;
-		background: none !important;
-    }
-    .btn.prevPage {
-    position: absolute;
-    left: 0 ;
-    top: 0 ;
-    cursor: pointer;
-    width: 80px;
-    height: 192px;
-    line-height: 165px ;
-	background: none !important;	
-    }
-    .btn.prevPage.disabled, .btn.nextPage.disabled {
-       opacity: 0.2;
-    }
-    .cowrap {
-        width: 155px;
-        text-transform: uppercase;
-    }
-    .cheadimg {
-        float: left;
-    }
-    .cheadtitle {
-        font-size: 22px;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-        color: #fc2779;
-    }
-    .cheadcta {
-        font-size: 15px;
-        font-weight: 600;
-    }
-    .shp {
-        background: url(http://www.nykaa.com/media/wysiwyg/Mega-sale-jun-2017/shpbtn.png) no-repeat 95% center;
-        /*border-bottom:2px solid #fc2779; color: #fc2779;*/
-        
-        padding-right: 17px;
-        display: inline-block;
-        color: #323245
-    }
-    .cheaddescs {
-        color: #323245;
-        margin: 15px 0 15px
-    }
-    .upto {
-        font-size: 14px;
-        font-weight: 600;
-    }
-    .disamt {
-        font-size: 24px;
-        font-weight: 600;
-        line-height: 35px;
-    }
-    .disamt span {
-        font-size: 48px;
-    }
-    .coname {
-        font-size: 16px;
-        color: rgba(3, 2, 26, 0.8);
-        margin: 20px 0 2px
-    }
-    a.popularBrand {
-        color: rgba(3, 2, 26, 0.6);
-        color: var(--midnight-60);
-    }
-    /*category css close here*/
-    /*navigation position csss*/
+	
+/*jQuery(document).ready(function(){
+    // Add smooth scrolling to all links
+   jQuery(document).on('click', 'a[href^="#"]', function (event) {
+      
+       // Make sure this.hash has a value before overriding default behavior
+       if (this.hash !== "") {
+         // Prevent default anchor click behavior
+         event.preventDefault();
+   
+         // Store hash
+         var hash = this.hash;
+   
+         // Using jQuery's animate() method to add smooth page scroll
+         // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+         jQuery('html, body').animate({
+           scrollTop: jQuery(hash).offset().top - 150
+         }, 800, function(){
+      
+           // Add hash (#) to URL when done scrolling (default click behavior)
+           //window.location.hash = hash;
+         });
+       } // End if
+     });
+   });*/
+
+</script>
+<!-- smooth scrolling close-->
+
+
+
+
+
+<!-- sticky starts-->
+<script>
+   jQuery(document).ready(function() {
+       jQuery(window).scroll(function() {
+           if (jQuery(this).scrollTop() > 350) {
+               jQuery('.stickypart').addClass("stick");
+   
+           } else {
+               jQuery('.stickypart').removeClass("stick");
+   
+           }
+       });
+   });
+</script>
+<!-- sticky close--> 
+<!-- category slider start-->
+<script src="http://darsa.in/sly/examples/js/vendor/plugins.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Sly/1.6.1/sly.min.js"></script> 
+<script >
+   jQuery(function($) {
+     'use strict';
+   
+     // -------------------------------------------------------------
+     //   Basic Navigation
+     // -------------------------------------------------------------
+     (function() {
+       var $frame = $('#slide');
+       var $slidee = $frame.children('ul').eq(0);
+       var $wrap = $frame.parent();
+   
+       // Call Sly on frame
+       $frame.sly({
+         horizontal: 1,
+         itemNav: 'basic',
+         smart: 1,
+         activateOn: 'click',
+         mouseDragging: 1,
+         touchDragging: 1,
+         releaseSwing: 1,
+         startAt: 0,
+         scrollBar: $wrap.find('.scrollbar'),
+         scrollBy: 1,
+         pagesBar: $wrap.find('.pages'),
+         activatePageOn: 'click',
+         speed: 300,
+         elasticBounds: 1,
+         easing: 'easeOutExpo',
+         dragHandle: 1,
+         dynamicHandle: 1,
+         clickBar: 1,
+   
+         // Buttons
+         forward: $wrap.find('.forward'),
+         backward: $wrap.find('.backward'),
+         prev: $wrap.find('.prev'),
+         next: $wrap.find('.next'),
+         prevPage: $wrap.find('.prevPage'),
+         nextPage: $wrap.find('.nextPage')
+       });
     
-   /*#Featured-Brands,
-     #Popular-Brands,
-    #Editors-Choice,
-    #Category-Offers,
-    #Free-Product-Offers,
-    #All-Offers {
-        position: absolute;
-        margin-top: -350px
-    }
-    #Editors-Choice,
-    #Category-Offers,
-    #Free-Product-Offers,
-    #Brand-Offers {
-        margin-top: -200px
-    }*/
-    #popup1,
-    .overlay {
-        display: none
-    }
-    #seemore,
-    #seeless {
-        cursor: pointer
-    }
-    #popup1 {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 999;
-        max-width: 70em;
-        width: 100%;
-        margin: 8% auto
-    }
-    /*navigation position csss*/
-    /*nnnn*/
+   
+       // To Start button
+       $wrap.find('.toStart').on('click', function() {
+         var item = $(this).data('item');
+         // Animate a particular item to the start of the frame.
+         // If no item is provided, the whole content will be animated.
+         $frame.sly('toStart', item);
+       });
+   
+       // To Center button
+       $wrap.find('.toCenter').on('click', function() {
+         var item = $(this).data('item');
+         // Animate a particular item to the center of the frame.
+         // If no item is provided, the whole content will be animated.
+         $frame.sly('toCenter', item);
+       });
+   
+       // To End button
+       $wrap.find('.toEnd').on('click', function() {
+         var item = $(this).data('item');
+         // Animate a particular item to the end of the frame.
+         // If no item is provided, the whole content will be animated.
+         $frame.sly('toEnd', item);
+       });
+   
+       // Add item
+       $wrap.find('.add').on('click', function() {
+         $frame.sly('add', '<li>' + $slidee.children().length + '</li>');
+       });
+   
+       // Remove item
+       $wrap.find('.remove').on('click', function() {
+         $frame.sly('remove', -1);
+       });
+     }());
+     (function() {
+       var $frame = $('#slide1');
+       var $slidee = $frame.children('ul').eq(0);
+       var $wrap = $frame.parent();
+   
+       // Call Sly on frame
+       $frame.sly({
+         horizontal: 1,
+         itemNav: 'basic',
+         smart: 1,
+         activateOn: 'click',
+         mouseDragging: 1,
+         touchDragging: 1,
+         releaseSwing: 1,
+         startAt: 0,
+         scrollBar: $wrap.find('.scrollbar'),
+         scrollBy: 1,
+         pagesBar: $wrap.find('.pages'),
+         activatePageOn: 'click',
+         speed: 300,
+         elasticBounds: 1,
+         easing: 'easeOutExpo',
+         dragHandle: 1,
+         dynamicHandle: 1,
+         clickBar: 1,
+   
+         // Buttons
+         forward: $wrap.find('.forward'),
+         backward: $wrap.find('.backward'),
+         prev: $wrap.find('.prev'),
+         next: $wrap.find('.next'),
+         prevPage: $wrap.find('.prevPage'),
+         nextPage: $wrap.find('.nextPage')
+       });
     
-    .megasalejune .slick-slider {
-        margin-bottom: 0
-    }
-    .megasalejune .slick-slider .checkboxwrap {
-        padding-bottom: 0
-    }
-    .megasalejune .owl-wrapper {
-        padding-bottom: 10px;
-    }
-    .megasalejune .slider {
-        width: auto;
-    }
-    .megasalejune .slick-prev:before,
-    .megasalejune .slick-next:before {
-        color: black;
-    }
-    .megasalejune .slick-prev,
-    .megasalejune .slick-next {
-        display: inline-block;
-        margin: 0;
-        top: auto;
-        height: 20px;
-        width: 20px;
-    }
-    .megasalejune .slick-dots {
-        position: relative;
-        bottom: 0;
-        width: 310px;
-        margin: 8px auto
-    }
-    .megasalejune .slick-dots li button::before {
-        display: none
-    }
-    .megasalejune .slick-dots li {
-        height: 10px;
-        width: 10px;
-    }
-    .megasalejune .slick-dots li button {
-        height: 10px;
-        width: 10px;
-        background: #efefef;
-        border-radius: 100px;
-    }
-    .megasalejune .slick-dots li.slick-active button {
-        background: #fc2779;
-    }
-    .megasalejune .slick-prev {
-        left: 353px;
-        background: url(http://www.nykaa.com/media/wysiwyg/Mega-sale-jun-2017/bprev.png) no-repeat;
-        width: 67px;
-        height: 59px;
-        background-size: 60%;
-        bottom: -32px
-    }
-    .megasalejune .slick-next {
-        right: 331px;
-        background: url(http://www.nykaa.com/media/wysiwyg/Mega-sale-jun-2017/bnext.png) no-repeat;
-        width: 67px;
-        height: 59px;
-        background-size: 60%
-    }
-    .megasalejune .brandclmn {
-        width: 19.5%;
-        display: inline-block;
-        vertical-align: top
-    }
-    .megasalejune .brandbg1 {
-        background-image: radial-gradient(circle at 53% 17%, rgba(255, 255, 255, 0), #91cadb), linear-gradient(#ffffff, #ffffff);
-    }
-    .megasalejune .brandbg2 {
-        background-image: radial-gradient(circle at 53% 17%, rgba(255, 255, 255, 0), #ffc2c3), linear-gradient(#ffffff, #ffffff);
-    }
-    .megasalejune .brandbg3 {
-        background-image: radial-gradient(circle at 53% 17%, rgba(255, 255, 255, 0), #f4ead9), linear-gradient(#ffffff, #ffffff);
-    }
-    .megasalejune .brandbg4 {
-        background-image: radial-gradient(circle at 53% 17%, rgba(255, 255, 255, 0), #abd866), linear-gradient(#ffffff, #ffffff);
-    }
-    /*.margin-left-ten{margin-right:1.7% !important}
-.margin-left-zero{margin-right:0 !important}*/
+   
+       
+     }());
+     (function() {
+       var $frame = $('#slide2');
+       var $slidee = $frame.children('ul').eq(0);
+       var $wrap = $frame.parent();
+   
+       // Call Sly on frame
+       $frame.sly({
+         horizontal: 1,
+         itemNav: 'basic',
+         smart: 1,
+         activateOn: 'click',
+         mouseDragging: 1,
+         touchDragging: 1,
+         releaseSwing: 1,
+         startAt: 0,
+         scrollBar: $wrap.find('.scrollbar'),
+         scrollBy: 1,
+         pagesBar: $wrap.find('.pages'),
+         activatePageOn: 'click',
+         speed: 300,
+         elasticBounds: 1,
+         easing: 'easeOutExpo',
+         dragHandle: 1,
+         dynamicHandle: 1,
+         clickBar: 1,
+   
+         // Buttons
+         forward: $wrap.find('.forward'),
+         backward: $wrap.find('.backward'),
+         prev: $wrap.find('.prev'),
+         next: $wrap.find('.next'),
+         prevPage: $wrap.find('.prevPage'),
+         nextPage: $wrap.find('.nextPage')
+       });
     
-    @media screen and (max-width: 1075px) {
-        .megasalejune .twodiv,
-        .megasalejune .threediv,
-        .megasalejune .fourdiv,
-        .megasalejune .popularBrand,
-        .megasalejune .brand {
-            margin-right: 1.5%
+   
+       
+     }());
+     (function() {
+       var $frame = $('#slide3');
+       var $slidee = $frame.children('ul').eq(0);
+       var $wrap = $frame.parent();
+   
+       // Call Sly on frame
+       $frame.sly({
+         horizontal: 1,
+         itemNav: 'basic',
+         smart: 1,
+         activateOn: 'click',
+         mouseDragging: 1,
+         touchDragging: 1,
+         releaseSwing: 1,
+         startAt: 0,
+         scrollBar: $wrap.find('.scrollbar'),
+         scrollBy: 1,
+         pagesBar: $wrap.find('.pages'),
+         activatePageOn: 'click',
+         speed: 300,
+         elasticBounds: 1,
+         easing: 'easeOutExpo',
+         dragHandle: 1,
+         dynamicHandle: 1,
+         clickBar: 1,
+   
+         // Buttons
+         forward: $wrap.find('.forward'),
+         backward: $wrap.find('.backward'),
+         prev: $wrap.find('.prev'),
+         next: $wrap.find('.next'),
+         prevPage: $wrap.find('.prevPage'),
+         nextPage: $wrap.find('.nextPage')
+       });
+    
+     }());
+     (function() {
+       var $frame = $('#slide4');
+       var $slidee = $frame.children('ul').eq(0);
+       var $wrap = $frame.parent();
+   
+       // Call Sly on frame
+       $frame.sly({
+         horizontal: 1,
+         itemNav: 'basic',
+         smart: 1,
+         activateOn: 'click',
+         mouseDragging: 1,
+         touchDragging: 1,
+         releaseSwing: 1,
+         startAt: 0,
+         scrollBar: $wrap.find('.scrollbar'),
+         scrollBy: 1,
+         pagesBar: $wrap.find('.pages'),
+         activatePageOn: 'click',
+         speed: 300,
+         elasticBounds: 1,
+         easing: 'easeOutExpo',
+         dragHandle: 1,
+         dynamicHandle: 1,
+         clickBar: 1,
+   
+         // Buttons
+         forward: $wrap.find('.forward'),
+         backward: $wrap.find('.backward'),
+         prev: $wrap.find('.prev'),
+         next: $wrap.find('.next'),
+         prevPage: $wrap.find('.prevPage'),
+         nextPage: $wrap.find('.nextPage')
+       });
+    
+     }());
+     (function() {
+       var $frame = $('#slide5');
+       var $slidee = $frame.children('ul').eq(0);
+       var $wrap = $frame.parent();
+   
+       // Call Sly on frame
+       $frame.sly({
+         horizontal: 1,
+         itemNav: 'basic',
+         smart: 1,
+         activateOn: 'click',
+         mouseDragging: 1,
+         touchDragging: 1,
+         releaseSwing: 1,
+         startAt: 0,
+         scrollBar: $wrap.find('.scrollbar'),
+         scrollBy: 1,
+         pagesBar: $wrap.find('.pages'),
+         activatePageOn: 'click',
+         speed: 300,
+         elasticBounds: 1,
+         easing: 'easeOutExpo',
+         dragHandle: 1,
+         dynamicHandle: 1,
+         clickBar: 1,
+   
+         // Buttons
+         forward: $wrap.find('.forward'),
+         backward: $wrap.find('.backward'),
+         prev: $wrap.find('.prev'),
+         next: $wrap.find('.next'),
+         prevPage: $wrap.find('.prevPage'),
+         nextPage: $wrap.find('.nextPage')
+       });
+    
+     }());
+     (function() {
+       var $frame = $('#slide6');
+       var $slidee = $frame.children('ul').eq(0);
+       var $wrap = $frame.parent();
+   
+       // Call Sly on frame
+       $frame.sly({
+         horizontal: 1,
+         itemNav: 'basic',
+         smart: 1,
+         activateOn: 'click',
+         mouseDragging: 1,
+         touchDragging: 1,
+         releaseSwing: 1,
+         startAt: 0,
+         scrollBar: $wrap.find('.scrollbar'),
+         scrollBy: 1,
+         pagesBar: $wrap.find('.pages'),
+         activatePageOn: 'click',
+         speed: 300,
+         elasticBounds: 1,
+         easing: 'easeOutExpo',
+         dragHandle: 1,
+         dynamicHandle: 1,
+         clickBar: 1,
+   
+         // Buttons
+         forward: $wrap.find('.forward'),
+         backward: $wrap.find('.backward'),
+         prev: $wrap.find('.prev'),
+         next: $wrap.find('.next'),
+         prevPage: $wrap.find('.prevPage'),
+         nextPage: $wrap.find('.nextPage')
+       });
+    
+     }());
+     (function() {
+       var $frame = $('#slide7');
+       var $slidee = $frame.children('ul').eq(0);
+       var $wrap = $frame.parent();
+   
+       // Call Sly on frame
+       $frame.sly({
+         horizontal: 1,
+         itemNav: 'basic',
+         smart: 1,
+         activateOn: 'click',
+         mouseDragging: 1,
+         touchDragging: 1,
+         releaseSwing: 1,
+         startAt: 0,
+         scrollBar: $wrap.find('.scrollbar'),
+         scrollBy: 1,
+         pagesBar: $wrap.find('.pages'),
+         activatePageOn: 'click',
+         speed: 300,
+         elasticBounds: 1,
+         easing: 'easeOutExpo',
+         dragHandle: 1,
+         dynamicHandle: 1,
+         clickBar: 1,
+   
+         // Buttons
+         forward: $wrap.find('.forward'),
+         backward: $wrap.find('.backward'),
+         prev: $wrap.find('.prev'),
+         next: $wrap.find('.next'),
+         prevPage: $wrap.find('.prevPage'),
+         nextPage: $wrap.find('.nextPage')
+       });
+    
+     }());
+     (function() {
+       var $frame = $('#slide8');
+       var $slidee = $frame.children('ul').eq(0);
+       var $wrap = $frame.parent();
+   
+       // Call Sly on frame
+       $frame.sly({
+         horizontal: 1,
+         itemNav: 'basic',
+         smart: 1,
+         activateOn: 'click',
+         mouseDragging: 1,
+         touchDragging: 1,
+         releaseSwing: 1,
+         startAt: 0,
+         scrollBar: $wrap.find('.scrollbar'),
+         scrollBy: 1,
+         pagesBar: $wrap.find('.pages'),
+         activatePageOn: 'click',
+         speed: 300,
+         elasticBounds: 1,
+         easing: 'easeOutExpo',
+         dragHandle: 1,
+         dynamicHandle: 1,
+         clickBar: 1,
+   
+         // Buttons
+         forward: $wrap.find('.forward'),
+         backward: $wrap.find('.backward'),
+         prev: $wrap.find('.prev'),
+         next: $wrap.find('.next'),
+         prevPage: $wrap.find('.prevPage'),
+         nextPage: $wrap.find('.nextPage')
+       });
+    
+     }());
+     (function() {
+       var $frame = $('#slide9');
+       var $slidee = $frame.children('ul').eq(0);
+       var $wrap = $frame.parent();
+   
+       // Call Sly on frame
+       $frame.sly({
+         horizontal: 1,
+         itemNav: 'basic',
+         smart: 1,
+         activateOn: 'click',
+         mouseDragging: 1,
+         touchDragging: 1,
+         releaseSwing: 1,
+         startAt: 0,
+         scrollBar: $wrap.find('.scrollbar'),
+         scrollBy: 1,
+         pagesBar: $wrap.find('.pages'),
+         activatePageOn: 'click',
+         speed: 300,
+         elasticBounds: 1,
+         easing: 'easeOutExpo',
+         dragHandle: 1,
+         dynamicHandle: 1,
+         clickBar: 1,
+   
+         // Buttons
+         forward: $wrap.find('.forward'),
+         backward: $wrap.find('.backward'),
+         prev: $wrap.find('.prev'),
+         next: $wrap.find('.next'),
+         prevPage: $wrap.find('.prevPage'),
+         nextPage: $wrap.find('.nextPage')
+       });
+    
+     }());
+   
+   });
+   
+</script>  
+<!--category slider close -->
+<!--seemore scripts start--> 
+<script type="text/javascript">
+   jQuery(document).ready(function () {
+         
+                   jQuery('#seeless').hide();
+                   jQuery('#seemore').click(function () {
+                        jQuery('.freeprdoffers').slideDown('slow');
+            jQuery('#seemore').hide();
+            jQuery('#seeless').show();
+          });
+          jQuery('#seeless').click(function () {
+            jQuery('.freeprdoffers').slideUp('slow');
+            jQuery('#seemore').show();
+            jQuery('#seeless').hide();
+            jQuery('html, body').animate({
+               scrollTop: jQuery(".freeprdoffers-top").offset().top
+             }, 1000);
+          });
+        });
+</script> 
+<!--seemore scripts start--> 
+<!--scroll scripts-->
+<script type="text/javascript">
+/*   jQuery(window).scroll(function() {
+       if (jQuery(this).scrollTop() >
+           350) {
+           jQuery('.megasalejune .navlist li').removeClass("active");
+           jQuery('.megasalejune .navlist li:nth-child(1)').addClass("active");
+       }
+   });
+   jQuery(window).scroll(function() {
+       if (jQuery(this).scrollTop() >
+           3916) {
+           jQuery('.megasalejune .navlist li').removeClass("active");
+           jQuery('.megasalejune .navlist li:nth-child(2)').addClass("active");
+       }
+   });
+   jQuery(window).scroll(function() {
+       if (jQuery(this).scrollTop() >
+           4766) {
+           jQuery('.megasalejune .navlist li').removeClass("active");
+           jQuery('.megasalejune .navlist li:nth-child(3)').addClass("active");
+       }
+   });
+    jQuery(window).scroll(function() {
+       if (jQuery(this).scrollTop() >
+           5598) {
+           jQuery('.megasalejune .navlist li').removeClass("active");
+           jQuery('.megasalejune .navlist li:nth-child(4)').addClass("active");
+       }
+   });
+    jQuery(window).scroll(function() {
+       if (jQuery(this).scrollTop() >
+           7672) {
+           jQuery('.megasalejune .navlist li').removeClass("active");
+           jQuery('.megasalejune .navlist li:nth-child(5)').addClass("active");
+       }
+   });
+    jQuery(window).scroll(function() {
+       if (jQuery(this).scrollTop() >
+           8784) {
+           jQuery('.megasalejune .navlist li').removeClass("active");
+           jQuery('.megasalejune .navlist li:nth-child(6)').addClass("active");
+       }
+
+   });*/
+</script>
+<!--scroll scripts-->
+<!-- popuptab starts-->
+<script type="text/javascript"> 
+   jQuery(document).ready(function (e) { 
+   jQuery('.bigimg').hide() 
+   jQuery('.bigimg:first-child').show() 
+   jQuery('.tabx').click(function () { 
+   //$('.bigimg').removeClass('tab-active') 
+   jQuery('.tabx').removeClass('active'); 
+   jQuery(this).addClass('active'); 
+   jQuery('.bigimg').hide() 
+   var index0 = jQuery('.tabx').index(this) 
+   //jQuery('.bigimg').eq(index0).show();
+   jQuery('.bigimg').eq(index0).show();
+ 
+  
+   });    
+   
+   
+      jQuery('.filterbtn').click(function () { 
+   //$('.bigimg').removeClass('tab-active') 
+     
+   jQuery('#popup1').css('display','block'); 
+   jQuery('.overlay').css('display','block') 
+   
+   }); 
+   jQuery('.overlay').click(function () { 
+   //$('.bigimg').removeClass('tab-active') 
+   
+   jQuery('#popup1').css('display','none'); 
+   jQuery('.overlay').css('display','none') 
+   
+   }); 
+   jQuery('#brandclick').click(function () { 
+     jQuery('.slider').not('.slick-initialized').slick({
+       slidesToShow: 1,
+       dots:true,
+       slide: 'li',
+       arrows:true,
+     });
+     jQuery('.slider').get(0).slick.setPosition();
+   
+   }); 
+   
+    
+   }); 
+   
+    jQuery(document).ready(function(){
+      jQuery('.twodiv,.threediv,.fourdiv,.popularBrand,.brand,.catwrap').addClass('custom-block');
+      //jQuery('.megasalejune').addClass('custom-category');
+      jQuery('input[type="checkbox"]').click(function(){
+        if(jQuery(this).prop("checked") == true){
+            jQuery(this).next().addClass('check-sucess');
+            jQuery(this).closest('.checkbox').addClass('slect-box');
         }
-    }
-    @media screen and (max-width: 1030px) {
-        .megasalejune .navlist li {
-            padding: 0 13px
+        else if(jQuery(this).prop("checked") == false){
+            jQuery(this).next().removeClass('check-sucess');
+            jQuery(this).closest('.checkbox').removeClass('slect-box');
+        }
+        var numCF = jQuery('.checkbox.cat-filter.slect-box').length;
+        var numBF = jQuery('.checkbox.brand-filter.slect-box').length;
+        jQuery('.count-number').text(numCF);
+        jQuery('.brand-count-number').text(numBF); 
+      });
+      jQuery('.tabBrand').click(function(){
+        var brandsToShow = '';
+        jQuery('.checkbox.cat-filter.slect-box').each(function(index){
+          if(0 == index){
+            brandsToShow += '.'+jQuery(this).find('input[type="checkbox"]').val();
+          }else{
+            brandsToShow += ',.'+jQuery(this).find('input[type="checkbox"]').val();
+          }
+        });
+        if(brandsToShow == ''){
+          jQuery('.checkbox.brand-filter').show();
+        }else{
+          jQuery('.checkbox.brand-filter').hide();
+          jQuery(brandsToShow).show();  
+        }
+      });
+    });
+
+    jQuery('.applybtn').on('click', function(){
+
+var j=0;
+jQuery(".twodiv:visible").css("margin-right", function(i) {
+j=j+1;
+if(j%2 && j!=0){
+   return '1.7%';
+}
+});
+
+
+   jQuery( ".goldbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+   
+   jQuery( ".silverbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+   
+   jQuery( ".popular:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+   
+   jQuery( ".editobx:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+   
+   jQuery( ".brandbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+   
+   jQuery( ".platinumbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+   
+   jQuery( ".freeprdoffersbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+   
+   jQuery( ".goldplusbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+     var filter = '';
+      var showCatFilters = showBrandFilters = catgFiltersForTracking = brandFiltersForTracking = '';
+      var catgIndex = brandIndex = 1;
+      jQuery('.checkbox.slect-box').each(function(index){
+        jQuery("#cat").show();
+        if(index == 0){
+          filter += '.'+jQuery(this).find('input[type="checkbox"]').val();
+        }else{
+         filter += ',.'+jQuery(this).find('input[type="checkbox"]').val();  
+        }
+        if(jQuery(this).hasClass('cat-filter')){
+          if(1 == catgIndex){
+            showCatFilters += jQuery(this).find('span').text();
+            catgFiltersForTracking += jQuery(this).find('span').text().toLowerCase();
+          }
+          if(2 == catgIndex){
+            showCatFilters += ','+jQuery(this).find('span').text();
+            catgFiltersForTracking += '|'+jQuery(this).find('span').text().toLowerCase();
+          }
+          if(3 == catgIndex){
+            showCatFilters += '...';
+            catgFiltersForTracking += '|'+jQuery(this).find('span').text().toLowerCase();
+          }
+          if(catgIndex > 3){
+            catgFiltersForTracking += '|'+jQuery(this).find('span').text().toLowerCase();
+          }
+          catgIndex++;
+        }else if(jQuery(this).hasClass('brand-filter')){
+          jQuery("#cat").hide();
+          if(1 == brandIndex){
+            showBrandFilters += jQuery(this).find('span').text();
+            brandFiltersForTracking += jQuery(this).find('span').text().toLowerCase();
+          }
+          if(2 == brandIndex){
+            showBrandFilters += ','+jQuery(this).find('span').text();
+            brandFiltersForTracking += '|'+jQuery(this).find('span').text().toLowerCase();
+          }
+          if(3 == brandIndex){
+            showBrandFilters += '...';
+            brandFiltersForTracking += '|'+jQuery(this).find('span').text().toLowerCase();
+          }
+          if(brandIndex > 3){
+            brandFiltersForTracking += '|'+jQuery(this).find('span').text().toLowerCase();
+          }
+          brandIndex++;
+        }
+      });
+      jQuery("#popular").show();
+      jQuery("#featured").show();
+      jQuery("#editor").show();
+      jQuery("#free").show();
+      jQuery("#all").show();
+      if(filter == ''){
+         jQuery("#cat").show();
+        jQuery('.custom-block, .custom-category, .see-more').show();
+        jQuery('.category .brand-text .font-color').text('All Categories').css('color', '#9a9aa3');
+        jQuery('.brands .brand-text .font-color').text('All Brands').css('color', '#9a9aa3');
+   
+   jQuery( ".goldbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+   
+   jQuery( ".silverbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+   
+   jQuery( ".popular:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+   
+   jQuery( ".editobx:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+   
+   jQuery( ".brandbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+   
+   jQuery( ".platinumbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+   
+   jQuery( ".freeprdoffersbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+   
+   jQuery( ".goldplusbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+   
+   
+      }else{
+        jQuery('#seemore').trigger('click');
+        !jQuery('.nw_see_more_btn').hasClass('nw_see_less') && jQuery('.nw_see_more_btn').click();
+        jQuery('#seeless').hide();
+        jQuery('.custom-block').hide();
+        jQuery(filter).css('display','inline-block'); 
+        jQuery('.custom-category').each(function(){
+          if(jQuery(this).find('.custom-block:visible').length == 0){
+            jQuery(this).hide();
+          }
+        });
+        jQuery('.see-more').hide();
+        if(showCatFilters == ''){
+          jQuery('.category .brand-text .font-color').text('All Categories').css('color', '#9a9aa3');
+        }else{
+          jQuery('.category .brand-text .font-color').text(showCatFilters).css('color', '#fc2779');
+        }
+        if(showBrandFilters == ''){
+          jQuery('.brands .brand-text .font-color').text('All Brands').css('color', '#9a9aa3');
+        }else{
+          jQuery('.brands .brand-text .font-color').text(showBrandFilters).css('color', '#fc2779');
         }
 
-		
-		 .megasalejune .navlist li a:hover {
-        border-bottom: 3px solid #fc2779;
-        font-weight: 600;
-		color: #fc2779;
-   	 }
-		
-    }
-	@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px)  {
-	.scrollbar{width:500px;}		
-	.megasalejune .navlist li a{width:150px;font-size:15px;}
-	}
-    @media screen and (max-width: 1023px) {
-		
-        .megasalejune .navlist {
-            width: calc(100% - 119px)
-        }
-        .megasalejune .filterbtn {
-            width: 115px;
-            background-position: 5px 0;
-            height: 45px;
-            font-size: 15px;
-            background-size: 18%
-        }
-        .megasalejune .navlist li {
-            padding: 0 0.7vw;
-            margin: 0 1px
-        }
-        .megasalejune .navlist li a {
-            font-size: 1.5vw
-        }
+        var trackingParam = "'" + catgFiltersForTracking + ":" + brandFiltersForTracking + "'";
+        ga('send','event','Mega Sale','category:brand', trackingParam);
+
+   jQuery("#apply-desk-filter").html(parseInt(jQuery(".brand-count-number").html()) + parseInt(jQuery(".count-number").html()));
+   
+   
+   
+   var count=1;
+   
+   jQuery(".custom-category .platinumbox:visible .custom-block").each(function(){
+    if(jQuery(this).is(":visible")) { 
+      if(count % 2 != 0){ 
+        jQuery(this).addClass("margin-left-ten");
+      }
+      else {
+        jQuery(this).addClass("margin-left-zero");
+      }
+      count++;
+      
     }
 
-</style>
-<link rel="stylesheet" type="text/css" href="http://www.nykaa.com/skin/frontend/nykaa/theme202/css/slick.css?v=1.4.3.65" media="all" />
-<script type="text/javascript" src="https://rawgit.com/kenwheeler/slick/master/slick/slick.js"></script>
+   });
+   
+   var count=1;
+   
+   jQuery(".custom-category .goldplusbox:visible .custom-block").each(function(){
+    if(jQuery(this).is(":visible")) { 
+      if(count < 3 ){ 
+        jQuery(this).addClass("margin-left-ten");
+      }
+      else {
+        jQuery(this).addClass("margin-left-zero");
+        if(count == 3) {count = 0;}
+      }
+      count++;
+      
+    }
+   });
+   
+   
+   var count=1;
+   
+   jQuery(".custom-category .freeprdoffersbox:visible .custom-block").each(function(){
+    if(jQuery(this).is(":visible")) { 
+      if(count %2 != 0){ 
+        jQuery(this).addClass("margin-left-ten");
+      }
+      else {
+        jQuery(this).addClass("margin-left-zero");
+      }
+      count++;
+   
+    }
+   });
+   
+   var count=1;
+   
+   jQuery(".custom-category .goldbox:visible .custom-block").each(function(){
+      if(jQuery(this).is(":visible")) { 
+      if(count < 4){ 
+        jQuery(this).addClass("margin-left-ten");
+      }
+      else {
+        jQuery(this).addClass("margin-left-zero");
+        if(count == 4) {count = 0; }
+      }
+      count++;
+      
+    }
+   });
+   var count=1;
+   jQuery(".custom-category .silverbox:visible .custom-block").each(function(){
+    if(jQuery(this).is(":visible")) { 
+      if(count < 4){ 
+        jQuery(this).addClass("margin-left-ten");
+      }
+      else {
+        jQuery(this).addClass("margin-left-zero");
+        if(count == 4) {count = 0; }
+      }
+      count++;
+      
+    }
+   });
+   var count=1;
+   jQuery(".custom-category .popular:visible .custom-block").each(function(){
+    if(jQuery(this).is(":visible")) { 
+      if(count < 4){ 
+        jQuery(this).addClass("margin-left-ten");
+      }
+      else {
+        jQuery(this).addClass("margin-left-zero");
+        if(count == 4) {count = 0; }
+      }
+      count++;
+      
+    }
+   });
+   var count=1;
+   jQuery(".custom-category .editobx:visible .custom-block").each(function(){
+    if(jQuery(this).is(":visible")) { 
+      if(count < 4 ){ 
+        jQuery(this).addClass("margin-left-ten");
+      }
+      else {
+        jQuery(this).addClass("margin-left-zero");
+        if(count == 4) {count = 0;}
+      }
+      count++;
+      
+    }
+   });
+   
+   var count=1;
+   jQuery(".custom-category .brandbox:visible .custom-block").each(function(){
+    if(jQuery(this).is(":visible")) { 
+      if(count < 4){ 
+        jQuery(this).addClass("margin-left-ten");
+      }
+      else {
+        jQuery(this).addClass("margin-left-zero");
+        if(count == 4) {count = 0;}
+      }
+      count++;
+      
+    }
+   });
+   
+   var flag_parent_show = 0;
+   jQuery("#popular .custom-block").each(function(){
+    if(jQuery(this).css('display') == "none"){
+      flag_parent_show = 1;
+    }else{
+      flag_parent_show = 0;
+      return false;
+    }
+   });
+   if(flag_parent_show == 1){
+    jQuery("#popular").hide();
+   }
+   else{
+    jQuery("#popular").show();
+   }
+   
+   flag_parent_show = 0;
+   jQuery("#featured .custom-block").each(function(){
+    if(jQuery(this).css('display') == "none"){
+      flag_parent_show = 1;
+    }else{
+      flag_parent_show = 0;
+      return false;
+    }
+   });
+   if(flag_parent_show == 1){
+    jQuery("#featured").hide();
+   }
+   else{
+    jQuery("#featured").show();
+   }
+   
+   
+   flag_parent_show = 0;
+   jQuery("#editor .custom-block").each(function(){
+    if(jQuery(this).css('display') == "none"){
+      flag_parent_show = 1;
+    }else{
+      flag_parent_show = 0;
+      return false;
+    }
+   });
+   if(flag_parent_show == 1){
+    jQuery("#editor").hide();
+   }else{
+    jQuery("#editor").show();
+   }
+   
+   flag_parent_show = 0;
+   jQuery("#free  .custom-block").each(function(){
+    if(jQuery(this).css('display') == "none"){
+      flag_parent_show = 1;
+    }else{
+      flag_parent_show = 0;
+      return false;
+    }
+   });
+   if(flag_parent_show == 1){
+    jQuery("#free").hide();
+   }else{
+    jQuery("#free").show();
+   }
+   
+   flag_parent_show = 0;
+   jQuery("#all  .custom-block").each(function(){
+    if(jQuery(this).css('display') == "none"){
+      flag_parent_show = 1;
+    }else{
+      flag_parent_show = 0;
+      return false;
+    }
+   });
+   if(flag_parent_show == 1){
+    jQuery("#all").hide();
+   }else{
+    jQuery("#all").show();
+   }
+   
+   }
+     jQuery('.overlay').css('display','none');
+      jQuery('#popup1').css('display','none');
+           jQuery('.filterbtn').addClass('active');
+    });
+    jQuery('.clearbtn').on('click', function(){
+      jQuery('#seeless').trigger('click');
+      jQuery("#cat").show();
+      jQuery("#popular").show();
+      jQuery("#featured").show();
+      jQuery("#editor").show();
+      jQuery("#free").show();
+      jQuery("#all").show();
+      jQuery('.checkbox').removeClass('slect-box');
+      jQuery('.count-number, .brand-count-number').text('0');
+     jQuery('#apply-desk-filter').text('0');
+     jQuery('.filterbtn').removeClass('active');
+    });
+  
+  /* jQuery('.slider').slick({
+    slidesToShow: 1,
+          dots:true,
+          slide: 'li',
+          arrows:true,
+   
+    });*/
+    jQuery('.applybtn').on('click', function(){
+      jQuery("img.lazy").lazyload({load : function(){}});
+    }); 
+</script> 
+<!--filter script close--> 
+<!-- lazyloading  start-->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.js" type="text/javascript"></script>
+<script>
+   jQuery('img.lazy').lazyload({
+     load : function()
+     {
+       //jQuery(this).css('background-color','#ffffff');
+     }
+   });
+</script>
+<!-- lazyloading ends -->
+<script type="text/javascript">
+   var checkedBrands = [];
+   var allBrands = [
+     "Aaranyaa",
+     "Agaro",
+     "Age Lock",
+     "AHAVA",
+     "Alan Truman",
+     "All Good Scents",
+     "Aloe Veda",
+     "Amway",
+     "Anatomicals",
+     "Andis",
+     "Archies",
+     "Ardell",
+     "Arganic",
+     "Aroma Treasures",
+     "Aryanveda",
+     "Astaberry",
+     "Aura Essence",
+     "Australis",
+     "Avene",
+     "Avene",
+     "Avon",
+     "Axe",
+     "Azafran Organics",
+     "Babor",
+     "BaByliss",
+     "Balmain Paris",
+     "Batiste",
+     "B'atude",
+     "BBlunt",
+     "Beardo",
+     "Belcam",
+     "Bella",
+     "Bentley Organic",
+     "Beverly Hills Polo Club",
+     "Bharat & Dorris",
+     "Bio Oil",
+     "BioCare",
+     "Bioderma",
+     "Biotique",
+     "Blue Heaven",
+     "BodyHerbals",
+     "Bomb Cosmetics",
+     "Bombay Shaving Company",
+     "Boroplus",
+     "Braun",
+     "Breathe Aromatherapy",
+     "Brylcreem",
+     "C.A.L Los Angeles",
+     "Casmara",
+     "Chambor",
+     "Chaoba",
+     "Chicco",
+     "Ciate London",
+     "Clean & Clear",
+     "Close-Up",
+     "Coccoon",
+     "Colgate",
+     "Colorbar",
+     "Coloressence",
+     "Concept II",
+     "Corioliss",
+     "Creme 21",
+     "Da Yogis",
+     "Dabur",
+     "Dalan",
+     "Deborah",
+     "Denver",
+     "Dettol",
+     "D'free",
+     "Diana Of London",
+     "Dove",
+     "Dr. Vaidya's",
+     "Dr.Batra's",
+     "Durex",
+     "Elchim",
+     "Elle 18",
+     "Eleanor",
+     "Enchanteur",
+     "Engage",
+     "Enliven",
+     "Envy 1000",
+     "Epique Switzerland",
+     "Essence",
+     "Eva",
+     "ExxelUSA",
+     "Eyova",
+     "Faces",
+     "Fair And Lovely",
+     "Fem",
+     "Filone",
+     "Fogg",
+     "Forest Essentials",
+     "ForeverTeen",
+     "Foxmen",
+     "Fran Wilson Moodmatcher",
+     "Freedom",
+     "FreshLook",
+     "Gala of London",
+     "Garnier",
+     "Gillette",
+     "GlamGals",
+     "Grace Cole",
+     "Gratia",
+     "GUBB USA",
+     "Hair For Sure",
+     "HAIR4REAL",
+     "HairPro",
+     "HE",
+     "Head & Shoulders",
+     "HealthAid",
+     "HealthKart",
+     "HealthVit",
+     "HealthViva",
+     "Hedonista",
+     "Herbal Hills",
+     "Herbalife",
+     "Himalaya",
+     "Iba Halal Care",
+     "Ikonic Professional",
+     "Inatur",
+     "India Grooming Club",
+     "Indulekha",
+     "Inlife",
+     "Innisfree",
+     "Inveda",
+     "Invisibobble",
+     "Iraa",
+     "Iraya",
+     "Island Kiss",
+     "Ital Veloce",
+     "Jaquline USA",
+     "Jeva",
+     "Johnson's",
+     "Jovees",
+     "Just Herbs",
+     "Kama Ayurveda",
+     "KamaSutra",
+     "Kara",
+     "Kaya",
+     "Kent",
+     "Keshking",
+     "Khadi",
+     "Kinetics",
+     "Krishkare",
+     "L.A. Colors",
+     "L.A.Girl",
+     "Lacto Calamine",
+     "Lakme",
+     "LASplash",
+     "Lass Naturals",
+     "Layer'r",
+     "Lever Ayush",
+     "Lifebuoy",
+     "Livon",
+     "L'Oreal Paris",
+     "L'Oreal Paris Men",
+     "L'Oreal Professionnel",
+     "Lottie London",
+     "Lotus Herbals",
+     "Lovea",
+     "Lushveda",
+     "Lux",
+     "Macadamia",
+     "Make up for Life",
+     "Make Up Tools",
+     "Makeup Obsession",
+     "Makeup Revolution",
+     "Mamaearth",
+     "Man Arden",
+     "ManCave",
+     "Matra",
+     "Matrix",
+     "Maybelline New York",
+     "MCaffeine",
+     "Mee Mee",
+     "Megaga",
+     "MIB",
+     "Milani",
+     "MOND'SUB",
+     "Morpheme Remedies",
+     "MUA",
+     "MuscleXP",
+     "Nanogen",
+     "Natio",
+     "Natural Bath And Body",
+     "Naturalium",
+     "Nature's Essence",
+     "Naturyz",
+     "Navratna",
+     "Neutrogena",
+     "Nicka K",
+     "Nike",
+     "Nivea",
+     "Note",
+     "Nourish Vitals",
+     "Nova",
+     "NutraVigour",
+     "NutroActive",
+     "Nutrovea",
+     "Nyassa",
+     "Nykaa Cosmetics",
+     "NYX Professional Makeup",
+     "O3+",
+     "Odiva",
+     "Olay",
+     "Olivia Garden",
+     "OMORFEE",
+     "OPI",
+     "Optimum Nutrition",
+     "Organic India",
+     "Organix",
+     "Oriflame",
+     "Original Source",
+     "OxyLife",
+     "Palmer's",
+     "Palmolive",
+     "Panache",
+     "Pantene",
+     "Park Avenue",
+     "Patisserie De Bain",
+     "Philips",
+     "Pigeon",
+     "Plum",
+     "Ponds",
+     "Provoc",
+     "PROWOMEN",
+     "Pure Nutrition",
+     "Puresense",
+     "QVS",
+     "Real Techniques",
+     "Rebul by Archies",
+     "ReinPlatz",
+     "Remington",
+     "Revlon",
+     "Rica",
+     "Richfeel",
+     "Rimmel",
+     "Roots",
+     "Roots & Herbs",
+     "Rose & Co.",
+     "Ruby's Organics",
+     "Sally Hansen",
+     "Sara",
+     "Scholl",
+     "Schwarzkopf",
+     "SeaSoul",
+     "Sebamed",
+     "Secret Senses",
+     "Secret Temptation",
+     "Shany",
+     "Soulflower",
+     "Spa Ceylon Luxury Ayurveda",
+     "Spars",
+     "Spice Island",
+     "SSCPL Herbals",
+     "St.Botanica",
+     "Streax PRO",
+     "Street Wear",
+     "SUGAR",
+     "Suncros",
+     "Sunsilk",
+     "Swati Khadi",
+     "Swiss Tempelle",
+     "Tampax",
+     "Tangle Teezer",
+     "Thalgo",
+     "The Body Shop",
+     "The Brush Tools",
+     "The Face Shop",
+     "The Man Company",
+     "The Nature's Co.",
+     "The Shave Doctor",
+     "Toni&Guy",
+     "Toppik",
+     "Tresemme",
+     "Tvam",
+     "Unived",
+     "Ustraa",
+     "Vaadi Herbals",
+     "Vanesa",
+     "Vaseline",
+     "Vedic Line",
+     "Veet",
+     "Versace 19.69",
+     "Victoria's Secret",
+     "VLCC",
+     "Votre",
+     "VWash",
+     "Wella Professionals",
+     "West Coast",
+     "Wet Brush",
+     "Whisper",
+     "Wild Earth",
+     "Wild Stone",
+     "Wow",
+     "XLR8",
+     "Yardley",
+     "YBP",
+     "Yoga India",
+     "Yves Rocher",
+     "Zodiac",
+     "Zuci"
+     ];
+   
+   
+   
+     var createOuterWrapper = function (brandName) {
+       var totalStruct = "";
+       l1Div = "";
+       while(brandName.length){
+         l1 = brandName.splice(0,30);
+         l1Div = l1Div + '<li>  <div class="checkboxwrap">  ';
+         l2Div = "";
+         while(l1.length){
+           l2 = l1.splice(0,6);
+           l2Div = l2Div + '<div class="brandclmn">';
+           l3Div = "";
+           jQuery.each(l2,function(index, value){
+   
+             newValueName = value.replace(/\ /g,"-");
+             newValueName = newValueName.replace(/\'/g,"-");
+             newValueName = newValueName.replace(/&/g,"");
+             newValueName = newValueName.replace(/\./g,"-");
+   
+             newValueName = newValueName.toLowerCase() + '-f';
+   
+             newValueName = newValueName.replace(/--/g,"-");
+   
+             if(jQuery.inArray(newValueName, checkedBrands) == -1) {
+               l3Div = l3Div + '<div class="checkbox brand-filter"><input type="checkbox" value="'+ newValueName +'" > <span> '+ value +' </span></div>';
+             } else {
+               l3Div = l3Div + '<div class="checkbox brand-filter slect-box"><input type="checkbox" checked value="'+ newValueName +'" > <span class="check-sucess"> '+ value +' </span></div>';
+             }
+           });
+           l2Div = l2Div + l3Div + '</div>';
+         }
+         l1Div = l1Div + l2Div + '</div></li>';
+       }
+       return l1Div;
+     };
+   
+   jQuery("#brandSearch").on("keyup",function(){
+   
+   jQuery('.checkbox.slect-box').each(function(index){
+     checkedBrands.push(jQuery(this).find('input[type="checkbox"]').val());
+   });
+   checkedBrands = jQuery.unique(checkedBrands);
+   
+   
+   
+     var copyBrands = allBrands.slice();
+     var completeWrapper = "";
+     try { jQuery(".slider").unslick(); } catch(err) {  }
+     if (jQuery(this).val().trim() != "" ) {
+       var searchTerm = jQuery(this).val().trim();
+       copyBrands2 = jQuery.grep(copyBrands, function( item, index ) {
+         key = item.toLowerCase().indexOf(searchTerm.toLowerCase());
+         if (key > -1) {return true};
+       });
+       completeWrapper = createOuterWrapper(copyBrands2);
+     } else {
+       completeWrapper = createOuterWrapper(copyBrands);
+     }
+   
+     jQuery("#popup1 .owl-wrapper #product_list_ul_1").empty().append(completeWrapper);
+     jQuery('.slider').slick({
+       slidesToShow: 1,
+       dots:true,
+       slide: 'li',
+       arrows:true,
+      
+     });
+   
+     jQuery('input[type="checkbox"]').off().on("click",function(){
+       if(jQuery(this).prop("checked") == true){
+           jQuery(this).next().addClass('check-sucess');
+           jQuery(this).closest('.checkbox').addClass('slect-box');
+       }
+       else if(jQuery(this).prop("checked") == false){
+           jQuery(this).next().removeClass('check-sucess');
+           jQuery(this).closest('.checkbox').removeClass('slect-box');
+       }
+       var numCF = jQuery('.checkbox.cat-filter.slect-box').length;
+       var numBF = jQuery('.checkbox.brand-filter.slect-box').not(".slick-cloned").length;
+       jQuery('.count-number').text(numCF);
+       jQuery('.brand-count-number').text(numBF+checkedBrands.length); 
+     });
+   });
+  
+     
+</script>
+
+
+<!--script close here-->
