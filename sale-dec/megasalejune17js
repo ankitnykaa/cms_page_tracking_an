@@ -681,15 +681,25 @@ console.log(jQuerytarget.offset().top - 150);
 
 	   }); 
 
+function remove_from_array(array, element) {
+    var index = array.indexOf(element);
+    if(index > -1){
+         array.splice(index, 1);
+    }
+}
+
 		jQuery(document).ready(function(){
 		  jQuery('.twodiv,.threediv,.fourdiv,.popularBrand,.brand,.catwrap').addClass('custom-block');
 		  //jQuery('.megasalejune').addClass('custom-category');
 		  jQuery('input[type="checkbox"]').click(function(){
 			if(jQuery(this).prop("checked") == true){
+                                checkedBrands.push(jQuery(this).val());
+                                checkedBrands = jQuery.unique(checkedBrands);
 				jQuery(this).next().addClass('check-sucess');
 				jQuery(this).closest('.checkbox').addClass('slect-box');
 			}
 			else if(jQuery(this).prop("checked") == false){
+                                remove_from_array(checkedBrands, jQuery(this).val());
 				jQuery(this).next().removeClass('check-sucess');
 				jQuery(this).closest('.checkbox').removeClass('slect-box');
 			}
@@ -798,12 +808,15 @@ console.log(jQuerytarget.offset().top - 150);
 
                   if(checkedBrands && Array.isArray(checkedBrands)){
                         cached_checked_filter = checkedBrands.join(',.');
-                        if(filter){
-                              filter+=(filter+",."+cached_checked_filter)
-                        }else{
-                              filter = '.'+cached_checked_filter;
-                        }
+                       if(cached_checked_filter){
+                             if(filter){
+                                 filter+=(filter+",."+cached_checked_filter)
+                              }else{
+                                  filter = '.'+cached_checked_filter;
+                               }
+                       }
                   }
+
 		  if(filter == ''){
 			 jQuery("#cat").show();
 			jQuery('.custom-block, .custom-category, .see-more').show();
@@ -1065,7 +1078,7 @@ console.log(jQuerytarget.offset().top - 150);
 			   jQuery('.filterbtn').addClass('active');
 		});
 		jQuery('.clearbtn').on('click', function(){
-		  jQuery('#seeless').trigger('click');
+                  jQuery('#seeless').trigger('click');
 		  jQuery("#cat").show();
 		  jQuery("#popular").show();
 		  jQuery("#featured").show();
@@ -1076,6 +1089,7 @@ console.log(jQuerytarget.offset().top - 150);
 		  jQuery('.count-number, .brand-count-number').text('0');
 		 jQuery('#apply-desk-filter').text('0');
 		 jQuery('.filterbtn').removeClass('active');
+                 
 		});
 
 	  /* jQuery('.slider').slick({

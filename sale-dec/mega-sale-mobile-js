@@ -268,15 +268,26 @@
 
   </script> 
 <script type="text/javascript">
+function remove_from_array(array, element) {
+    var index = array.indexOf(element);
+    if(index > -1){
+         array.splice(index, 1);
+    }
+}
+
+
     jQuery(document).ready(function(){
     jQuery('.platinum-image,.gold,.popularBrand,.brand').addClass('custom-block');
     jQuery('.featured-part').addClass('custom-category');
     jQuery('input[type="checkbox"]').click(function(){
       if(jQuery(this).prop("checked") == true){
+        checkedBrands.push(jQuery(this).val());
+        checkedBrands = jQuery.unique(checkedBrands);
         jQuery(this).next().addClass('check-sucess');
         jQuery(this).closest('.checkbox').addClass('slect-box');
       }
       else if(jQuery(this).prop("checked") == false){
+        remove_from_array(checkedBrands, jQuery(this).val());
         jQuery(this).next().removeClass('check-sucess');
         jQuery(this).closest('.checkbox').removeClass('slect-box');
       }
@@ -370,10 +381,12 @@ jQuery( ".goldplusbox:visible .custom-block" ).removeClass("margin-left-zero mar
     });
    if(checkedBrands && Array.isArray(checkedBrands)){
          cached_checked_filter = checkedBrands.join(',.');
-         if(filter){
-               filter+=(filter+",."+cached_checked_filter)
-         }else{
-               filter = '.'+cached_checked_filter;
+         if(cached_checked_filter){
+               if(filter){
+                   filter+=(filter+",."+cached_checked_filter)
+              }else{
+                 filter = '.'+cached_checked_filter;
+              }
          }
    }
     if(filter == ''){ 
@@ -536,9 +549,13 @@ jQuery(".custom-category .brandbox:visible .custom-block").each(function(){
 
     });
     jQuery('.close').on('click', function(){
+     checkedBrands = [];
     jQuery('.checkbox').removeClass('slect-box');
+    jQuery('.checkbox span').removeClass('check-sucess');
     jQuery('.tabCategory .count-number, .tabBrand .brand-count-number').text('0');
-
+    jQuery('#brandSearch').val('');
+     jQuery("#brandSearch").keyup();
+    
     });
   </script> 
 <script type="text/javascript">
@@ -646,17 +663,20 @@ var checkedBrands = [];
    
      jQuery('input[type="checkbox"]').off().on("click",function(){
        if(jQuery(this).prop("checked") == true){
+           checkedBrands.push(jQuery(this).val());
+           checkedBrands = jQuery.unique(checkedBrands);
            jQuery(this).next().addClass('check-sucess');
            jQuery(this).closest('.checkbox').addClass('slect-box');
        }
        else if(jQuery(this).prop("checked") == false){
+           remove_from_array(checkedBrands, jQuery(this).val());
            jQuery(this).next().removeClass('check-sucess');
            jQuery(this).closest('.checkbox').removeClass('slect-box');
        }
        var numCF = jQuery('.checkbox.cat-filter.slect-box').length;
        var numBF = jQuery('.checkbox.brand-filter.slect-box').not(".slick-cloned").length;
        jQuery('.count-number').text(numCF);
-       jQuery('.brand-count-number').text(numBF+checkedBrands.length); 
+       jQuery('.brand-count-number').text(checkedBrands.length); 
      });
    });
 
