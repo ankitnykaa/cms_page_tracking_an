@@ -1,9 +1,9 @@
 <script type="text/javascript"> 
 
     jQuery(document).ready(function (e) { 
-     if(jQuery('#All-Offers .nw-pagecontainer .nw_container_title')){
+    /* if(jQuery('#All-Offers .nw-pagecontainer .nw_container_title')){
         jQuery('#All-Offers .nw-pagecontainer .nw_container_title')[0].innerHTML='all offers('+jQuery('#All-Offers .custom-block').length+')';
-     }
+     }*/
 	
     jQuery('.menuwrap').hide() ;
 	jQuery('.menuwrap:first').show();
@@ -368,6 +368,14 @@ jQuery( ".goldplusbox:visible .custom-block" ).removeClass("margin-left-zero mar
       brandIndex++;
       }
     });
+   if(checkedBrands && Array.isArray(checkedBrands)){
+         cached_checked_filter = checkedBrands.join(',.');
+         if(filter){
+               filter+=(filter+",."+cached_checked_filter)
+         }else{
+               filter = '.'+cached_checked_filter;
+         }
+   }
     if(filter == ''){ 
       jQuery('.custom-block, .custom-category, .see-more').show();
      jQuery('.see-more #seeless').trigger('click');
@@ -406,9 +414,9 @@ jQuery( ".freeprdoffersbox:visible .custom-block" ).removeClass("margin-left-zer
 
 jQuery( ".goldplusbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
 
-if(jQuery('#All-Offers .nw-pagecontainer .nw_container_title')){
+/*if(jQuery('#All-Offers .nw-pagecontainer .nw_container_title')){
      jQuery('#All-Offers .nw-pagecontainer .nw_container_title')[0].innerHTML='all offers('+jQuery('#All-Offers .custom-block:visible').length+')';
-}
+}*/
 
 
     }else{ 
@@ -424,9 +432,9 @@ if(jQuery('#All-Offers .nw-pagecontainer .nw_container_title')){
       });
       jQuery('.see-more').hide();
 
-if(jQuery('#All-Offers .nw-pagecontainer .nw_container_title')){
+/*if(jQuery('#All-Offers .nw-pagecontainer .nw_container_title')){
      jQuery('#All-Offers .nw-pagecontainer .nw_container_title')[0].innerHTML='all offers('+jQuery('#All-Offers .custom-block:visible').length+')';
-}
+}*/
       if(showCatFilters == ''){
       jQuery('.category .brand-text .font-color').text('All Categories').css('color', '#9a9aa3');
          jQuery('.category .brand-image img').attr("src","http://www.nykaa.com/media/wysiwyg/Mega-sale-jun-2017/category_mobile_black2x.png");
@@ -572,3 +580,87 @@ if(jQuery(window).width() < 760) {
 }
 });
 </script>
+<script type="text/javascript">
+var checkedBrands = [];
+  
+       var createOuterWrapper = function (brandName) {
+       var totalStruct = "";
+       l1Div = "";
+       while(brandName.length){
+         l1 = brandName.splice(0,30);
+         l1Div = l1Div + '<div>  <div class="checkboxwrap">  ';
+         l2Div = "";
+         while(l1.length){
+           l2 = l1.splice(0,6);
+           l2Div = l2Div + '<div class="brandclmn">';
+           l3Div = "";
+           jQuery.each(l2,function(index, value){
+   
+             newValueName = value.replace(/\ /g,"-");
+             newValueName = newValueName.replace(/\'/g,"-");
+             newValueName = newValueName.replace(/&/g,"");
+             newValueName = newValueName.replace(/\./g,"-");
+             newValueName = newValueName.replace(/\+/g,"-");
+   
+             newValueName = newValueName.toLowerCase() + '-f';
+   
+             newValueName = newValueName.replace(/--/g,"-");
+   
+             if(jQuery.inArray(newValueName, checkedBrands) == -1) {
+               l3Div = l3Div + '<div class="checkbox brand-filter"><input type="checkbox" value="'+ newValueName +'" > <span> '+ value +' </span></div>';
+             } else {
+               l3Div = l3Div + '<div class="checkbox brand-filter slect-box"><input type="checkbox" checked value="'+ newValueName +'" > <span class="check-sucess"> '+ value +' </span></div>';
+             }
+           });
+           l2Div = l2Div + l3Div + '</div>';
+         }
+         l1Div = l1Div + l2Div + '</div></div>';
+       }
+       return l1Div;
+     };
+   
+
+   
+    jQuery("#brandSearch").on("keyup",function(){
+   jQuery('.checkbox.slect-box').each(function(index){
+     checkedBrands.push(jQuery(this).find('input[type="checkbox"]').val());
+   });
+   checkedBrands = jQuery.unique(checkedBrands);
+   
+   
+   
+     var copyBrands = allBrands.slice();
+     var completeWrapper = "";
+     if (jQuery(this).val().trim() != "" ) {
+       var searchTerm = jQuery(this).val().trim();
+       copyBrands2 = jQuery.grep(copyBrands, function( item, index ) {
+         key = item.toLowerCase().indexOf(searchTerm.toLowerCase());
+         if (key > -1) {return true};
+       });
+       completeWrapper = createOuterWrapper(copyBrands2);
+     } else {
+       completeWrapper = createOuterWrapper(copyBrands);
+     }
+   
+     jQuery(".mobile-wrapper .chekboxwrap").empty().append(completeWrapper);
+   
+     jQuery('input[type="checkbox"]').off().on("click",function(){
+       if(jQuery(this).prop("checked") == true){
+           jQuery(this).next().addClass('check-sucess');
+           jQuery(this).closest('.checkbox').addClass('slect-box');
+       }
+       else if(jQuery(this).prop("checked") == false){
+           jQuery(this).next().removeClass('check-sucess');
+           jQuery(this).closest('.checkbox').removeClass('slect-box');
+       }
+       var numCF = jQuery('.checkbox.cat-filter.slect-box').length;
+       var numBF = jQuery('.checkbox.brand-filter.slect-box').not(".slick-cloned").length;
+       jQuery('.count-number').text(numCF);
+       jQuery('.brand-count-number').text(numBF+checkedBrands.length); 
+     });
+   });
+
+ jQuery("#brandSearch").keyup();
+
+</script>
+
