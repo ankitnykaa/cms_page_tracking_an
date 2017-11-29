@@ -1,0 +1,574 @@
+<script type="text/javascript"> 
+
+    jQuery(document).ready(function (e) { 
+     if(jQuery('#All-Offers .nw-pagecontainer .nw_container_title')){
+        jQuery('#All-Offers .nw-pagecontainer .nw_container_title')[0].innerHTML='all offers('+jQuery('#All-Offers .custom-block').length+')';
+     }
+	
+    jQuery('.menuwrap').hide() ;
+	jQuery('.menuwrap:first').show();
+    //$('.menuwrap:first-of-type').show() 
+  jQuery('.catimg').click(function () { 
+  //$('.bigimg').removeClass('tab-active')
+  if(jQuery(this).hasClass('active')){
+    index0 = jQuery('.catimg').index(this);
+    jQuery('.menuwrap').eq(index0).slideUp();
+    jQuery('.catimg').removeClass('active');
+  }else{
+    jQuery('.catimg').removeClass('active'); 
+    jQuery(this).addClass('active'); 
+    jQuery('.menuwrap').hide() 
+    index0 = jQuery('.catimg').index(this) 
+    jQuery('.menuwrap').eq(index0).slideDown() 
+  }
+  }); 
+
+    }); 
+
+    </script>
+
+<script>
+      ;(function ( $ ) {
+
+      $.fn.smk_Accordion = function( options ) {
+
+        if (this.length > 1){
+        this.each(function() { 
+          $(this).smk_Accordion(options);
+        });
+        return this;
+        }
+
+        // Defaults
+        var settings = $.extend({
+        animation:  true,
+        showIcon:   true,
+        closeAble:  false,
+        closeOther: true,
+        slideSpeed: 150,
+        activeIndex: false
+        }, options );
+
+        if( $(this).data('close-able') )    settings.closeAble = $(this).data('close-able');
+        if( $(this).data('animation') )     settings.animation = $(this).data('animation');
+        if( $(this).data('show-icon') )     settings.showIcon = $(this).data('show-icon');
+        if( $(this).data('close-other') )   settings.closeOther = $(this).data('close-other');
+        if( $(this).data('slide-speed') )   settings.slideSpeed = $(this).data('slide-speed');
+        if( $(this).data('active-index') )  settings.activeIndex = $(this).data('active-index');
+
+        // Cache current instance
+        // To avoid scope issues, use 'plugin' instead of 'this'
+        // to reference this class from internal events and functions.
+        var plugin = this;
+
+        //"Constructor"
+        var init = function() {
+        plugin.createStructure();
+        plugin.clickHead();
+        }
+
+        // Add .smk_accordion class
+        this.createStructure = function() {
+
+        //Add Class
+        plugin.addClass('smk_accordion');
+        if( settings.showIcon ){
+          plugin.addClass('acc_with_icon');
+        }
+
+        //Create sections if they were not created already
+        if( plugin.find('.accordion_in').length < 1 ){
+          plugin.children().addClass('accordion_in');
+        }
+
+        //Add classes to accordion head and content for each section
+        plugin.find('.accordion_in').each(function(index, elem){
+          var childs = $(elem).children();
+          $(childs[0]).addClass('acc_head');
+          $(childs[1]).addClass('acc_content');
+        });
+
+        //Append icon
+        if( settings.showIcon ){
+          plugin.find('.acc_head').prepend('<div class="acc_icon_expand"></div>');
+        }
+
+        //Hide inactive
+        plugin.find('.accordion_in .acc_content').not('.acc_active .acc_content').hide();
+
+        //Active index
+        if( settings.activeIndex === parseInt(settings.activeIndex) ){
+          if(settings.activeIndex === 0){
+          plugin.find('.accordion_in').addClass('acc_active').show();
+          plugin.find('.accordion_in .acc_content').addClass('acc_active').show();
+          }
+          else{
+          plugin.find('.accordion_in').eq(settings.activeIndex - 1).addClass('acc_active').show();
+          plugin.find('.accordion_in .acc_content').eq(settings.activeIndex - 1).addClass('acc_active').show();
+          }
+        }
+
+        }
+
+        // Action when the user click accordion head
+        this.clickHead = function() {
+
+        plugin.on('click', '.acc_head', function(){
+
+          var s_parent = $(this).parent();
+
+          if( s_parent.hasClass('acc_active') == false ){
+          if( settings.closeOther ){
+            plugin.find('.acc_content').slideUp(settings.slideSpeed);
+            plugin.find('.accordion_in').removeClass('acc_active');
+          } 
+          }
+
+          if( s_parent.hasClass('acc_active') ){
+          if( false !== settings.closeAble ){
+            s_parent.children('.acc_content').slideUp(settings.slideSpeed);
+            s_parent.removeClass('acc_active');
+          }
+          }
+          else{
+          $(this).next('.acc_content').slideDown(settings.slideSpeed);
+          s_parent.addClass('acc_active');
+          }
+
+        });
+
+        }
+
+        //"Constructor" init
+        init();
+        return this;
+
+      };
+
+
+      }( jQuery ));
+
+     </script> 
+<script type="text/javascript">
+      jQuery(document).ready(function(jQuery){
+
+      jQuery(".accordion_example1").smk_Accordion();
+
+      jQuery(".accordion_example2").smk_Accordion({
+        closeAble: true, //boolean
+
+      });
+
+      jQuery(".accordion_example3").smk_Accordion({
+        showIcon: false, //boolean
+      });
+
+      jQuery(".accordion_example4").smk_Accordion({
+        closeAble: true, //boolean
+        closeOther: false, //boolean
+      });
+
+      jQuery(".accordion_example5").smk_Accordion({closeAble: true});
+
+      jQuery(".accordion_example6").smk_Accordion();
+
+      jQuery(".accordion_example7").smk_Accordion({
+        activeIndex: 2 //second section open
+      });
+      jQuery(".accordion_example8, .accordion_example9").smk_Accordion();
+
+
+
+      });
+     </script> 
+<!--leftside accordian menu--> 
+<script>
+       jQuery(document).ready(function() {
+         jQuery(window).scroll(function() {
+           if (jQuery(this).scrollTop() >312) {
+             jQuery('.stickypart').addClass("stick");
+
+           } else {
+             jQuery('.stickypart').removeClass("stick");
+
+           }
+         });
+        jQuery(window).scroll(function() {
+           if (jQuery(this).scrollTop() >50) {
+             jQuery('.stickypart2').addClass("stick");
+
+           } else {
+             jQuery('.stickypart2').removeClass("stick");
+
+           }
+         });
+       });
+     </script> 
+<script>
+   jQuery(function(){
+
+  var appendthis =  ("<div class='modal-overlay js-modal-close'></div>");
+
+     jQuery('a[data-modal-id]').click(function(e) {
+    e.preventDefault();
+     jQuery("body").append(appendthis);
+     jQuery(".modal-overlay").fadeTo(500, 1);
+    //$(".js-modalbox").fadeIn(500);
+    var className = jQuery(this).parent().attr('class');
+    jQuery('.modal-box').fadeIn(jQuery(this).data());
+    if(className == 'category'){
+     jQuery('.modal-box').find('.tabCategory').parent().trigger('click'); 
+    }else if(className == 'brands'){ 
+      jQuery('.modal-box').find('.tabBrand').parent().trigger('click');
+                 jQuery("html").attr({style: "height: 100% !important;overflow:hidden !important",scroll:"no"})
+    }
+    });  
+
+
+   jQuery(".js-modal-close, .modal-overlay").click(function() {
+     jQuery(".modal-box, .modal-overlay").fadeOut(500, function() {
+       jQuery(".modal-overlay").remove(); 
+                        jQuery("html").removeAttr('scroll style');
+
+    });
+
+  });
+
+   jQuery(window).resize(function() {
+     jQuery(".modal-box").css({
+      top: 0,
+      left: 0,
+     height: jQuery( window ).height()
+    });
+
+  });
+
+  jQuery(window).resize();
+
+  });
+  </script> 
+<script>
+  jQuery(function() {
+    jQuery('.tabs nav a').on('click', function() {
+    show_content(jQuery(this).index());
+    });
+
+    show_content(0);
+
+    function show_content(index) {
+    // Make the content visible
+    jQuery('.tabs .content.visible').removeClass('visible');
+    jQuery('.tabs .content:nth-of-type(' + (index + 1) + ')').addClass('visible');
+
+    // Set the tab to selected
+    jQuery('.tabs nav a.selected').removeClass('selected');
+    jQuery('.tabs nav a:nth-of-type(' + (index + 1) + ')').addClass('selected');
+    }
+  });
+
+  </script> 
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+    jQuery('.platinum-image,.gold,.popularBrand,.brand').addClass('custom-block');
+    jQuery('.featured-part').addClass('custom-category');
+    jQuery('input[type="checkbox"]').click(function(){
+      if(jQuery(this).prop("checked") == true){
+        jQuery(this).next().addClass('check-sucess');
+        jQuery(this).closest('.checkbox').addClass('slect-box');
+      }
+      else if(jQuery(this).prop("checked") == false){
+        jQuery(this).next().removeClass('check-sucess');
+        jQuery(this).closest('.checkbox').removeClass('slect-box');
+      }
+      var numCF = jQuery('.checkbox.cat-filter.slect-box').length;
+      var numBF = jQuery('.checkbox.brand-filter.slect-box').length;
+      jQuery('.tabCategory .count-number').text(numCF);
+      jQuery('.tabBrand .brand-count-number').text(numBF); 
+    });
+    // jQuery('.tabBrand').click(function(){
+    //   var brandsToShow = '';
+    //   jQuery('.checkbox.cat-filter.slect-box').each(function(index){
+    //     if(0 == index){
+    //       brandsToShow += '.'+jQuery(this).find('input[type="checkbox"]').val();
+    //     }else{
+    //       brandsToShow += ',.'+jQuery(this).find('input[type="checkbox"]').val();
+    //     }
+    //   });
+    //   if(brandsToShow == ''){
+    //     jQuery('.checkbox.brand-filter').show();
+    //   }else{
+    //     jQuery('.checkbox.brand-filter').hide();
+    //     jQuery(brandsToShow).show();  
+    //   }
+    // });
+    });
+
+    jQuery('.apply-filter').on('click', function(){
+
+
+
+jQuery( ".goldbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+
+jQuery( ".silverbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+
+jQuery( ".popular:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+
+jQuery( ".editobx:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+
+jQuery( ".brandbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+
+jQuery( ".platinumbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+
+jQuery( ".freeprdoffersbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+
+jQuery( ".goldplusbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+
+    var filter = '';
+    var showCatFilters = showBrandFilters = catgFiltersForTracking = brandFiltersForTracking = '';
+    var catgIndex = brandIndex = 1;
+    jQuery('.checkbox.slect-box').each(function(index){
+      if(index == 0){
+      filter += '.'+jQuery(this).find('input[type="checkbox"]').val();
+      }else{
+       filter += ',.'+jQuery(this).find('input[type="checkbox"]').val();  
+      }
+      if(jQuery(this).hasClass('cat-filter')){
+      if(1 == catgIndex){
+        showCatFilters += jQuery(this).find('span').text();
+        catgFiltersForTracking += jQuery(this).find('span').text().toLowerCase();
+      }
+      if(2 == catgIndex){
+        showCatFilters += ','+jQuery(this).find('span').text();
+        catgFiltersForTracking += '|'+jQuery(this).find('span').text().toLowerCase();
+      }
+      if(3 == catgIndex){
+        showCatFilters += '...';
+        catgFiltersForTracking += '|'+jQuery(this).find('span').text().toLowerCase();
+      }
+      if(catgIndex > 3){
+        catgFiltersForTracking += '|'+jQuery(this).find('span').text().toLowerCase();
+      }
+      catgIndex++;
+      }else if(jQuery(this).hasClass('brand-filter')){
+      if(1 == brandIndex){
+        showBrandFilters +=  jQuery(this).find('span').text();
+        brandFiltersForTracking += jQuery(this).find('span').text().toLowerCase();
+      }
+      if(2 == brandIndex){
+        showBrandFilters +=  ','+jQuery(this).find('span').text();
+        brandFiltersForTracking += '|'+jQuery(this).find('span').text().toLowerCase();
+      }
+      if(3 == brandIndex){
+        showBrandFilters +=  '...';
+        brandFiltersForTracking += '|'+jQuery(this).find('span').text().toLowerCase();
+      }
+      if(brandIndex > 3){
+        brandFiltersForTracking += '|'+jQuery(this).find('span').text().toLowerCase();
+      }
+      brandIndex++;
+      }
+    });
+    if(filter == ''){ 
+      jQuery('.custom-block, .custom-category, .see-more').show();
+     jQuery('.see-more #seeless').trigger('click');
+     jQuery('.category .brand-text .font-color').text('All Categories').css('color', '#9a9aa3');
+      jQuery('.brands .brand-text .font-color').text('All Brands').css('color', '#9a9aa3');
+
+if(showCatFilters == ''){
+      jQuery('.category .brand-text .font-color').text('All Categories').css('color', '#9a9aa3');
+         jQuery('.category .brand-image img').attr("src","http://www.nykaa.com/media/wysiwyg/Mega-sale-jun-2017/category_mobile_black2x.png");
+      }else{
+      jQuery('.category .brand-text .font-color').text(showCatFilters).css('color', '#fc2779');
+        jQuery('.category .brand-image img').attr("src","http://www.nykaa.com/media/wysiwyg/Mega-sale-jun-2017/category_mobile_pink_header2x.png");
+      }
+if(showBrandFilters == ""){
+      jQuery('.brands .brand-text .font-color').text('All Brands').css('color', '#9a9aa3');
+      jQuery('.brands .brand-image img').attr("src","http://www.nykaa.com/media/wysiwyg/Mega-sale-jun-2017/brandIcon2x.png");
+      }else{
+      jQuery('.brands .brand-text .font-color').text(showBrandFilters).css('color', '#fc2779');
+      jQuery('.brands .brand-image img').attr("src","http://www.nykaa.com/media/wysiwyg/Mega-sale-jun-2017/brandIconPinkMobile2xm.png");
+
+      }
+
+jQuery( ".goldbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+
+jQuery( ".silverbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+
+jQuery( ".popular:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+
+jQuery( ".editobx:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+
+jQuery( ".brandbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+
+jQuery( ".platinumbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+
+jQuery( ".freeprdoffersbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+
+jQuery( ".goldplusbox:visible .custom-block" ).removeClass("margin-left-zero margin-left-ten");
+
+if(jQuery('#All-Offers .nw-pagecontainer .nw_container_title')){
+     jQuery('#All-Offers .nw-pagecontainer .nw_container_title')[0].innerHTML='all offers('+jQuery('#All-Offers .custom-block:visible').length+')';
+}
+
+
+    }else{ 
+      !jQuery('.nw_see_more_btn').hasClass('nw_see_less') && jQuery('.nw_see_more_btn').click();
+      jQuery('.custom-category').show();
+      jQuery('.custom-block').hide();
+      jQuery('.freeprdoffers').show();
+      jQuery(filter).show();
+      jQuery('.custom-category').each(function(){
+      if(jQuery(this).find('.custom-block:visible').length == 0){
+        jQuery(this).hide();
+      }
+      });
+      jQuery('.see-more').hide();
+
+if(jQuery('#All-Offers .nw-pagecontainer .nw_container_title')){
+     jQuery('#All-Offers .nw-pagecontainer .nw_container_title')[0].innerHTML='all offers('+jQuery('#All-Offers .custom-block:visible').length+')';
+}
+      if(showCatFilters == ''){
+      jQuery('.category .brand-text .font-color').text('All Categories').css('color', '#9a9aa3');
+         jQuery('.category .brand-image img').attr("src","http://www.nykaa.com/media/wysiwyg/Mega-sale-jun-2017/category_mobile_black2x.png");
+      }else{
+      jQuery('.category .brand-text .font-color').text(showCatFilters).css('color', '#fc2779');
+        jQuery('.category .brand-image img').attr("src","http://www.nykaa.com/media/wysiwyg/Mega-sale-jun-2017/category_mobile_pink_header2x.png");
+      }
+      if(showBrandFilters == ""){
+      jQuery('.brands .brand-text .font-color').text('All Brands').css('color', '#9a9aa3');
+      jQuery('.brands .brand-image img').attr("src","http://www.nykaa.com/media/wysiwyg/Mega-sale-jun-2017/brandIcon2x.png");
+      }else{
+      jQuery('.brands .brand-text .font-color').text(showBrandFilters).css('color', '#fc2779');
+      jQuery('.brands .brand-image img').attr("src","http://www.nykaa.com/media/wysiwyg/Mega-sale-jun-2017/brandIconPinkMobile2xm.png");
+
+      }
+
+      var trackingParam = "'" + catgFiltersForTracking + ":" + brandFiltersForTracking + "'";
+      console.log(catgFiltersForTracking);
+      console.log(brandFiltersForTracking);
+      console.log(trackingParam);
+      ga('send','event','Mega Sale','category:brand', trackingParam);
+
+var count =1;
+
+
+jQuery(".custom-category .goldbox:visible .custom-block").each(function(){
+  if(jQuery(this).is(":visible")) { 
+    if(count%2 == 0 ){ 
+      jQuery(this).addClass("margin-left-ten");
+    }
+    else {
+      jQuery(this).addClass("margin-left-zero");
+    }
+    count++;
+  }
+});
+
+var count =1;
+
+jQuery(".custom-category .silverbox:visible .custom-block").each(function(){
+  if(jQuery(this).is(":visible")) { 
+    if(count%2 == 0 ){ 
+      jQuery(this).addClass("margin-left-ten");
+    }
+    else {
+      jQuery(this).addClass("margin-left-zero");
+    }
+    count++;
+  }
+});
+
+var count =1;
+
+
+jQuery(".custom-category .popular:visible .custom-block").each(function(){
+  if(jQuery(this).is(":visible")) { 
+    if(count%2 == 0 ){ 
+      jQuery(this).addClass("margin-left-ten");
+    }
+    else {
+      jQuery(this).addClass("margin-left-zero");
+    }
+    count++;
+  }
+});
+var count =1;
+
+
+jQuery(".custom-category .editobx:visible .custom-block").each(function(){
+  if(jQuery(this).is(":visible")) { 
+    if(count%2 == 0 ){ 
+      jQuery(this).addClass("margin-left-ten");
+    }
+    else {
+      jQuery(this).addClass("margin-left-zero");
+    }
+    count++;
+  }
+});
+var count =1;
+
+
+jQuery(".custom-category .brandbox:visible .custom-block").each(function(){
+  if(jQuery(this).is(":visible")) { 
+    if(count%2 == 0 ){ 
+      jQuery(this).addClass("margin-left-ten");
+    }
+    else {
+      jQuery(this).addClass("margin-left-zero");
+    }
+    count++;
+  }
+});
+
+
+
+
+    }
+
+    });
+    jQuery('.close').on('click', function(){
+    jQuery('.checkbox').removeClass('slect-box');
+    jQuery('.tabCategory .count-number, .tabBrand .brand-count-number').text('0');
+
+    });
+  </script> 
+<script type="text/javascript">
+  jQuery(document).ready(function () {
+
+           jQuery('#seeless').hide();
+           jQuery('#seemore').click(function () {
+            jQuery('.freeprdoffers').slideDown('slow');
+  jQuery('#seemore').hide();
+  jQuery('#seeless').show();
+  });
+  jQuery('#seeless').click(function () {
+  jQuery('.freeprdoffers').slideUp('slow');
+  jQuery('#seemore').show();
+  jQuery('#seeless').hide();
+  jQuery('html, body').animate({
+    scrollTop: jQuery(".freeprdoffers-top").offset().top
+  }, 1000);
+  });
+
+  });
+  </script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.js" type="text/javascript"></script> 
+<script>
+   jQuery('img.lazy').lazyload({
+     load : function()
+     {
+     //jQuery(this).css('background-color','#ffffff');
+     }
+   });
+  </script>
+ <script>
+    jQuery('.apply-filter').on('click', function(){
+      jQuery("img.lazy").lazyload({load : function(){}});
+    }); 
+jQuery(window).load(function(){
+if(jQuery(window).width() < 760) {
+  jQuery('.container').find('a').removeAttr('target');
+}
+});
+</script>
