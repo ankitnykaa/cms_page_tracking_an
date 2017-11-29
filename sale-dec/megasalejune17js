@@ -666,7 +666,8 @@ console.log(jQuerytarget.offset().top - 150);
 	   jQuery('.overlay').css('display','none') 
 
 	   }); 
-	   jQuery('#brandclick').click(function () { 
+	   jQuery('#brandclick').click(function () {
+                 jQuery('.slider').removeClass('first-click');  
 		 jQuery('.slider').not('.slick-initialized').slick({
 		   slidesToShow: 1,
 		   dots:true,
@@ -1094,7 +1095,7 @@ console.log(jQuerytarget.offset().top - 150);
 	<script type="text/javascript">
 	   var checkedBrands = [];
 	   var allBrands = [
-		"Agaro",
+                "Agaro",
 		 "Age Lock",
 		 "AHAVA",
 		 "Alan Truman",
@@ -1364,7 +1365,7 @@ console.log(jQuerytarget.offset().top - 150);
 
 		 var copyBrands = allBrands.slice();
 		 var completeWrapper = "";
-		 try { jQuery(".slider").unslick(); } catch(err) {  }
+		 try { jQuery(".slider").not('.first-click').unslick(); } catch(err) {  }
 		 if (jQuery(this).val().trim() != "" ) {
 		   var searchTerm = jQuery(this).val().trim();
 		   copyBrands2 = jQuery.grep(copyBrands, function( item, index ) {
@@ -1377,7 +1378,7 @@ console.log(jQuerytarget.offset().top - 150);
 		 }
 
 		 jQuery("#popup1 .owl-wrapper #product_list_ul_1").empty().append(completeWrapper);
-		 jQuery('.slider').slick({
+		 jQuery('.slider').not('.first-click').slick({
 		   slidesToShow: 1,
 		   dots:true,
 		   slide: 'li',
@@ -1401,7 +1402,7 @@ console.log(jQuerytarget.offset().top - 150);
 		 });
 	   });
 
-
+           jQuery('#brandSearch').keyup();
 	</script>
 
 
